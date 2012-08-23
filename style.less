@@ -1,0 +1,981 @@
+/*
+Theme Name: Faculty Resources
+Author: Terry Sutton
+Author URI: http://waterstreetgm.org/
+Description: A reworking of the victoria_park theme.
+Version: 0.1
+
+*/
+
+
+
+
+@import "elements.less";
+@import "normalize.css";
+
+
+/* Colour Variables */
+@blue: #5EC1D1;
+@light-blue: @blue + #111;
+
+
+* { box-sizing: border-box }
+
+
+/* =Structure
+-------------------------------------------------------------- */
+body{
+	font: 14px/24px Helvetica neue;
+	color: #444;
+	background:url(images/tile.gif) #F7F7F7 repeat;
+	
+}
+
+#page {
+	background: white;
+	padding: 40px;
+	width: 960px;
+	margin: 35px auto;
+	border: 1px solid #DDD;
+}
+
+#main{
+	overflow:hidden;
+	padding: 10px 0;
+}
+header#branding{
+	border-bottom: 1px solid;
+ }
+
+#primary {
+ 	float: left;
+	width: 630px;
+	padding: 15px 0 25px 25px;
+}
+
+#content { }
+
+article{
+	width: 550px;
+	border-bottom: 1px solid;
+	margin-bottom: 25px;
+}
+
+#secondary {
+	float: left;
+	width: 220px;
+}
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+
+/* =Type and basics
+-------------------------------------------------------------- */
+
+a{
+	color:#444;
+	text-decoration: none;
+
+	.transition(.5s, ease-out);
+	
+}
+
+em{
+	font-style: italic;
+}
+
+strong{
+	font-weight: bold;
+}
+
+
+p {
+	margin: 0 0 1em;
+}
+
+
+h1,h2,h3,h4,h5 {
+	margin: 0 0 1em;
+}
+
+h1 {
+	font-size: 1em;
+}
+
+h1.entry-title{
+	font-size: 24px;
+	font-weight: normal;
+}
+
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+#site-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 15px 0;
+		a {
+			border: none;
+		}
+}
+#site-description {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 0 1em;
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	background: #ccc;
+	display: block;
+	float: left;
+	margin: 20px auto 1em;
+	width: 100%;
+}
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+#access ul ul {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	background: #dedede;
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+	height: auto;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: #dedede;
+}
+#access ul ul a:hover {
+	background: #cecece;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+
+
+/* =Secondary
+-------------------------------------------------------------- */
+
+#secondary {
+	float: left;
+	width: 230px;
+	margin-top: 15px;
+	padding: 0 25px 0 0;
+	font-size: 13px;
+	border-right: 1px solid #ccc;
+		h2 {
+		  margin-bottom: 25px;
+		  font-size: 14px;
+		}
+		h3.parent-guide {
+				text-transform: uppercase;
+				color: #999;
+				font-weight: normal;
+				font-size: 12px;
+				background: #eee;
+				.border-radius(14px 14px 0 0);
+				padding-left: 5px;
+ 			}
+		 
+		ul, ol {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+		  margin-bottom: 10px;
+		  border-bottom: 1px solid #ddd;
+		  	a:hover {
+		  		color: #777;
+		  	}
+		  	&.current_page_item {
+		  			a{color: #4C9BA8;}
+		  	}
+		}
+		.back {
+		  float: left;
+		  font-size: 12px;
+		  color: #999;
+		  text-transform: uppercase;
+		  margin: 35px 0;
+		  border-top: 1px solid;
+		}
+		.back:hover {
+		  color: #444;
+		}
+		li.current {
+		  color: #38b0c4;
+		}
+}
+body.step-by-step #secondary {
+  border-right: 1px solid #ccc;
+  margin-right: 25px;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+.sticky { }
+
+.entry-meta {
+	clear: both;
+	display: block;
+	font-size: 80%;
+	font-style: italic;
+}
+.single-author .entry-meta .byline {
+	display: none;
+}
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0;
+}
+.page-link {
+	clear: both;
+	margin: 0 0 1em;
+}
+.page .edit-link {
+	clear: both;
+	display: block;
+}
+
+
+/* Accordion for tool landing pages
+-----------------------------------------------------------*/
+
+#accordion  {
+	background: @blue;
+	color: #fff;
+	padding: 25px;
+		a {
+			color: #fff;
+		} 
+
+		h3 {
+			a:hover {
+ 				background: darken(@blue, 10%);
+			}
+		}
+
+
+ 		h3.page-title {
+ 			font: 24px Georgia, "Times New Roman", serif;
+ 				a:hover{
+ 					color:  #F0F4F5;
+ 				}
+ 		}
+}
+
+
+
+/* Up on Blocks
+-----------------------------------------------------------*/
+ 
+.block {
+  float: left;
+}
+.block.half {
+  width: 46%;
+  float: left;
+  margin-right: 65px;
+}
+.block.third {
+  width: 33%;
+  float: left;
+}
+.block.two-thirds {
+  width: 62%;
+}
+.block.last {
+  margin-right: 0;
+  border-right: none;
+}
+.block p.section-description {
+  color: #777;
+  font-size: 13px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+
+
+/* Row by row
+-----------------------------------------------------------*/
+
+.row {
+    width: 100%;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+/* Frontpage
+-----------------------------------------------------------*/
+
+body.home {
+	#primary {
+		width: auto;
+		padding: 0;
+	}
+    h3 {
+        font: 26px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 100;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        margin-top: 45px;
+        color: #c83174;
+    }
+    .block {
+        .teaching-skills {
+            padding: 25px;
+            background: #c83174;
+            margin-bottom: 25px;
+            color: white;
+            p {
+                border-bottom: 1px solid #fff;
+                padding-bottom: 15px;
+            }
+            .view-more {
+                background: #9f275c;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+        }
+        .technology-enabled {
+            background: #38b0c4;
+            padding: 25px;
+            color: white;
+            .view-more {
+                background: #2d8c9c;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+        }
+        .view-more:hover {
+            background: #8b2250;
+        }
+        .view-more {
+            float: left;
+            color: white;
+            margin-top: 15px;
+            padding: 7px 10px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            a {
+                color: white;
+            }
+        }
+    }
+    .index-tool {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 25px;
+        position: relative;
+        h3 {
+            color: #555;
+            font-size: 14px;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-left: 55px;
+            margin-top: 15px;
+        }
+        a {
+            text-decoration: none;
+        }
+        h2:hover {
+            color: #2d8c9c;
+        }
+        img {
+            float: left;
+            width: 30px;
+            margin-right: 25px;
+            opacity: .7;
+        }
+        h2 {
+            font: 24px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #38b0c4;
+            margin-bottom: 10px;
+        }
+        span.soon {
+        	position: absolute;
+        	top: 0;
+        	right: 5px;
+        }
+    }
+    .index-tool.first {
+        border-top: 1px solid #aaa;
+        padding-top: 25px;
+    }
+    .hero {
+        background: #eff0ed url('images/schools.png') no-repeat 515px 35px;
+        background-size: 350px;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+/* D2L homepage styles
+-----------------------------------------------------------*/
+
+body.page-using-desire2learn-at-memorial #primary {
+	width: auto;
+	padding: 0;
+}
+.row.tools-get-started {
+    a {
+        border-bottom: 1px solid #38b0c4;
+        color: #444;
+        text-decoration: none;
+    }
+    h3.task {
+        font-weight: bold;
+        color: #38b0c4;
+        font-size: 16px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+    .block.half {
+        margin-top: 25px;
+    }
+    ul {
+    	padding: 0;
+    	list-style-type: none;
+    }
+    li {
+        margin-bottom: 25px;
+    }
+    span.tool {
+        font-weight: bold;
+    }
+    span.soon {
+        background: #aaa;
+        color: #fff;
+        font-size: 10px;
+        padding: 2px;
+        text-transform: uppercase;
+        margin-right: 5px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+    }
+    h2 {
+        font-size: 35px;
+        border-bottom: 1px solid #ccc;
+        color: #38b0c4;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+}
+.row.teaching-with-technology {
+    border-top: 1px solid #ccc;
+}
+
+.row.using-d2l {
+    background: #38b0c4;
+    padding: 0 10px 25px;
+    h3 {
+        font-size: 13px;
+        color: white;
+        text-transform: uppercase;
+        border-bottom: 1px solid #fff;
+        padding: 25px;
+    }
+    .block.third.last {
+        border: none;
+    }
+    .block.third {
+        border-right: 1px solid #fff;
+        padding: 0 25px;
+    }
+    p {
+        color: #fff;
+        padding: 0;
+        margin-top: 15px;
+    }
+    h3.user-type {
+        border-bottom: none;
+        font-weight: bold;
+        padding: 0;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: normal;
+        color: white;
+        margin: 25px 0 50px;
+        padding: 25px;
+        line-height: 46px;
+        font-weight: 300;
+    }
+}
+
+span.soon {
+  background: #aaa;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px;
+  text-transform: uppercase;
+  margin-right: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+
+/* Step by step pages
+-----------------------------------------------------------*/
+body.single-guides h1.entry-title {
+	margin-bottom: 35px;
+	font-size: 30px;
+	line-height: 38px;
+}
+
+h3.step-by-steps{
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc; 
+}
+
+
+
+
+
+/* 404 page */
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Buttons */
+button {
+	display: inline-block;
+	font-weight: bold;
+	line-height: 27px;
+	min-width: 50px;
+	overflow: hidden;
+	padding: 0 9px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+	margin: 0;
+	-webkit-border-radius: 3px;
+	-webkit-background-clip: padding-box;
+	-webkit-box-sizing: border-box;
+	color: #505c77;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+	border: solid 1px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdfefe), to(#f0f1f2));
+	-webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0, 0, 0, .05);
+	box-sizing: border-box;
+	border-color: #ccc #c0c1c2 #bdbec0;
+}
+
+button.blue {
+	font-size: 13px;
+	line-height: 36px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #fff;
+	padding: 0 15px;
+	border: solid 1px;
+	border-radius: 3px;
+	background: -webkit-gradient( linear, left top, left bottom, from(#50A9E7), to(#307CB3) );
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 1px rgba(0,0,0,.08);
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	border-color: #2978B0 #266FA5 #1C557D;
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+	background: #eee;
+	display: block;
+	padding: 1em;
+}
+
+/* Images */
+
+.entry-content img {
+	border: 1px solid #ccc;
+}
+.image-attachment div.entry-meta {
+	float: left;
+}
+.image-attachment nav {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #eee;
+	margin: 0 0 1em;
+	padding: 1em;
+	text-align: center;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+	display: none;
+}
+.single .format-aside .entry-header {
+	display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+	padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+	padding-top: 0;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+	display: none;
+}
+.single .format-image .entry-header {
+	display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+	padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+	padding-top: 0;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+.gallery-caption {
+}
+.wp-smiley {
+	margin: 0;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	width: 60%;
+}
+input[type=text],
+input#s {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+textarea {
+	width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+article.comment {
+	display: block;
+}
+#respond input[type=text] {
+	display: block;
+	width: 60%;
+}
+#respond textarea {
+	display: block;
+	margin: 0 0 1em;
+	width: 80%;
+}
+#respond .form-allowed-tags {
+	clear: both;
+	width: 80%;
+}
+#respond .form-allowed-tags code {
+	display: block;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	display: block;
+}
+.widget-area .widget_search {
+	overflow: hidden;
+}
+.widget-area .widget_search input {
+	float: left;
+}
+
+
+
+
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+	padding: 1em 0 0;
+	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	float: left;
+	clear: both;
+	width: 100%;
+	border-top: 1px solid #aaa;
+	padding-top: 15px;
+	margin-top: 25px;
+		a {
+			color: #8A8585;
+			border-bottom: 1px solid #38b0c4;
+			text-decoration: none;
+				&:hover {
+				  border-bottom: 1px solid #8A8585;
+				  color: #444;
+				}
+		}
+}
+ 
+ 
+
+
+/* =Group/Clearfix
+-------------------------------------------------------------- */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+
+
+/* =Reponsive styles
+-------------------------------------------------------------- */
+
+ 
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+	body {
+		width: 712px;
+		background: #eee;
+		}
+}
+
+
+
+/*		iPhone standard layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+
+	body {
+		width: 252px;
+		background: #ccc;
+	}
+
+}
+
+
+
+/*		iPhone wide Layout: 480px.  */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	body {
+		width: 436px;
+		background: #eee;
+	}
+
+}
+
+@import "print.css";
