@@ -752,7 +752,7 @@ body {
   background: url(images/tile.gif) #f7f7f7 repeat;
 }
 #page {
-  background: white;
+  background: #fff;
   padding: 40px;
   width: 960px;
   margin: 35px auto;
@@ -1107,6 +1107,8 @@ body.step-by-step #secondary {
 /* Accordion for tool landing pages
 -----------------------------------------------------------*/
 .accordion {
+  color: #017fb0;
+  padding: 0;
   list-style-type: none;
   color: white;
 }
@@ -1173,6 +1175,7 @@ a.tool-name.active i {
 }
 .accordion.is-collapsed i.tool-name {
   display: inline;
+  font-size: 14px;
 }
 .accordion li > a {
   font-size: 14px;
@@ -1758,6 +1761,12 @@ article.comment {
 #colophon a:hover {
   border-bottom: 1px solid #8A8585;
   color: #444;
+}
+#colophon #site-generator {
+  float: left;
+}
+#colophon .right {
+  float: right;
 }
 /* =Extras
 -------------------------------------------------------------- */

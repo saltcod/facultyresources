@@ -37,7 +37,7 @@ body{
 }
 
 #page {
-	background: white;
+	background: #fff;
 	padding: 40px;
 	width: 960px;
 	margin: 35px auto;
@@ -394,6 +394,8 @@ body.step-by-step #secondary {
 -----------------------------------------------------------*/
  
 .accordion {
+ 	color: @blue;
+ 	padding: 0; 
 	list-style-type: none;
 	color: white;
 		li#one {
@@ -453,7 +455,7 @@ a.tool-name.active i { display: none;}
 	}
 
 	i.faq { display: none;}
-	i.tool-name { display: inline;}
+	i.tool-name { display: inline; font-size: 14px;}
 }
 
 .accordion li > a {
@@ -1066,9 +1068,7 @@ article.comment {
 .widget-area .widget_search input {
 	float: left;
 }
-
-
-
+ 
 
 
 /* Increase the size of the content area for templates without sidebars */
@@ -1111,6 +1111,13 @@ article.comment {
 				  color: #444;
 				}
 		}
+	#site-generator {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+
 }
  
  
