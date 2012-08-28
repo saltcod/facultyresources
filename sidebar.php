@@ -10,9 +10,8 @@
 <div id="secondary" class="widget-area group" role="complementary">
 
 
-	 	<h3 class="parent-guide"><a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo get_the_title($post->post_parent); ?> </a></h3>
 
-	 	<h2> Step by Step Guides</h2>
+	 	<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
 
 		<?php
 			if (!$post->post_parent):
@@ -48,7 +47,23 @@
 
  		<?php endif;?>
 
+ 		<?php if( has_term('step-by-step', 'guide-type') ) : ?>
+	 		<h3 class="parent-guide"><i class="icon-chevron-left"></i><a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo get_the_title($post->post_parent); ?> </a></h3>
+	 	<?php endif; ?>
 
- 
+ 		
+ 		<div id="share">
+ 			<h2>Share</h2>
+ 			<i class="icon-share"></i> <a href="#">Email to a friend</a> <br>
+ 			<i class="icon-twitter"></i> <a href="#">Post to Twitter</a>
+ 			
+ 			<?php if( has_term('step-by-step', 'guide-type') ) : ?>
+	 			<div class="print">
+	 				<i class="icon-print"></i> <a href="#">Print this guide</a>
+	 			</div>
+	 		<?php endif; ?>
+
+ 		</div>
+
 		</div><!-- #secondary .widget-area -->
  

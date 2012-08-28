@@ -48,7 +48,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" type="text/css" media="screen, projection, print" />
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
 
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -66,6 +67,21 @@
 		<hgroup>
 			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<!-- <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>-->		</hgroup>
-	</header><!-- #branding -->
 
-	<div id="main" class="group">
+		<nav id="access" role="navigation">
+			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'tsep' ); ?></h1>
+			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tsep' ); ?>"><?php _e( 'Skip to content', 'tsep' ); ?></a></div>
+
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #access -->
+	</header><!-- #branding -->
+			
+			
+	<?php if(is_home() ): ?>
+	<div class="hero">
+		<h3>Discover. Learn. Transform. Teach.</h3>
+		<span class="tagline">with teaching resources from DELTS </span>
+	</div>
+	<?php endif; ?>
+
+<div id="main" class="group">

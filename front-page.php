@@ -14,22 +14,18 @@
 
 get_header(); ?>
 
+
 <div id="primary">
 <div id="content" role="main">
 
-<div class="hero">
-	<h3>Discover. Learn. Transform. Teach</h3>
-</div>
 
 <div class="row teaching-with-technology group">
 
-	<div class="block half">
-		
-		<h2>Teaching with Technology Resources</h2>
+	<div class="block two-thirds">
+		<h2 class="blue resources">Teaching with Technology Resources</h2>
 
 		<p>Detailed how-to guides and video tutorials will guide you through the technical side of teaching online.</p>
-		<p>Click a tool below to view the resources →</p>
-
+ 
 
 		<div class="index-tool first">
 			<img src="<?php echo get_template_directory_uri();?>/images/d2l-icon-green.png" alt="">
@@ -40,25 +36,21 @@ get_header(); ?>
 			<img src="<?php echo get_template_directory_uri();?>/images/elive-icon-green.png" alt="">
 			<a href="#"><h2>Elluminate <em>Live!</em></h2>	</a>
 			<h3>Bring your classroom discussions online</h3><span class="soon">soon</span>	
-		</div> 
 	</div> 
+</div> 
 
-		<div class="block half last">
-			<div class="teaching-skills group">
-				<h2>Teaching Skills Enhancement Program</h2>
 
-				<p>Praesent hendrerit sapien et justo porta sed viverra mauris viverra. Nullam id eros diam.</p>
-				<span class="view-more"><a href="#">Explore the course offerings</a> →</span>
-			</div>
-
-			<div class="technology-enabled group">
-				<h2>Technology Enabled Learning</h2>
-
-				<p>Praesent hendrerit sapien et justo porta sed viverra mauris viverra. Nullam id eros diam.</p>
-				<span class="view-more"><a href="#">Explore the course offerings</a> →</span>
-			</div>
-		
-		</div>
+	<div id="sidebar" class="block third last">
+		 <h2>Courses and Programs</h2>
+		 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper ante quis nulla sagittis ut volutpat lectus semper. </p>
+		 <ul>
+		 	<li><a href="#">Technology Enabled Learning</a></li>
+		 	<li><a href="#">Teaching Skills Enhancement</a></li>
+		 	<li><a href="#">Rubrics and you</a></li>
+		 	<li><a href="#">Incorporating chalkboards into the classroom</a></li>
+		</ul>
+	
+	</div>
 
 
 </div> <!-- .row -->

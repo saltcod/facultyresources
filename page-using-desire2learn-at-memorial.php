@@ -18,66 +18,67 @@ get_header(); ?>
 <div id="content" role="main">
  
  
-<div class="row using-d2l group">
-	<h3>Using Desire2Learn at Memorial</h3>
-	<h2>Desire2Learn is Memorial University’s Learning Management System (LMS). </h2>
+ 
+<div class="row using-d2l-hero group">
+
+	<img src="<?php echo get_template_directory_uri();?>/images/d2l-screenshot.png" alt="">
+
+	<h2 class="title">Desire2Learn</h2>
+	<h2>Memorial University’s Learning Management System (LMS).</h2>
+	<h3>Bring your classroom discussions online </h3>
 
 
- 	<div class="block third first-block">
- 		<h3 class="user-type">Distance Instructors</h3>
-		<p>Morbi dapibus est massa. Eendrerit metus pellentesque. Eultrices sed urna.  </p>
-	</div> <!--  [ /block.third ] -->
-  
+ 	
 
-	<div class="block third second-block">
- 		<h3 class="user-type">On-campus Instructors</h3>
-		<p>Nam vitae eros purus, sed eleifend neque. Vivamus tus enim et . Nam sit amet mi non lacus placerat auctor. </p>
-			
-	</div> <!--  [ /block.third ] -->
 
-	<div class="block third third-block last">
- 		<h3 class="user-type">Administrative Staff</h3>
-		<p>Eetus rutrum quis. Nam vitae eros purus, sed eleifend neque. Donec suscipit tellus felis.  Eacerat auctor. </p>
-	</div> <!--  [ /block.third ] -->
 </div> <!-- .row.using-d2l -->
 
 
 <div class="row tools-get-started">
+	<h2>Tools to get you started</h2>  
 
-	<h2> Tools to get you started</h2>
+</div>
 
-	<div class="block half">
+
+<div class="row tools-list group">
+	<div class="block third">
 		<h3 class="task">Content and Organization</h3>
 			<ul>
-				<li><a href="#"><span class="tool">COURSE CONTENT</span></a> to create, upload, review, or update course materials, syllabi, and links to resources</li>
-				<li><a href="#"><span class="tool">CLASSLIST</span></a> is a list of students, instructors, and teaching assistants who can access the course. Desire2Learn and Banner, Memorial University’s registration system, are synchronized several times a day. When students register for a course they are automatically added to the Classlist. Use the Classlist to view course registration, communicate with students, and view student progress.</li>
-				<li><span class="soon">Soon</span><a href="#"><span class="tool">DROPBOX FOLDERS</span></a> where students can submit assignments and you can grade, return, and provide feedback</li>
-				<li><span class="soon">Soon</span><a href="#"><span class="tool">DISCUSSION FORUMS AND GROUPS</span></a> to facilitate class discussions and group work</li>
-				<li><a href="<?php echo home_url(); ?>/guides/the-grades-tool/"><span class="tool">GRADES TOOL</span></a> to enter and release student, calculate final grades, and  transfer final grades to Banner</li>
+				<li><a href="#" class="tool">Course Content</a> to create, upload, review, or update course materials, syllabi, and links to resources</li>
+				<li><a href="#" class="tool">Classlist</a> is a list of students, instructors, and teaching assistants who can access the course. </li>
+				<li><a href="#" class="tool">Dropbox Folders</a><span class="soon">Soon</span>  where students can submit assignments and you can grade, return, and provide feedback</li>
+				<li><a href="#" class="tool">Discussion Forums and Groups</a><span class="soon">Soon</span>  to facilitate class discussions and group work</li>
+				<li><a href="<?php echo home_url(); ?>/guides/the-grades-tool/" class="tool">Grades Tool</a> to enter and release student, calculate final grades, and  transfer final grades to Banner</li>
 				 
 			</ul>
 	</div>
 		
-	<div class="block half last">
+	<div class="block third">
 		<h3 class="task">Communicate with Ease</h3>
-			 
-				 update your <a href="#"><span class="tool">PROFILE</span> </a>
-				 send <a href="#"><span class="tool">ANNOUNCEMENTS</span> </a>
-				 facilitate using <a href="#"><span class="tool">ONLINE ROOMS</span> </a>
-				 communicate using <a href="#"><span class="tool">EMAIL</span> </a>
-
+			 <ul>
+				<li><a href="#" class="tool">Profile</a> Nam venenatis sapien et massa condimentum tincidunt molestie ut odio. </li>
+				<li class="soon"><a href="#" class="tool">Announcements</a> Donec purus nisi, facilisis eget pellentesque in, congue eget risus. Nullam vestibulum, leo eu suscipit fringilla </li>
+				<li><a href="#" class="tool">Online Rooms</a><span class="soon">Soon</span>  facilisis eget pellentesque in, congue eget risus</li>
+				<li><a href="#" class="tool">Email</a><span class="soon">Soon</span>  Nullam vestibulum, leo eu suscipit fringilla discussions and group work</li>
+				 
+			</ul>
+	</div> 
 	 
+
+	<div class="block third last">
 		<h3 class="task">Do other cool stuff</h3>		 
-			set up <a href="#"><span class="tool">SELF-ASSESSMENTS<!--<a-->, </span></a><a href="#"><span class="tool">QUIZZES<!--<a-->, and </span></a><a href="#"><span class="tool">SURVEYS<!--<a-->
-			use the </span></a><a href="#"><span class="tool">CALENDAR<!--<a-->
-			use </span></a><a href="#"><span class="tool">RUBRICS<!--<a-->
-	</span></a></div><a href="#">
-		
-</a></div><a href="#"> <!-- .row.tools-get-started -->
+			<ul>
+				<li><a href="#" class="tool">Self-assessments</a> Nam venenatis sapien et massa condimentum tincidunt molestie ut odio. </li>
+				<li><a href="#" class="tool">Calendar</a> Donec purus nisi, facilisis eget pellentesque in, congue eget risus. Nullam vestibulum, leo eu suscipit fringilla </li>
+				<li><a href="#" class="tool">Rubrics</a><span class="soon">Soon</span>  facilisis eget pellentesque in, congue eget risus</li>
+			</ul>
+	</div> 
+	 
+
+
+</div> <!-- .row.tools-get-started -->
  
-
-</a> 
-
+ 
 
 
 			</div><!-- #content -->

@@ -12,7 +12,7 @@
 
 
 	<?php if (has_term( 'step-by-step', 'guide-type' ) ) : ?>
-		<h3 class="step-by-steps">Step by Steps</h3>
+		<h3 class="step-by-steps"><i class="icon-bookmark-empty"></i> Step by Steps</h3>
 	<?php endif; ?>
 
 	<div class="entry-content">

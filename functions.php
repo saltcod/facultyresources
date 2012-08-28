@@ -36,7 +36,6 @@ function victoria_park_theme_setup(){
 	add_filter('body_class', 'victoria_park_better_body_classes');
 	add_filter('wp_nav_menu', 'victoria_park_add_slug_class_to_menu_item');
 
-
 	//print template file in footer — remove for production. 
 	add_action('wp_footer', 'victoria_park_show_template');
 
@@ -137,10 +136,13 @@ function victoria_park_enqueue_scripts() {
     wp_register_script( 'jquery-ui', get_template_directory_uri() .'/js/jquery-ui-1.8.23.custom.min.js');
     wp_enqueue_script( 'jquery-ui' );
 
+    wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js');
+    wp_enqueue_script( 'jquery-accordion' );
+
+
 } 
 
  
-
  /**
  * Include the page slug in the body class attribute.
  *
@@ -208,6 +210,13 @@ function victoria_park_register_menus(){
 	) );
 	
 }
+
+
+function facultyresources_home_page_menu_args( $args ) {
+	$args['show_home'] = true;
+	return $args;
+}
+add_filter( 'wp_page_menu_args', 'facultyresources_home_page_menu_args' );
 
  
 /**
