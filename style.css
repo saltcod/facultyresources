@@ -1257,10 +1257,10 @@ body.home h3 {
   color: #fff;
 }
 body.home span.tagline {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 16px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   position: absolute;
-  top: 130px;
+  top: 135px;
   right: 63px;
 }
 body.home .index-tool {
