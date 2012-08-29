@@ -768,6 +768,9 @@ ul.icons li .icon-large:before {
   -webkit-opacity: 1;
   opacity: 1;
 }
+body.logged-in #at-home {
+  top: 55px;
+}
 /* =Structure
 -------------------------------------------------------------- */
 body {
