@@ -744,12 +744,46 @@ ul.icons li .icon-large:before {
 .icon-user-md:before {
   content: "\f200";
 }
+#at-home {
+  position: absolute;
+  top: 27px;
+  left: 982px;
+  background: url(images/at-home.png) no-repeat;
+  width: 125px;
+  height: 125px;
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  -webkit-opacity: 0.9;
+  opacity: 0.9;
+}
+#at-home a {
+  color: #fff;
+}
+#at-home a:hover {
+  color: #fddda3;
+}
+#at-home:hover {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+}
 /* =Structure
 -------------------------------------------------------------- */
 body {
   font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
   background: url(images/tile.gif) #f7f7f7 repeat;
+}
+body:before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 100;
+  box-shadow: 0px 0px 210px rgba(0, 0, 0, 0.8);
 }
 #page {
   background: #fff;
@@ -822,7 +856,7 @@ h1.entry-title {
   font-weight: normal;
 }
 .blue {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 /* Alignment */
 .alignleft {
@@ -843,7 +877,7 @@ h1.entry-title {
 -------------------------------------------------------------- */
 #site-title {
   font-size: 24px;
-  font-family: Lato;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 15px 0;
 }
@@ -852,7 +886,7 @@ h1.entry-title {
   color: #5E5C5C;
 }
 #site-title a:hover {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 #site-description {
   font-size: 1em;
@@ -908,7 +942,7 @@ hgroup {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-  border-bottom: 1px solid #017fb0;
+  border-bottom: 1px solid #4c9cc1;
 }
 #access ul ul a:hover {
   background: #cecece;
@@ -918,7 +952,11 @@ hgroup {
 }
 #access li.current-menu-item,
 #access li.current_page_item {
-  border-bottom: 1px solid #017fb0;
+  border-bottom: 1px solid #4c9cc1;
+}
+#access li.current-menu-item a,
+#access li.current_page_item a {
+  color: #4c9cc1;
 }
 /* =Secondary
 -------------------------------------------------------------- */
@@ -928,14 +966,14 @@ hgroup {
   margin-top: 15px;
   padding: 0;
   font-size: 13px;
-  color: #017fb0;
+  color: #4c9cc1;
 }
 #secondary h2 {
   margin-bottom: 0;
   font-size: 14px;
   color: #444;
   width: 100%;
-  background: #017fb0;
+  background: #4c9cc1;
   color: #fff;
   padding: 5px 5px;
   -webkit-border-top-right-radius: 5px;
@@ -985,7 +1023,7 @@ hgroup {
   margin-right: 10px;
 }
 #secondary h3.parent-guide a:hover {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 #secondary ul,
 #secondary ol {
@@ -1006,16 +1044,16 @@ hgroup {
   background: #F7F7F7;
 }
 #secondary li a {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 #secondary li a:hover {
-  color: #015a7d;
+  color: #3880a2;
 }
 #secondary li.current_page_item {
   background: #F7F7F7;
 }
 #secondary li.current_page_item a {
-  color: #014864;
+  color: #32718f;
 }
 #secondary .back {
   float: left;
@@ -1029,7 +1067,7 @@ hgroup {
   color: #444;
 }
 #secondary li.current {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 #secondary #share h2 {
   font-weight: normal;
@@ -1043,7 +1081,7 @@ hgroup {
   color: #444;
 }
 #secondary #share a {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 #secondary #share i {
   margin-right: 10px;
@@ -1107,7 +1145,7 @@ body.step-by-step #secondary {
 /* Accordion for tool landing pages
 -----------------------------------------------------------*/
 .accordion {
-  color: #017fb0;
+  color: #4c9cc1;
   padding: 0;
   list-style-type: none;
   color: white;
@@ -1120,10 +1158,14 @@ body.step-by-step #secondary {
 .accordion li#one a.tool-name {
   font-size: 30px;
   text-decoration: none;
+  font-weight: 300;
+}
+.accordion li#one a.tool-name:hover {
+  color: #CED3D5;
 }
 .accordion li#one .sub-menu {
   margin-top: 25px;
-  font: 18px/32px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/26px "Helvetica Neue", Helvetica, Arial, sans-serif;
   list-style-type: none;
   padding: 10px 0 0 0;
   border-top: 1px solid #fff;
@@ -1137,7 +1179,7 @@ body.step-by-step #secondary {
 }
 .accordion li#two a.faq {
   text-decoration: none;
-  text-transform: uppercase;
+  font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
 }
@@ -1287,13 +1329,13 @@ body.home .index-tool h2:hover {
 }
 body.home .index-tool img {
   float: left;
-  width: 30px;
+  width: 45px;
   margin-right: 25px;
   opacity: .7;
 }
 body.home .index-tool h2 {
   font: 24px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #017fb0;
+  color: #4c9cc1;
   margin-bottom: 10px;
 }
 body.home .index-tool span.soon {
@@ -1302,6 +1344,10 @@ body.home .index-tool span.soon {
 body.home .index-tool.first {
   border-top: 1px solid #aaa;
   padding-top: 25px;
+}
+body.home .block.two-thirds {
+  padding-right: 50px;
+  border-right: 1px solid #ccc;
 }
 body.home #sidebar {
   background: #F1F1EA;
@@ -1328,10 +1374,10 @@ body.home #sidebar ul li {
   font-size: 13px;
 }
 body.home #sidebar ul a {
-  color: #017fb0;
+  color: #4c9cc1;
 }
 body.home #sidebar ul a:hover {
-  color: #014864;
+  color: #32718f;
 }
 /* D2L homepage styles
 -----------------------------------------------------------*/
@@ -1351,35 +1397,35 @@ body.page-using-desire2learn-at-memorial #content {
 .row.tools-get-started h2 {
   font-size: 35px;
   border-bottom: 2px solid #ccc;
-  color: #017fb0;
+  color: #4c9cc1;
   padding-bottom: 40px;
   margin-bottom: 0;
   text-transform: uppercase;
   text-align: center;
 }
 .row.tools-list {
-  background: #e9f9ff;
+  background: #d8eaf2;
   padding: 25px;
 }
 .row.tools-list a {
-  border-bottom: 1px solid #017fb0;
+  border-bottom: 1px solid #4c9cc1;
   color: #444;
   text-decoration: none;
 }
 .row.tools-list h3.task {
   font-weight: normal;
-  color: #017fb0;
+  color: #3880a2;
   font-size: 24px;
   line-height: 28px;
   margin-bottom: 25px;
   margin-top: 25px;
-  border-bottom: 1px solid #7fdbfe;
+  border-bottom: 1px solid #72b1ce;
   padding-bottom: 15px;
   min-height: 75px;
 }
 .row.tools-list .block.third {
   margin-right: 15px;
-  border-right: 1px solid #7fdbfe;
+  border-right: 1px solid #72b1ce;
   padding: 0 35px 0 25px;
   width: 32%;
 }
@@ -1407,7 +1453,7 @@ body.page-using-desire2learn-at-memorial #content {
   border: none;
 }
 .row.tools-list a.tool:hover {
-  color: #016d97;
+  color: #3f8fb5;
 }
 .row.tools-list a span.soon {
   background: #aaa;
@@ -1454,10 +1500,10 @@ body.page-using-desire2learn-at-memorial #content {
 .row.using-d2l-hero h2.title {
   font-size: 36px;
   margin-bottom: 15px;
-  color: #017fb0;
+  color: #4c9cc1;
 }
 .row.using-d2l-hero h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: #777;
   font-weight: 200;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1498,7 +1544,7 @@ body.single-guides h1.entry-title {
   margin-bottom: 35px;
   font-size: 30px;
   line-height: 38px;
-  color: #017fb0;
+  color: #4c9cc1;
 }
 h3.step-by-steps {
   text-transform: uppercase;
@@ -1755,7 +1801,7 @@ article.comment {
 }
 #colophon a {
   color: #8A8585;
-  border-bottom: 1px solid #017fb0;
+  border-bottom: 1px solid #4c9cc1;
   text-decoration: none;
 }
 #colophon a:hover {

@@ -84,4 +84,6 @@
 	</div>
 	<?php endif; ?>
 
+<a href="http://www.delts.mun.ca"><div id="at-home"></div></a>
+
 <div id="main" class="group">
