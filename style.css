@@ -744,33 +744,6 @@ ul.icons li .icon-large:before {
 .icon-user-md:before {
   content: "\f200";
 }
-#at-home {
-  position: absolute;
-  top: 27px;
-  left: 982px;
-  background: url(images/at-home.png) no-repeat;
-  width: 125px;
-  height: 125px;
-  -moz-opacity: 0.9;
-  -khtml-opacity: 0.9;
-  -webkit-opacity: 0.9;
-  opacity: 0.9;
-}
-#at-home a {
-  color: #fff;
-}
-#at-home a:hover {
-  color: #fddda3;
-}
-#at-home:hover {
-  -moz-opacity: 1;
-  -khtml-opacity: 1;
-  -webkit-opacity: 1;
-  opacity: 1;
-}
-body.logged-in #at-home {
-  top: 55px;
-}
 /* =Structure
 -------------------------------------------------------------- */
 body {
@@ -945,17 +918,13 @@ hgroup {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-  border-bottom: 1px solid #4c9cc1;
+  color: #4c9cc1;
 }
 #access ul ul a:hover {
   background: #cecece;
 }
 #access ul li:hover > ul {
   display: block;
-}
-#access li.current-menu-item,
-#access li.current_page_item {
-  border-bottom: 1px solid #4c9cc1;
 }
 #access li.current-menu-item a,
 #access li.current_page_item a {
@@ -1209,11 +1178,17 @@ body.step-by-step #secondary {
 a.tool-name.active i {
   display: none;
 }
+.accordion.is-collapsed li#one {
+  background: #72b7ce;
+}
 .accordion.is-collapsed li#one a.tool-name {
   font-size: 20px;
 }
 .accordion.is-collapsed li#two {
-  background: #72b7ce;
+  background: #4c9cc1;
+}
+.accordion.is-collapsed li#two a.faq {
+  font-size: 25px;
 }
 .accordion.is-collapsed i.faq {
   display: none;
@@ -1289,27 +1264,58 @@ body.home #content {
 body.home .hero {
   background: url('images/hero-ribbon.png') top left no-repeat;
   padding: 25px;
-  margin: -20px 0 0 -66px;
+  margin: -15px 0 0 -66px;
   position: relative;
+}
+body.home .hero #at-home {
+  position: absolute;
+  top: -68px;
+  left: 929px;
+  background: url(images/at-home.png) no-repeat;
+  width: 125px;
+  height: 125px;
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  -webkit-opacity: 0.9;
+  opacity: 0.9;
+}
+body.home .hero #at-home a {
+  color: #fff;
+}
+body.home .hero #at-home a:hover {
+  color: #fddda3;
+}
+body.home .hero #at-home:hover {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+}
+body.home .hero body.logged-in #at-home {
+  top: 55px;
 }
 body.home h2.resources {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 28px;
+  color: #3b86a9;
 }
 body.home h3 {
-  font: 55px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 35px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  padding: 0 0 15px 45px;
-  margin-bottom: 15px;
-  margin-top: 45px;
+  padding: 0 0 0 40px;
+  margin-bottom: 0;
+  padding-top: 20px;
   color: #fff;
 }
 body.home span.tagline {
   font: 300 16px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   position: absolute;
-  top: 135px;
-  right: 63px;
+  top: 50px;
+  right: 33px;
+  width: 224px;
+  border-left: 1px solid #FFFFFF;
+  padding-left: 35px;
 }
 body.home .index-tool {
   border-bottom: 1px solid #ccc;
@@ -1320,9 +1326,13 @@ body.home .index-tool h3 {
   color: #555;
   font-size: 14px;
   border-bottom: none;
-  padding-bottom: 0;
-  margin-left: 12px;
-  margin-top: 15px;
+  padding: 0;
+  margin: 0 0 25px 25px;
+}
+body.home .index-tool h2 {
+  font: 28px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4c9cc1;
+  margin-bottom: 10px;
 }
 body.home .index-tool a {
   text-decoration: none;
@@ -1334,15 +1344,13 @@ body.home .index-tool img {
   float: left;
   width: 45px;
   margin-right: 25px;
+  margin-bottom: 35px;
   opacity: .7;
 }
-body.home .index-tool h2 {
-  font: 24px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #4c9cc1;
-  margin-bottom: 10px;
-}
 body.home .index-tool span.soon {
-  margin-left: 14px;
+  position: absolute;
+  top: 2px;
+  right: 0;
 }
 body.home .index-tool.first {
   border-top: 1px solid #aaa;
@@ -1353,26 +1361,27 @@ body.home .block.two-thirds {
   border-right: 1px solid #ccc;
 }
 body.home #sidebar {
-  background: #F1F1EA;
-  padding: 15px;
+  background: #d1e5ef;
+  padding: 25px 35px;
 }
 body.home #sidebar h2 {
   font-weight: normal;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #4c9cc1;
   padding-bottom: 15px;
   margin-bottom: 15px;
+  color: #3880a2;
 }
 body.home #sidebar p {
-  font-size: 13px;
-  border-bottom: 1px solid #bbb;
+  font-size: 16px;
   padding-bottom: 15px;
+  color: #4c9cc1;
+  border-bottom: 1px solid #4c9cc1;
 }
 body.home #sidebar ul {
   list-style-type: none;
   padding: 0;
 }
 body.home #sidebar ul li {
-  border-bottom: 1px solid #ddd;
   padding: 5px 0;
   font-size: 13px;
 }

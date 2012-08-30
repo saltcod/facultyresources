@@ -27,28 +27,6 @@ Version: 0.1
 /* Font Awesome icon font */
 @import "font-awesome.less";
  
-#at-home {
-	position: absolute;
-	top: 27px;
-	left: 982px;
-	background: url(images/at-home.png) no-repeat;
-	width: 125px;
-	height: 125px;
-	.opacity(.9);
- 		a { 
-			color: #fff; 
-				&:hover {
-					color: lighten(@yellow, 22%);
-				}
-		}
-		&:hover {
-			.opacity(1);
- 		}
- 
-}
-body.logged-in #at-home {
-	top: 55px;
-}
 /* =Structure
 -------------------------------------------------------------- */
 body{
@@ -243,7 +221,7 @@ hgroup {
 		}
 		li:hover > a,
 		ul ul :hover > a {
-		 	border-bottom: 1px solid @blue;
+		 		color: @blue;
 		 }
 		ul ul a:hover {
 			background: #cecece;
@@ -253,8 +231,7 @@ hgroup {
 		}
 		 li.current-menu-item,
 		 li.current_page_item {
-		 	border-bottom: 1px solid @blue;
-		 	a {
+ 		 	a {
 		 		color: @blue;}
 		 }
  }
@@ -480,14 +457,25 @@ body.step-by-step #secondary {
 			}
 		}
 }
+
 /* The plus sign shoud be hidden on the active accordion item */
-a.tool-name.active i { display: none;}
+
+a.tool-name.active i { 
+	display: none;
+}
+
 .accordion.is-collapsed {
-	li#one a.tool-name {
-		font-size: 20px;
+	li#one {
+		background: lighten(spin(@light-blue, -4), 10%);
+		a.tool-name {
+			font-size: 20px;
+		}		
 	}
 	li#two {
-		background: lighten(spin(@light-blue, -4), 10%);
+		background: @light-blue;
+			a.faq {
+				font-size: 25px;
+			}
 	}
 
 	i.faq { display: none;}
@@ -574,47 +562,83 @@ body.home {
 	.hero {
         background: url('images/hero-ribbon.png')  top left no-repeat;
         padding: 25px;
-        margin: -20px 0 0 -66px;
+        margin: -15px 0 0 -66px;
         position: relative;
+
+		#at-home {
+			position: absolute;
+			top: -68px;
+			left: 929px;
+			background: url(images/at-home.png) no-repeat;
+			width: 125px;
+			height: 125px;
+			.opacity(.9);
+		 		a { 
+					color: #fff; 
+						&:hover {
+							color: lighten(@yellow, 22%);
+						}
+				}
+				&:hover {
+					.opacity(1);
+		 		}
+		 
+		}
+		body.logged-in #at-home {
+			top: 55px;
+		}
      }
 
     h2.resources {
     	font-weight: normal;
-    	font-size: 24px;
+    	font-size: 28px;
+    	color: darken(@blue, 8%);
     }
 
     h3 {
-        font: 55px Lato, @helvetica;
+        font: 35px Lato, @helvetica;
         font-weight: 100;
-        padding: 0 0 15px 45px;
-        margin-bottom: 15px;
-        margin-top: 45px;
+        padding: 0 0 0 40px;
+        margin-bottom: 0;
+        padding-top: 20px;
         color: #fff;
     }
     span.tagline {
-    	font: 300 16px Lato, @helvetica;
-    	color: #fff;
-    	position: absolute;
-    	top: 135px;
-    	right: 63px;
-
-    }
+		font: 300 16px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #fff;
+		position: absolute;
+		top: 50px;
+		right: 33px;
+		width: 224px;
+		border-left: 1px solid #FFFFFF;
+		padding-left: 35px;
+	}
     
     .index-tool {
         border-bottom: 1px solid #ccc;
         margin-bottom: 25px;
         position: relative;
+
         h3 {
             color: #555;
             font-size: 14px;
             border-bottom: none;
-            padding-bottom: 0;
-            margin-left: 12px;
-            margin-top: 15px;
+            padding: 0;
+            margin: 0 0 25px 25px;
         }
+
+ 		h2 {
+            font: 28px Lato, @helvetica;
+            color: @blue;
+            margin-bottom: 10px;
+        }
+
         a {
             text-decoration: none;
         }
+
+
+
         h2:hover {
             color: @light-blue;
         }
@@ -622,15 +646,14 @@ body.home {
             float: left;
             width: 45px;
             margin-right: 25px;
+            margin-bottom: 35px;
             opacity: .7;
         }
-        h2 {
-            font: 24px Lato, @helvetica;
-            color: @blue;
-            margin-bottom: 10px;
-        }
+        
         span.soon {
-         	 margin-left: 14px;
+         	 position: absolute;
+         	 top: 2px;
+         	 right: 0;
         	 
         }
     }
@@ -645,25 +668,26 @@ body.home {
 }
 
     #sidebar {
-    	background: #F1F1EA;
-    	padding: 15px;
+    	background: lighten(@blue, 35%);
+    	padding: 25px 35px;
     		h2 {
     			font-weight: normal;
-    			border-bottom: 1px solid #bbb;
+    			border-bottom: 1px solid @blue;
     			padding-bottom: 15px;
     			margin-bottom: 15px;
+    			color: darken(@blue, 10%);
     		}
 
     		p { 
-    			font-size: 13px;
-    			border-bottom: 1px solid #bbb;
-    			padding-bottom: 15px;
+    			font-size: 16px;
+     			padding-bottom: 15px;
+    			color: @blue;
+    			border-bottom: 1px solid @blue;
     		}
     		ul {
     			list-style-type: none;
     			padding: 0;	
     				li {
-    					border-bottom: 1px solid #ddd;
     					padding: 5px 0;
     					font-size: 13px;
     				} 
