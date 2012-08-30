@@ -80,10 +80,11 @@
 	<?php if(is_home() ): ?>
 	<div class="hero">
 		<h3>Discover. Learn. Transform. Teach.</h3>
-		<span class="tagline">with teaching resources from DELTS </span>
+		<span class="tagline">teaching with technology resources from DELTS </span>
+
+		<a href="http://www.delts.mun.ca"><div id="at-home"></div></a>
 	</div>
 	<?php endif; ?>
 
-<a href="http://www.delts.mun.ca"><div id="at-home"></div></a>
 
 <div id="main" class="group">
