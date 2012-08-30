@@ -878,6 +878,7 @@ hgroup {
 -------------------------------------------------------------- */
 #access {
   float: left;
+  position: relative;
 }
 #access ul {
   list-style: none;
@@ -929,6 +930,30 @@ hgroup {
 #access li.current-menu-item a,
 #access li.current_page_item a {
   color: #4c9cc1;
+}
+#access #at-home {
+  position: absolute;
+  top: -49px;
+  left: 291px;
+  background: url(images/at-home.png) no-repeat;
+  width: 125px;
+  height: 125px;
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  -webkit-opacity: 0.9;
+  opacity: 0.9;
+}
+#access #at-home a {
+  color: #fff;
+}
+#access #at-home a:hover {
+  color: #fddda3;
+}
+#access #at-home:hover {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
 }
 /* =Secondary
 -------------------------------------------------------------- */
@@ -1266,30 +1291,6 @@ body.home .hero {
   padding: 25px;
   margin: -15px 0 0 -66px;
   position: relative;
-}
-body.home .hero #at-home {
-  position: absolute;
-  top: -68px;
-  left: 929px;
-  background: url(images/at-home.png) no-repeat;
-  width: 125px;
-  height: 125px;
-  -moz-opacity: 0.9;
-  -khtml-opacity: 0.9;
-  -webkit-opacity: 0.9;
-  opacity: 0.9;
-}
-body.home .hero #at-home a {
-  color: #fff;
-}
-body.home .hero #at-home a:hover {
-  color: #fddda3;
-}
-body.home .hero #at-home:hover {
-  -moz-opacity: 1;
-  -khtml-opacity: 1;
-  -webkit-opacity: 1;
-  opacity: 1;
 }
 body.home .hero body.logged-in #at-home {
   top: 55px;

@@ -182,6 +182,7 @@ hgroup {
 
 #access {
 	float: left;
+	position: relative;
 		ul {
 			list-style: none;
 			margin: 0;
@@ -234,6 +235,25 @@ hgroup {
  		 	a {
 		 		color: @blue;}
 		 }
+		 #at-home {
+			position: absolute;
+			top: -49px;
+			left: 291px;
+			background: url(images/at-home.png) no-repeat;
+			width: 125px;
+			height: 125px;
+			.opacity(.9);
+		 		a { 
+					color: #fff; 
+						&:hover {
+							color: lighten(@yellow, 22%);
+						}
+				}
+				&:hover {
+					.opacity(1);
+		 		}
+		 
+		}
  }
 
  
@@ -565,25 +585,7 @@ body.home {
         margin: -15px 0 0 -66px;
         position: relative;
 
-		#at-home {
-			position: absolute;
-			top: -68px;
-			left: 929px;
-			background: url(images/at-home.png) no-repeat;
-			width: 125px;
-			height: 125px;
-			.opacity(.9);
-		 		a { 
-					color: #fff; 
-						&:hover {
-							color: lighten(@yellow, 22%);
-						}
-				}
-				&:hover {
-					.opacity(1);
-		 		}
-		 
-		}
+		
 		body.logged-in #at-home {
 			top: 55px;
 		}

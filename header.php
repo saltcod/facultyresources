@@ -73,6 +73,8 @@
 			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tsep' ); ?>"><?php _e( 'Skip to content', 'tsep' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			
+			<a href="http://www.delts.mun.ca"><div id="at-home"></div></a>
 		</nav><!-- #access -->
 	</header><!-- #branding -->
 			
@@ -82,7 +84,6 @@
 		<h3>Discover. Learn. Transform. Teach.</h3>
 		<span class="tagline">teaching with technology resources from DELTS </span>
 
-		<a href="http://www.delts.mun.ca"><div id="at-home"></div></a>
 	</div>
 	<?php endif; ?>
 
