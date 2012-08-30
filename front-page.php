@@ -35,7 +35,7 @@ get_header(); ?>
 		<div class="index-tool">
 			<img src="<?php echo get_template_directory_uri();?>/images/elive-icon-green.png" alt="">
 			<a href="#"><h2>Elluminate <em>Live!</em></h2>	</a>
-			<h3>Bring your classroom discussions online</h3><span class="soon">soon</span>	
+			<h3>Bring your classroom discussions online</h3><span class="soon">Coming soon</span>	
 	</div> 
 </div> 
 
