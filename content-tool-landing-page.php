@@ -14,7 +14,7 @@
 <ul class="accordion">
  
     <li id="one">
-        <a href="#one" class="tool-name">The Grades Tool <i class="icon-plus tool-name"></i></a>
+        <a href="#one" class="tool-name"><?php the_title();?> <i class="icon-plus tool-name"></i></a>
         <ul class="sub-menu">
             <li><?php the_field('tool_intro');?></li>
         </ul>
