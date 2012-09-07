@@ -1,8 +1,12 @@
 jQuery(function($){
 
- 
+ //Fade some stuff in on page load
+ $(document).ready(function(){
+    $('img').fadeIn();
+ });
 
- // jQuery Accordion for tool landing pages
+
+  // jQuery Accordion for tool landing pages
   // Store variables
  
         var accordion_head = $('.accordion > li > a'),

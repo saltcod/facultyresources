@@ -11,8 +11,6 @@
 
 
 
-	 	<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
-
 		<?php
 			if (!$post->post_parent):
 				// will get the subpages of this top level page
@@ -38,6 +36,7 @@
 		?>
   
 
+ 	 		<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
 
 	  		<nav id="menu-context">
 				<ul class="menu">
@@ -48,7 +47,7 @@
  		<?php endif;?>
 
  		<?php if( has_term('step-by-step', 'guide-type') ) : ?>
-	 		<h3 class="parent-guide"><i class="icon-chevron-left"></i><a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo get_the_title($post->post_parent); ?> </a></h3>
+	 		<h3 class="parent-guide"><i class="icon-chevron-left"></i><a href="<?php echo get_permalink( $post->post_parent ); ?>">Back to <?php echo get_the_title($post->post_parent); ?> </a></h3>
 	 	<?php endif; ?>
 
  		
