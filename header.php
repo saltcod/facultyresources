@@ -74,7 +74,7 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			
-			<a href="http://www.delts.mun.ca"><div id="at-home"></div></a>
+			<a href="http://online.mun.ca"><div id="at-home"></div></a>
 		</nav><!-- #access -->
 	</header><!-- #branding -->
 			

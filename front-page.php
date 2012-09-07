@@ -42,7 +42,6 @@ get_header(); ?>
 
 	<div id="sidebar" class="block third last">
 		 <h2>Courses and Programs</h2>
-		 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper ante quis nulla sagittis ut volutpat lectus semper. </p>
 		 <ul>
 		 	<li><a href="#">Technology Enabled Learning</a></li>
 		 	<li><a href="#">Teaching Skills Enhancement</a></li>
