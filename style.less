@@ -2,13 +2,15 @@
 Theme Name: Faculty Resources
 Author: Terry Sutton
 Author URI: http://waterstreetgm.org/
-Description: A reworking of the victoria_park theme.
+Description: Theme for the new Technology Resources site  
 Version: 0.1
 
 */
 
-
-
+/* Some nice fadeIn action */
+img {
+	display: none;
+}
 
 @import "elements.less";
 @import "normalize.css";
@@ -21,7 +23,7 @@ Version: 0.1
 
 @helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-* { box-sizing: border-box }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
 /* Font Awesome icon font */
@@ -74,7 +76,6 @@ body.home header#branding {
  }
 
 article{
-	border-bottom: 1px solid;
 	margin-bottom: 25px;
 }
 
@@ -111,6 +112,9 @@ strong{
 
 p {
 	margin: 0 0 1em;
+		&.center {
+			text-align: center;
+		}
 }
 
 
@@ -147,8 +151,11 @@ h1.entry-title{
 	margin-right: auto;
 }
 
+ul, ol { padding: 0; list-style: none; }
 
-/* =Header
+article { ul, ol { padding: 0 0 0 40px; }}
+
+ /* =Header
 -------------------------------------------------------------- */
 
 #site-title {
@@ -240,8 +247,8 @@ hgroup {
 			top: -49px;
 			left: 291px;
 			background: url(images/at-home.png) no-repeat;
-			width: 125px;
-			height: 125px;
+			width: 66px;
+			height: 78px;
 			.opacity(.9);
 		 		a { 
 					color: #fff; 
@@ -290,7 +297,7 @@ hgroup {
 				.border-radius(0, 5px, 5px, 0);
 				padding: 2px 5px;
 				margin-top:0;
-				background: #efefef;
+				background: lighten(@blue, 40%);
 					i { margin-right: 10px;}
 					a:hover {
 						color: @blue;
@@ -377,7 +384,7 @@ body.step-by-step #secondary {
 -------------------------------------------------------------- */
 
 .sticky { }
-
+.entry-content ol { list-style-type: decimal;  }
 .entry-meta {
 	clear: both;
 	display: block;
@@ -437,7 +444,7 @@ body.step-by-step #secondary {
 				font-size: 30px;
 				text-decoration: none;
 				font-weight: 300;
-					&:hover { color: #CED3D5; }
+					&:hover { color: #A3D2E6; }
 			}
 			.sub-menu {
 				margin-top: 25px;
@@ -619,7 +626,20 @@ body.home {
     .index-tool {
         border-bottom: 1px solid #ccc;
         margin-bottom: 25px;
-        position: relative;
+        position: relative;  
+        	&:hover {  
+        		h2 { 
+        			color: darken(@blue, 10%);
+        			.transition-duration(.5s);
+
+        		}
+
+        		img { 
+        			.opacity(.8);  
+        			.rounded(25px); 
+        			.box-shadow(0 5px 5px #999); 
+         		}
+        	}
 
         h3 {
             color: #555;
@@ -633,17 +653,13 @@ body.home {
             font: 28px Lato, @helvetica;
             color: @blue;
             margin-bottom: 10px;
+
         }
 
         a {
             text-decoration: none;
         }
 
-
-
-        h2:hover {
-            color: @light-blue;
-        }
         img {
             float: left;
             width: 45px;
@@ -670,7 +686,7 @@ body.home {
 }
 
     #sidebar {
-    	background: lighten(@blue, 35%);
+    	background: lighten(@blue, 40%);
     	padding: 25px 35px;
     		h2 {
     			font-weight: normal;
@@ -706,8 +722,131 @@ body.home {
 
 
 
-/* D2L homepage styles
+/* D2L alternative
 -----------------------------------------------------------*/
+
+body.page-d2l-alternative {	
+	#primary {
+		width: auto;
+		padding: 0;
+	}
+	#content {
+		border: none;
+		padding: 0;
+		color: white;
+	}
+	.row {
+		margin: 0;
+		padding: 50px 0 75px;
+	}
+	.row.tools-get-started {
+		padding: 30px 0 10px;
+		margin-bottom: 50px;
+	}
+
+	.row.first-steps {
+		background: @blue;
+	}
+
+	.row.second-steps {
+		background: lighten(@blue, 10%);
+	}
+	
+	.row.third-steps {
+		background: lighten(@blue, 17%);
+	}
+
+	.row.forth-steps {
+		.gradient(#F5F5F5, lighten(@blue, 15%), @blue);
+	}
+
+	h2.section-title {
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 300;
+		float: left;
+		width: 225px;
+ 		margin-left: 25px;
+ 		border-bottom: 3px solid #fff;
+ 		padding-bottom: 25px;
+	}
+
+	i {
+		float: left;
+		font-size: 135px;
+		clear: left;
+		.opacity(.2);
+		padding: 25px;
+	}
+
+	.section-title {
+	}
+	.section-descriptions {
+		margin-left: 25px;
+			h2 {
+				font-weight: 300;
+				font-size: 24px;
+				line-height: 28px;
+			}
+			i {
+				font-size: 18px;
+				line-height: 18px;
+				padding: 5px 0 0;
+				margin-right: 15px;
+				.opacity(.8);
+			}
+
+			a {
+				color: #fff;
+				border-bottom: 1px dotted;
+					&:hover {
+						 border-bottom: 1px solid;
+					}
+			}
+			button {
+				margin: 45px 0 0 165px;
+				a {
+					color: darken(@blue, 5%);
+					border: none;
+				}
+			}
+
+			ul.tools li {
+				float: left;
+				list-style-type: none;
+ 				border-bottom: 1px solid lighten(@blue, 25%);
+				padding: 25px;
+				min-height: 60px;
+				width: 100%;
+					&:hover { 
+						background: lighten(@blue, 5%); 
+							a { border-bottom: 1px solid; }
+					}
+					
+
+					i { 
+						font-size: 40px;
+						background: darken(@blue, 5%);
+						padding: 25px 50px 25px 19px;
+						border: 5px solid darken(@blue, 15%);
+						.rounded(60px);
+						margin-right: 35px;
+ 
+					}
+					a { 
+						font-weight: bold;
+						padding-bottom: 5px;
+							&:hover { color: lighten(@blue, 30%); } 
+					}
+					p { margin-top: 20px;}
+			}
+
+	}
+
+}
+
+ 
+
 
 /* D2L homepage styles
 -----------------------------------------------------------*/
@@ -725,7 +864,7 @@ body.page-using-desire2learn-at-memorial {
 }
 
 .row.tools-get-started {
-	padding: 10px 0;
+	padding: 30px 0 10px;
 	h2 {
         font-size: 35px;
         border-bottom: 2px solid #ccc;
@@ -766,9 +905,11 @@ body.page-using-desire2learn-at-memorial {
 	        	margin-right: 0;
 	        	border: none;
 	        	}
-	    ul {
+	    ul.tools {
 	    	padding: 0;
 	    	list-style-type: none;
+	    		a { font-weight: bold; background: green;}
+	    		 
 	    }
 	    li {
 	        margin-bottom: 25px;
@@ -928,16 +1069,15 @@ button {
 	white-space: nowrap;
 	text-align: center;
 	margin: 0;
-	-webkit-border-radius: 3px;
-	-webkit-background-clip: padding-box;
-	-webkit-box-sizing: border-box;
+	.rounded(3px);
 	color: #505c77;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
 	border: solid 1px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fdfefe), to(#f0f1f2));
-	-webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0, 0, 0, .05);
-	box-sizing: border-box;
-	border-color: #ccc #c0c1c2 #bdbec0;
+	.gradient(#F5F5F5, #f0f1f2, #fdfefe);
+ 	border-color: #ccc #c0c1c2 #bdbec0;
+		&:hover {
+			.gradient(#F5F5F5, #ccc, #FFF);
+		}
 }
 
 button.blue {
