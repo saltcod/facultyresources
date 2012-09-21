@@ -10,7 +10,6 @@
 <div id="secondary" class="widget-area group" role="complementary">
 
 
-
 		<?php
 			if (!$post->post_parent):
 				// will get the subpages of this top level page
@@ -36,29 +35,60 @@
 		?>
   
 
- 	 		<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
+ 		<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
 
-	  		<nav id="menu-context">
-				<ul class="menu">
-					<?php echo $children; ?>
-				</ul>
-			</nav>
+		<nav id="menu-context">
+			<ul class="menu">
+				<?php echo $children; ?>
+			</ul>
+		</nav>
 
  		<?php endif;?>
+ 
 
- 		<?php if( has_term('step-by-step', 'guide-type') ) : ?>
-	 		<h3 class="parent-guide"><i class="icon-chevron-left"></i><a href="<?php echo get_permalink( $post->post_parent ); ?>">Back to <?php echo get_the_title($post->post_parent); ?> </a></h3>
-	 	<?php endif; ?>
 
- 		
+ 		<?php // Show a few things on the blog pages ?>
+
+		<?php  //Quizzically, is_home detects the posts page
+		if( is_home() || is_single() && !has_term('step-by-step', 'guide-type') && !has_term('tool-landing-page', 'guide-type') || is_archive() ): ?> 
+			
+			<a href="<?php echo home_url();?>/blog"><h2 class="blog"><i class="icon-rss"></i> Blog</h2></a>
+			<p>Thanks for stopping by at the new Technology Resources website</p>
+			
+			<h3>Tags</h3>			
+				<?php
+					$tags = get_tags();
+					$html = '<div class="post-tags"><ul>';
+					foreach ($tags as $tag){
+						$tag_link = get_tag_link($tag->term_id);
+								
+						$html .= "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+						$html .= "{$tag->name}</a>";
+						$html .= "<span>{$tag->count}</span></li>";
+					}
+					$html .= '</ul></div>';
+					echo $html;
+				?>
+
+
+
+
+			<h3> Archives</h3>
+			<div class="monthly-archives"><?php wp_get_archives('type=monthly&limit=12'); ?></div>
+		<?php endif; ?>
+
+
+
+
  		<div id="share">
  			<h2>Share</h2>
- 			<i class="icon-share"></i> <a href="#">Email to a friend</a> <br>
- 			<i class="icon-twitter"></i> <a href="#">Post to Twitter</a>
- 			
+ 			<i class="icon-share"> </i><?php echo direct_email();?>
+ 
+
  			<?php if( has_term('step-by-step', 'guide-type') ) : ?>
 	 			<div class="print">
-	 				<i class="icon-print"></i> <a href="#">Print this guide</a>
+	 				<i class="icon-print"></i> <a href="javascript:window.print()">Print this guide</a>
+
 	 			</div>
 	 		<?php endif; ?>
 

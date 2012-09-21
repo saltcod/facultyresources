@@ -20,7 +20,11 @@ get_sidebar(); ?>
 					
 	 				<?php get_template_part( 'content', 'tool-landing-page' ); ?>
 
-				<?php else : ?>
+				<?php elseif (has_term( 'step-by-step', 'guide-type' ) ) : ?>
+					
+					<?php get_template_part( 'content', 'step-by-step' ); ?>
+
+				<?php else: ?>
 					
 					<?php get_template_part( 'content', 'single' ); ?>
 

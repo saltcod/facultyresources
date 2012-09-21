@@ -29,10 +29,10 @@ get_header(); ?>
 
 		<div class="index-tool first">
 			<img src="<?php echo get_template_directory_uri();?>/images/d2l-icon-green.png" alt="">
-			<a href="<?php echo home_url(); ?>/using-desire2learn-at-memorial"><h2>Desire2Learn </h2></a>
+			<a href="<?php echo home_url(); ?>/using-d2l"><h2>Desire2Learn </h2></a>
 		 	<h3>Memorial's Learning Management System (LMS)</h3></div>	
 
-		<div class="index-tool">
+		<div class="index-tool last">
 			<img src="<?php echo get_template_directory_uri();?>/images/elive-icon-green.png" alt="">
 			<a href="#"><h2>Elluminate <em>Live!</em></h2>	</a>
 			<h3>Bring your classroom discussions online</h3><span class="soon">Coming soon</span>	
@@ -40,17 +40,26 @@ get_header(); ?>
 </div> 
 
 
-	<div id="sidebar" class="block third last">
-		 <h2>Courses and Programs</h2>
-		 <ul>
-		 	<li><a href="#">Technology Enabled Learning</a></li>
-		 	<li><a href="#">Teaching Skills Enhancement</a></li>
-		 	<li><a href="#">Rubrics and you</a></li>
-		 	<li><a href="#">Incorporating chalkboards into the classroom</a></li>
-		</ul>
-	
-	</div>
+	<div id="sidebar" class="block third">
+		
+		<div class="courses-programs">
+			 <h2>Courses and Programs</h2>
+			 <ul>
+			 	<li><a href="#">Technology Enabled Learning</a></li>
+			 	<li><a href="#">Teaching Skills Enhancement</a></li>
+	 		</ul>
+		</div>
 
+		<div class="short-courses">
+			<h2>Short Courses</h2>
+			 <ul>
+			 	<li><a href="http://media.distance.mun.ca/courses/rubrics/" target="_blank">Rubrics</a></li>
+			 	<li><a href="http://media.distance.mun.ca/courses/creativecommons/" target="_blank">Creative Commons</a></li>
+	 		</ul>
+		</div>
+
+	</div>
+	
 
 </div> <!-- .row -->
 

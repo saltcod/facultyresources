@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<?php get_sidebar(); ?>
 
 		<section id="primary">
 			<div id="content" role="main">
@@ -16,7 +17,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Tag Archives: %s', 'victoria_park' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+						printf( __( 'Tag: %s', 'victoria_park' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 					?></h1>
 
 					<?php
@@ -63,5 +64,4 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

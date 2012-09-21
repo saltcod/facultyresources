@@ -6,13 +6,21 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<div class="breadcrumb">
+		<?php if( has_term('step-by-step', 'guide-type') ) : ?>
+		 		<span class="parent-guide"> <a href="<?php echo home_url();?>/using-d2l">Desire2Learn</a> / <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo get_the_title($post->post_parent); ?> </a></span>
+		 	<?php endif; ?>
+	</div>
+
+
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
 
 	<?php if (has_term( 'step-by-step', 'guide-type' ) ) : ?>
-		<h3 class="step-by-steps"><i class="icon-bookmark-empty"></i> Step by Steps</h3>
+		<h3 class="step-by-steps"><i class="icon-bookmark-empty"></i> Step by Step</h3>
 	<?php endif; ?>
 
 	<div class="entry-content">
@@ -28,32 +36,15 @@
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', ', ' );
 
-			if ( ! victoria_park_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'victoria_park' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'victoria_park' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'victoria_park' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'victoria_park' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
 		?>
+
+				<?php
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() )
+						comments_template(  );
+				?>
+
+
 
 		<?php edit_post_link( __( 'Edit', 'victoria_park' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->

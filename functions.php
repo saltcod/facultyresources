@@ -25,6 +25,10 @@ function victoria_park_theme_setup(){
 	//add custom scripts
 	add_action('wp_enqueue_scripts', 'victoria_park_enqueue_scripts');
 
+	//Register taxonomies
+	add_action( 'init', 'register_guide_type_taxonomy' );
+
+
 	//add custom widgets/sidebars
 	add_action('init', 'victoria_park_widgets_init');
 
@@ -39,12 +43,12 @@ function victoria_park_theme_setup(){
 	//print template file in footer — remove for production. 
 	add_action('wp_footer', 'victoria_park_show_template');
 
+	// Make the HTML editor the default when creating content
+	add_filter( 'wp_default_editor', create_function('', 'return "html";') );
+
+	 
 }
 
-
-
-
- 
 /* Register the 'Guides' post type */
 
 register_post_type(
@@ -61,7 +65,7 @@ register_post_type(
 		'hierarchical' => true,
 		'rewrite' => array('slug' => ''),
 		'query_var' => true,
-		'supports' => array('title','editor','custom-fields','thumbnail','page-attributes',),
+		'supports' => array('title','editor','custom-fields','thumbnail','page-attributes', 'revisions'),
 		'labels' => array (
 		  'name' => 'Guides',
 		  'singular_name' => 'Guide',
@@ -86,7 +90,7 @@ register_post_type(
 
 //Register a taxonomy for specific tools (D2L, Elive)
 
-function tool_init() {
+function register_guide_type_taxonomy() {
 	// create a new taxonomy
 	register_taxonomy(
 		'guide-type',
@@ -100,13 +104,12 @@ function tool_init() {
 		)
 	);
 }
-add_action( 'init', 'tool_init' );
 
 
 
  
 /**
- * wp_list_pages() outputs a menu nicely, but doesn't include teh handy classes like current_page_item for styling
+ * wp_list_pages() outputs a menu nicely, but doesn't include the handy classes like current_page_item for styling
  *
  * @since 0.1
  */
@@ -138,8 +141,6 @@ function victoria_park_enqueue_scripts() {
 
     wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js');
     wp_enqueue_script( 'jquery-accordion' );
-
-
 } 
 
  
@@ -171,9 +172,11 @@ function victoria_park_better_body_classes( $classes ){
  */
 
 function victoria_park_show_template() {
-	global $template;
-	echo '<strong>Template file:</strong>';
-	 print_r($template);
+	if ( is_super_admin() ){
+		global $template;
+		echo '<strong>Template file:</strong>';
+	 	print_r($template);
+	 }
 }
  
 
@@ -326,4 +329,12 @@ function victoria_park_categorized_blog() {
 	}
 }
 
- 
+
+function direct_email($text="Send by email"){
+	global $post;
+	$title = htmlspecialchars($post->post_title);
+	$subject = htmlspecialchars(get_bloginfo('name')) . ' from DELTS'.' : '.$title;
+	$body = 'Hi! I saw this step by step guide and thought you might like to have a look: '.$title.'. You can read it on : '.get_permalink($post->ID);
+	$link = '<a rel="nofollow" href="mailto:?subject='.rawurlencode($subject).'&amp;body='.rawurlencode($body).'" title="'.$text.' : '.$title.'">'.$text.'</a>';
+	return $link;
+	}

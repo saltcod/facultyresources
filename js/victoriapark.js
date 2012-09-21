@@ -1,11 +1,11 @@
 jQuery(function($){
 
  //Fade some stuff in on page load
- $(document).ready(function(){
-    $('img').fadeIn();
+ $(function(){
+    $('img').animate({ opacity: 1 }, 200);
  });
-
-
+   
+ 
   // jQuery Accordion for tool landing pages
   // Store variables
  
