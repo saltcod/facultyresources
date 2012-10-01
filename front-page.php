@@ -21,6 +21,7 @@ get_header(); ?>
 
 <div class="row teaching-with-technology group">
 
+
 	<div class="block two-thirds">
 		<h2 class="blue resources">Teaching with Technology Resources</h2>
 
@@ -28,7 +29,7 @@ get_header(); ?>
  
 
 		<div class="index-tool first">
-			<img src="<?php echo get_template_directory_uri();?>/images/d2l-icon-green.png" alt="">
+			<img class="cloud" src="<?php echo get_template_directory_uri();?>/images/d2l-icon-green.png" alt="">
 			<a href="<?php echo home_url(); ?>/using-d2l"><h2>Desire2Learn </h2></a>
 		 	<h3>Memorial's Learning Management System (LMS)</h3></div>	
 
@@ -38,16 +39,16 @@ get_header(); ?>
 			<h3>Bring your classroom discussions online</h3><span class="soon">Coming soon</span>	
 	</div> 
 </div> 
-
+ 
 
 	<div id="sidebar" class="block third">
 		
 		<div class="courses-programs">
 			 <h2>Courses and Programs</h2>
 			 <ul>
-			 	<li><a href="#">Technology Enabled Learning</a></li>
-			 	<li><a href="#">Teaching Skills Enhancement</a></li>
-	 		</ul>
+			 	<li><a href="<?php echo home_url();?>/technology-enabled-learning/">Technology Enabled Learning</a></li>
+ 			 	<li><a href="http://blog.distance.mun.ca/teachingandlearning/">Teaching Skills Enhancement</a></li>
+ 	 		</ul>
 		</div>
 
 		<div class="short-courses">

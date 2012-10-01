@@ -18,10 +18,11 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-
+ 
 	<?php if (has_term( 'step-by-step', 'guide-type' ) ) : ?>
 		<h3 class="step-by-steps"><i class="icon-bookmark-empty"></i> Step by Step</h3>
 	<?php endif; ?>
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>

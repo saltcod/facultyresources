@@ -135,12 +135,39 @@ h1.entry-title{
 	border-bottom: 1px solid; 
 	padding-bottom: 10px;
 }
+#content h2 {
+	font-size: 24px;
+	font-weight: 500;
+ 	padding-bottom: 10px;
+}
+
+#content h2.blue {
+ 	padding: 0 0 4px;
+	color: @red;
+	.inline {
+		background: @red;
+		color: white;
+		padding: 0 10px;
+		text-transform: uppercase;
+		margin-right: 10px;
+
+	}
+}
+
+#content h3 {
+	font-size: 18px;
+}
+#content p img {
+	margin-bottom: 35px;
+}
+
 
 #content h1.entry-title { color: @blue; }
 
  .blue {
 	color: @blue;
  }
+
 
 /* Alignment */
 .alignleft {
@@ -167,8 +194,9 @@ ul, ol {
 
 .entry-content ul { list-style-type: disc; }
 
-article { ul, ol { padding: 0 0 0 40px; }}
+article .entry-content { ul, ol { padding: 0 0 0 40px; }}
 
+ 
  /* =Header
 -------------------------------------------------------------- */
 
@@ -310,18 +338,20 @@ hgroup {
 		}
 		li {
   		  border: 1px solid #E5E5E5;
-  		  padding: 10px 5px;
 		  line-height: 18px;
 		  margin: 0 0 -1px;
   		  background-size: 12px;
  		  	&:hover {
 		  		background: #F7F7F7;
+		  		.transition(.2s,ease-out);
 		  	}
 
 		  	a {
 		  		color: @blue;
+		  		padding: 10px 5px;
+		  		display: block;
 				  	&:hover {
-				  		color: darken(@blue, 10%);
+				  		color: darken(@blue, 15%);
 				  	}
 		  	}
 
@@ -444,7 +474,9 @@ body.step-by-step #secondary {
 				font-size: 30px;
 				text-decoration: none;
 				font-weight: 300;
-					&:hover { color: #A3D2E6; }
+					&:hover { 
+						color: lighten(@blue,40%); 
+					}
 			}
 			.sub-menu {
 				margin-top: 25px;
@@ -458,17 +490,27 @@ body.step-by-step #secondary {
 		li#two {
 		  background: lighten(spin(@light-blue, -4), 5%);
 		  padding: 25px;
+
 		  	&:hover {
 		  		background: lighten(spin(@light-blue, -4), 10%);
 		  	}
+
+		  	h2 { 
+		  		font-size: 16px;
+		  		font-weight: bold;
+		  		margin: 25px 0 5px;
+		  		font-family: @helvetica;
+		  	}
+
+
 		  	a.faq {
 			  text-decoration: none;
 			  font-size: 16px;
 			  font-family: @helvetica;
 			  cursor: pointer;
 			  	&:hover {
-			  		text-decoration: underline;
-			  	}
+			  		color: lighten(@blue,35%);
+ 			  	}
 			  	i { text-decoration: none;  }
 			}
 			.sub-menu {
@@ -476,9 +518,11 @@ body.step-by-step #secondary {
 	 			list-style-type: none;
 			  	padding: 10px 0 0 0;
 			  	border-top: 1px solid #fff;
+			  		ul { padding-left: 0; }
 	 				h3 {
 	 					font-weight: bold;
 						margin: 25px 0 10px;
+						font-family: @helvetica;
 					}
 					a { border-bottom: 1px dotted #fff;}
 			}
@@ -607,6 +651,7 @@ body.home {
     	font-weight: 600;
     	font-size: 24px;
     	color: darken(@blue, 5%);
+    		&.blue {border: none;}
     }
 
     h3 {
@@ -732,8 +777,7 @@ body.blog, body.single, body.archive {
 	article { margin-bottom: 50px; }
 	#content h1.entry-title {
 		color: @blue;
-		margin-bottom: 15px;
-		border-bottom: 1px solid;
+		margin: 15px 0 35px 0;
 		padding-bottom: 10px;
 			a{ color: @blue;}
 	}
@@ -846,6 +890,286 @@ body.page-using-d2l {
  		color: #444;
  		display: inline-block;
  		vertical-align: top;
+ 		border-bottom: 1px solid @red;
+	 		&.left {
+	        		font-size: 30px;
+	        		text-align: left;
+	        		border-bottom: 1px solid @red;
+ 	        	}
+	        &.center { text-align: center; display: inline-block; }
+	}
+
+	.left-side { 
+		width: 360px; 
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 50px 0 0;
+ 		vertical-align: top;
+			p { font-size: 18px; line-height: 30px;}
+			a { border-bottom: 1px solid @red; &:hover { background: #eee; }}
+	}
+
+	.right-side {
+		display: inline-block;
+ 		width: 360px;
+ 			&.blank { 
+				background: none; 
+				width: 300px;
+					p{font-size: 16px;  }
+			}
+			.tool {
+				display: inline-block;
+				padding: 30px 25px 40px;
+				width: 160px;
+				text-align: center;
+				margin-bottom: 25px;
+				margin-left: 35px;
+				
+					&.last { margin: 0; border-bottom: none; padding-bottom: 0;}
+ 					&:hover { 
+ 						.label { color: @red; }
+ 						i { color: @red; .opacity(.8); }
+ 					}
+			}
+
+			i { 
+ 				font-size: 50px;
+				color: #444;
+			}
+			.label {
+ 				display: block;
+ 				font-size: 12px;
+ 				margin-top: 10px;
+				color: #444;
+				text-align: center;
+				text-transform: uppercase;
+			}
+	}
+
+
+#fade { width: 100%; height: 325px; background: @blue; color: white;}
+#content img.cloud { margin-top: 150px;}
+
+	/* Row by row */
+
+	.d2l-tools {
+		&.first { 
+			background: lighten(@blue, 40%); 	
+			text-align: center;		
+				button { margin-top: 40px;}	
+
+		}
+		&.second { 
+			background: lighten(@blue, 35%);
+			padding-bottom: 25px;
+				.right-side { margin-top: 25px; } 
+				h3 { margin-bottom: 50px;}
+				img.d2l-screenshot-numbered {
+					float: left;
+				}
+				
+				.homepage {	
+	 				width: 395px;
+	 				text-align: center;
+	 				color: #555;
+					.label {
+						display: block;
+	 					font-size: 22px;
+	 					text-align: center;
+						color: darken(@blue, 10%);
+						margin-bottom: 5px;
+					}
+				}
+
+				.navigation-bar {
+					width: 200px;
+	 				color: #555;
+					float: left;
+					margin-top: 105px;
+						.label { 
+							display: block;
+		 					font-size: 22px;
+		 					text-align: center;
+							color: darken(@blue, 10%);
+							margin-bottom: 5px;
+						}
+				}
+
+
+
+		}
+		&.third { 
+			background: lighten(@blue, 30%); 
+				.left-side { 
+
+				}
+
+				.right-side { 
+				 
+				}
+				button {margin: 25px 0 0 95px; }
+		}
+		&.forth { 
+			background: lighten(@blue, 27%); 
+			position: relative;
+				.right-side {
+					margin-top: 25px;
+ 				}
+ 				button { margin-top: 75px;}
+ 				.classlist-circle {
+ 					margin-top: 45px;
+ 						a span:hover { border-bottom: 1px solid @red;  }
+ 				}
+ 				.classlist-email,
+				.classlist-progress, 
+				.classlist-status,
+				.classlist-enrollments {
+					position: absolute;
+					color: darken(@blue, 10%);
+					font-size: 16px;
+						i { 
+							margin-right: 10px; 
+							font-size: 36px; 
+							text-align: center;
+							display: block;
+							margin-bottom: 10px;
+							color: @blue;
+						}
+
+				}
+
+ 				.classlist-email { top: 290px; left: 660px; }
+				.classlist-progress {top: 290px; left: 60px; } 
+				.classlist-status{ top: 510px; left: 670px;  }
+				.classlist-enrollments { top: 510px; left: 60px;  }
+ 
+
+		}
+
+		#content .forth h2.section-title { display: block; background: green;}
+
+		&.fifth { background: lighten(@blue, 35%); padding-bottom: 0;}
+		&.sixth { background: lighten(@blue, 30%); }
+	}
+
+	.center { text-align: center; display: block; }
+	
+	p { 
+		font-size: 14px;
+		font-weight: 300;
+			&.eighteen { font-size: 18px;}
+	}
+	h3 {
+		font-weight: 200;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.tool-descriptions {
+		margin-left: 25px;
+			
+
+			a {
+ 				border-bottom: 1px solid spin(@blue, 180%);
+					&:hover {
+						 border-bottom: 2px solid spin(@blue, 180%);
+					}
+			}
+			button {
+				margin: 45px 0 35px 355px;
+				a {
+					color: #fff;
+					border: none;
+						&:hover { border-bottom: 1px solid #fff; }
+				}
+			}
+
+			ul.tools li {
+				float: left;
+				list-style-type: none;
+				width: 100%;
+				padding: 24px;
+
+
+					&:hover { 
+						background: lighten(@blue, 30%); 
+							a { border-bottom: 1px solid; }
+					}
+					
+
+					i { 
+						font-size: 40px;
+ 						margin-right: 35px;
+ 						float: left;
+ 						padding-top: 5px;
+ 
+					}
+					a { 
+						font-size: 25px;
+
+						padding-bottom: 5px;
+							&:hover {  } 
+					}
+					p { 
+						margin-top: 20px; 
+						margin-left: 90px; 
+
+
+					}
+			}
+
+	}
+
+}
+
+ 
+/* D2L Landing Page with illustrations	
+-----------------------------------------------------------*/
+
+body.page-using-d2l-illustrated {	
+	#primary {
+		width: auto;
+		padding: 0;
+		float: none;
+	}
+	 #content {
+		border: none;
+		padding: 0;
+		width: auto;
+		background: none;
+		margin: 0;
+	}
+	.row {
+		margin: 0;
+		padding: 25px 50px 35px;
+		position: relative;
+			.soon { 
+				font-size: 12px;
+				position: absolute; 
+				bottom: 0; 
+				right: 0;
+				background: @red;
+				.opacity(.8);
+				padding: 2px 10px;
+				color: white;
+				text-transform: uppercase;
+			}
+	}
+
+	button.center { display: block; }
+	/* Global row elements */
+
+	.icons-right {  }
+
+	#content h2.section-title {
+		font-size: 40px;
+		line-height: 46px;
+		font-weight: 300;
+ 		padding-top: 25px;
+  		color: #444;
+ 		display: inline-block;
+ 		vertical-align: top;
+ 		border-bottom: 1px solid @red;
+ 		padding-bottom: 0;
 	 		&.left {
 	        		font-size: 30px;
 	        		text-align: left;
@@ -902,28 +1226,123 @@ body.page-using-d2l {
 	}
 
 
+#fade { width: 100%; height: 325px; background: @blue; color: white;}
+#content img.cloud { margin-top: 150px;}
+
 	/* Row by row */
 
 	.d2l-tools {
 		&.first { 
-			background: lighten(@blue, 40%); 
-				h3 { margin-bottom: 50px;}
-				
-
+			background: lighten(@blue, 40%); 	
+			text-align: center;		
+				button { margin-top: 40px;}	
 		}
 		&.second { 
 			background: lighten(@blue, 35%);
 			padding-bottom: 25px;
 				.right-side { margin-top: 25px; } 
 				h3 { margin-bottom: 50px;}
+				img.d2l-screenshot-numbered {
+					float: left;
+				}
+				
+				.homepage {	
+	 				width: 395px;
+	 				text-align: center;
+	 				color: #555;
+					.label {
+						display: block;
+	 					font-size: 22px;
+	 					text-align: center;
+						color: darken(@blue, 10%);
+						margin-bottom: 5px;
+					}
+				}
+
+				.navigation-bar {
+					width: 200px;
+	 				color: #555;
+					float: left;
+					margin-top: 105px;
+						.label { 
+							display: block;
+		 					font-size: 22px;
+		 					text-align: center;
+							color: darken(@blue, 10%);
+							margin-bottom: 5px;
+						}
+				}
+
+
+
 		}
-		&.third { background: lighten(@blue, 30%); }
-		&.forth { background: lighten(@blue, 27%); }
+		&.third { 
+			background: lighten(@blue, 30%); 
+				.left-side { 
+					background: lighten(@blue, 25%);
+					width: 415px;
+					margin: 45px 0;
+				}
+
+				.right-side { 
+					width: 305px;
+					text-align: left;
+					margin-left: 50px;
+				}
+				button {margin: 25px 0 0 95px; }
+		}
+		&.forth { 
+			background: lighten(@blue, 27%); 
+			position: relative;
+				.right-side {
+					margin-top: 25px;
+ 				}
+ 				button { margin-top: 75px;}
+ 				.classlist-circle {
+ 					margin-top: 45px;
+ 					border-top: 1px solid lighten(@blue, 15%);
+ 					padding-top: 25px;
+ 						a span:hover { 
+ 							border-bottom: 2px solid @red;  
+ 							.transition(.5s, ease-out);
+ 								i { 
+ 									color: darken(@red, 5%);
+ 									.transition(1s, ease-out);
+ 								}
+ 						}
+ 				}
+ 				.classlist-email,
+				.classlist-progress, 
+				.classlist-status,
+				.classlist-enrollments {
+					position: absolute;
+					color: #444;
+					font-size: 16px;
+						i { 
+							margin-right: 10px; 
+							font-size: 36px; 
+							text-align: center;
+							display: block;
+							margin-bottom: 10px;
+							color: spin(darken(@blue, 5%), 170);
+						}
+ 				}
+
+ 				.classlist-email { top: 310px; left: 660px; }
+				.classlist-progress {top: 310px; left: 60px; } 
+				.classlist-status{ top: 530px; left: 670px;  }
+				.classlist-enrollments { top: 530px; left: 60px;  }
+ 
+
+		}
+
+		#content .forth h2.section-title { display: block; background: green;}
+
 		&.fifth { background: lighten(@blue, 35%); padding-bottom: 0;}
 		&.sixth { background: lighten(@blue, 30%); }
 	}
 
-	.center { text-align: center; display: block; }
+	.center { text-align: center; display: inline-block; }
 	
 	p { 
 		font-size: 14px;
@@ -1109,16 +1528,18 @@ body.page-using-desire2learn-at-memorial {
 	    
 	     h2 {
 	        color: #444;
-	        font-size: 26px;
+	        font-size: 22px;
 	        font-weight: normal;
  	        padding: 0;
  	        margin-top: 5px;
+ 	        margin-bottom: 5px;
 	        line-height: 30px;
 	        font-weight: 300;
 	        font-family: @helvetica;
 	        	&.title {
 	        		font-size: 42px;
-	        		margin-bottom: 15px;
+	        		margin-top: 25px;
+	        		margin-bottom: 25px;
 	        		color: @blue;
 	        	}
 	    }
@@ -1168,14 +1589,22 @@ span.soon {
 
 /* Step by step pages
 -----------------------------------------------------------*/
-body.single-guides #content h1.entry-title {
-	margin-bottom: 35px;
-	font-size: 30px;
-	line-height: 38px;
-	color: @blue;
+body.single-guides #content {
+
+	h1.entry-title {
+		margin: 25px 0;
+		font-size: 30px;
+		line-height: 38px;
+		color: @blue;
+		border: none;
+	}
+
+	h2 {
+		border-bottom: 1px solid @red;
+	}
 }
 
-h3.step-by-steps{
+#content h3.step-by-steps{
 	text-transform: uppercase;
 	border-bottom: 1px solid #ccc; 
 		i {
@@ -1240,7 +1669,7 @@ button {
 		&:hover {
 			.gradient(#F5F5F5, #ccc, #FFF);
 		}
-		&.center { display: inline-block; margin: 0 auto;}
+		&.center { display: block; margin: 0 auto;}
 }
 
 button.blue {
@@ -1511,7 +1940,7 @@ article.comment {
 			color: #8A8585;
 		a {
 			color: #8A8585;
-			border-bottom: 1px solid @red;
+			border-bottom: 1px solid @blue;
 			text-decoration: none;
 				&:hover {
 				  border-bottom: 1px solid #8A8585;

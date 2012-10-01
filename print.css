@@ -1,20 +1,20 @@
-@media print {
+@media print { 
 	 
-	* { border: none;}	
+	* { border: none; color: #000;}	
 	body {
 		background: #fff none !important;
 		color: #000;
 		border: none; 
 	}
 
-	#page, #header, #main, hgroup, nav, #main, #secondary,#primary, #content, article, #share, .print 
+	#page, #header, #main, hgroup, nav, #main, #secondary,#primary, #content, article, #share, .print, .group
 	{ border: none; }
 	
 	#content { border-left: 15px dotted green;  background: none;}
-	header#branding { border-bottom: none; }
+	header#branding { border-bottom: none;  }
 
-	#secondary { border: 25px dotted; }
-	#page { border: none; }
+	#secondary {   }
+	#page {  }
 	#wrapper {
 		clear: both !important;
 		display: block !important;
@@ -25,7 +25,7 @@
 		border: none;
 		padding-bottom: 18pt; 
  	}
- 	#uber { display: none;}
+ 	#uber { display: none; border: none;}
 	#colophon {
 		border-top: 2pt solid #000;
 	}
@@ -37,9 +37,12 @@
 		padding: 0;
 	}
 	#site-title {
-		font-size: 13pt;
+		font-size: 16pt;
+		font-family: Helvetica, Arial, sans-serif;
 	}
 	#content { background: none; }
+	#content h1 {color: #000; font-size: 28pt; margin-top: 15px;}
+	#content h2 { font-size: 18pt; font-weight: bold;}
 	.entry-content {
 		font-size: 14pt;
 		line-height: 1.6em;
@@ -101,4 +104,594 @@
 	.entry-content img {
 		max-width: 100%;
 	}
+
+
+
+/* Hide all elements in the two linked MUN stylesheets from the print stylesheet */
+
+
+
+#uber {display: none; }
+
+
+#topNav{
+   display: none;
+}
+
+/*Top nav buttons */
+.topNavQlButton{
+   display: none;
+}
+.topNavQlButton a{
+   display: none;
+}
+#tnql-about{
+    display: none;
+}
+#tnql-alumni{
+  display: none;
+}
+
+#tnql-careers{
+     display: none;
+}
+
+#tnql-becomestudent{
+   display: none;
+}
+
+#tnql-international{
+   display: none;
+}
+
+
+#tnql-programs{
+    display: none;
+}
+
+#tnql-research{
+   display: none;
+}
+
+
+#tnql-exploreourcampuses{
+    display: none;
+}
+
+#tnql-quicklinks{
+    display: none;
+}
+
+#tnql-about:hover { display: none; }
+#tnql-alumni:hover { display: none; }
+#tnql-careers:hover { display: none;}
+#tnql-becomestudent:hover { display: none; }
+#tnql-international:hover { display: none; }
+#tnql-programs:hover { display: none;}
+#tnql-research:hover {display: none;}
+#tnql-exploreourcampuses:hover { display: none; }
+#tnql-quicklinks:hover { display: none; }
+
+#tnql-becomestudent.current { display: none; }
+#tnql-exploreourcampuses.current { display: none; }
+#tnql-quicklinks.current { display: none; }
+#tnql-careers.current { display: none; }
+
+
+
+/*End Top nav buttons */
+/*Drop down, e.g. quick links, explore campuses */
+
+#dropdownBottom{
+    display: none;
+}
+#dropdown{
+    display: none;
+
+}
+
+#dropdownTop{
+    display: none;
+}
+
+.tnql-content{
+   display: none;
+}
+
+span.modifiedtime{
+    display: none;
+}
+
+
+#dropdown *{
+   display: none;
+}
+ 
+
+#tnql-quicklinks-content table{
+    display: none;
+}
+#tnql-quicklinks-content td{
+ display: none;
+}
+
+#tnql-quicklinks-content ul{
+    display: none;
+}
+#tnql-quicklinks-content li{
+    display: none;
+}
+
+/*End Drop down, e.g. quick links, explore campuses */
+
+#multisearch{
+    display: none;
+
+}
+#searchtext{
+    display: none;
+}
+
+#pseudosearchtext{
+    display: none;
+}
+
+#pseudosearchtextinner{
+    display: none;
+    }
+
+
+#searchError{
+    display: none;
+}
+
+#searchDropDown{
+   display: none;
+}
+
+#searchlist{
+   display: none;
+}
+#searchlist ul{
+    display: none;
+}
+#searchlist li{
+    display: none;
+}
+#searchlist a{
+    display: none;
+}
+
+
+#search_mun_button, #search_mun_button:hover, #search_people_button, #search_people_button:hover, #search_department_button, #search_department_button:hover, #search_yaffle_button, #search_yaffle_button:hover, #search_lc_button, #search_lc_button:hover, #search_da_button, #search_da_button:hover{
+display: none;
+}
+
+
+#search_mun_button{
+    display: none;
+}
+#search_mun_button:hover{
+    display: none;
+}
+
+#search_people_button{
+display: none;}
+#search_people_button:hover{
+display: none;}
+#search_department_button{
+display: none;}
+#search_department_button:hover{
+
+display: none;}
+#search_yaffle_button{
+display: none;}
+#search_yaffle_button:hover{
+display: none;}
+#search_lc_button{
+display: none;}
+#search_lc_button:hover{
+display: none;}
+#search_da_button{
+display: none;}
+#search_da_button:hover{
+display: none;}
+
+#searchDropDownBottom{
+   display: none;
+}
+
+
+
+
+#sububer,
+#sububer-notitle { /* Contains the repeating background texture */
+    display: none;
+}
+#subsububer{ /* Contains the static background image  for the main page*/
+display: none;}
+#pageContent { /* Contains all the content from header to footer */
+    display: none;
+}
+
+
+/* ===== Header ===== */
+
+#header {
+    display: none;
+}
+
+#headerlogo{
+   display: none;
+}
+
+#headerlogo a{
+   display: none;
+}
+
+
+/* Main navigation styles */
+
+#headernav2{
+    display: none;
+}
+
+#navTab01, #navTab02, #navTab03, #navTab04, #navTab05 {
+    display: none;
+}
+
+#navTab01 {
+   display: none;
+}
+#navTab02 {
+    display: none;
+}
+#navTab03 {
+    display: none;
+}
+#navTab04 {
+    display: none;
+}
+#navTab05 {
+    display: none;
+}
+
+#navTab01:hover, #navTab02:hover, #navTab03:hover, #navTab04:hover, #navTab05:hover {
+    display: none;
+}
+
+#navTab01:hover { display: none;}
+#navTab02:hover { display: none;}
+#navTab03:hover { display: none;}
+#navTab04:hover { display: none;}
+#navTab05:hover { display: none;}
+
+
+
+
+#homebanner{
+    display: none;
+}
+#flashBanner{
+   display: none;
+}
+
+#flashBannerLink{
+    display: none;
+}
+
+#flashBannerCorner{
+   display: none;
+}
+#flashBannerShadow, #flashBannerShadow-left{
+    display: none;
+}
+
+#flashBannerShadow-left{
+    display: none;
+}
+
+#flashBannerShadow-top{
+    display: none;
+}
+
+#checkOutOurCampuses{
+    display: none;
+}
+
+#campusFlash  {
+   display: none;
+}
+
+#checkOutOurCampuses h1 {
+    display: none;
+}
+#home3columns{
+    display: none;
+}
+
+#lefthome{
+    display: none;
+}
+#lefthome h1, #lefthome h4{
+    display: none;
+}
+#lefthome h1 a, #lefthome h4 a{
+    display: none;
+}
+/*testing*/
+#lefthome h4 a{
+    display: none;
+}
+/*testing ends*/
+.lefthomeitem, .centerhomeitem, .blankItem{
+    display: none;
+}
+
+.lefthomeitem{
+   display: none;
+}
+.lefthomepic {
+
+}
+.lefthomeitem img{
+    display: none;
+}
+.lefthomeitem ul, .centerhomeitem ul{
+    display: none;
+}
+.lefthomeitem li, .centerhomeitem li{
+    display: none;
+}
+/*.lefthomeitem ul.events a, .centerhomeitem ul.events a{
+    color:#1f1f1f;
+}*/
+
+.blankItem {
+    display: none;
+}
+.blankItem img{
+    display: none;
+    
+}
+.homeAwayImage{
+    display: none;
+}
+.blankItemText{
+   display: none;
+}
+
+#centrehome{
+   	display: none;
+}
+
+
+#righthome{
+    display: none;
+}
+#dare-to-button {
+  display: none;
+  
+}
+
+#righthome h2{
+    display: none;
+}
+#righthome h3, #righthome span.h3{
+    display: none;
+}
+#righthome ul {
+   display: none;
+}
+#righthome li {
+    display: none;
+}
+
+#footer{
+   display: none;
+}
+#footer a{
+    display: none;
+}
+#footerText{
+    display: none;
+}
+#footerlinks{
+    display: none;
+}
+.black{
+    display: none;
+}
+#lastupdated{
+   display: none;
+}
+
+#campusFlash  { display: none; }
+
+/* ========== EMERGENCY STYLES =========== */
+div.emergencyBarContainer{
+    display: none;
+}
+div.emergencyBar{
+    display: none;
+}
+div.emergencyBar a{
+   display: none;
+}
+div.emergencyBar a:hover{
+    display: none;
+}
+div.emergencyBar span.title{
+    display: none;
+}
+
+/*====== expand/cllapse side nav for main page ===*/
+
+h5.acc_trigger, h5.acc_no_trigger {
+	display: none;
+}
+
+.class-1{
+	display: none;
+}
+.class-11{
+	display: none;
+}
+.class-2{
+	display: none;
+}
+.class-22{
+	display: none;
+}
+.class-3{
+	display: none;
+}
+.class-33{
+	display: none;
+}
+	
+#home3columns-testing{
+    display: none;
+}
+	
+h5.acc_trigger a, h5.acc_no_trigger a {
+	display: none;
+	
+}
+
+
+
+.class-1-text p a, .class-3-text p a, .class-2-text p a{
+	display: none;
+}
+
+.class-1-text p a{
+	display: none;
+}
+
+.class-1-text p a:hover{
+	display: none;
+}
+
+.class-2-text p a{
+	display: none;
+}
+
+.class-2-text p a:hover{
+	display: none;
+}
+
+.class-3-text p a:hover  {
+	display: none;
+    }
+
+
+h5.acc_trigger a:hover, h5.acc_no_trigger a:hover, h5.acc_trigger a:active, h5.acc_no_trigger a:active {
+	display: none;
+}
+
+h5:hover {  display: none;}
+h5.active { display: none; }
+
+.acc_container{
+	display: none;
+}
+.class-3-text{
+	display: none;
+}
+
+.acc_container .block{
+	display: none;
+}
+
+#rightHomeBase{
+    display: none;
+    }
+#rightHomeBase ul{
+    display: none;
+}
+#rightHomeBase ul li{    
+    display: none;
+	
+}
+#twitter, #facebook, #youtube, #mobile, #blogger{    
+    display: none;
+    }
+#facebook{    
+    display: none;
+}
+#youtube{    
+    display: none;
+}
+#mobile{    
+display: none;}
+#blogger{
+display: none;}
+#mun-live-home-page{
+ 	display: none;}
+#red-means-go{
+ 	display: none;
+}
+	
+#righthome p{
+	display: none;
+}
+
+#contentTop a {
+	display: none;
+}
+#contentTop a:hover {
+	display: none;
+	
+}
+
+#breadcrumbs{  display: none;}	
+#breadcrumbs ul, #breadcrumbs li { display: none; }
+#breadcrumbs li a { display: none;}
+#breadcrumbs li.first {
+	display: none;
+}
+
+/*
+#takeMeTo01, #takeMeTo02, #takeMeTo03, #takeMeTo04 , #takeMeTo05, #takeMeTo06 {
+    position: relative;
+    float: left;
+}
+#righthome a, #righthome a:active, #righthome a:visited {
+    margin: 0 2px;
+    padding: 5px 0 0 12px;
+    text-transform: uppercase;
+    width: 212px;
+	color: #66899E;
+    float: left;
+    font-size: 14px;
+    height: 20px;
+	border-top:4px solid #E5E5E5;
+	background-image: url(../../images/take-me-to-buttons.jpg);
+}
+#righthome a:hover{
+    text-decoration:none;
+}
+
+#takeMeTo01 a { background-position: 0px 0px; border-top:none}
+#takeMeTo02 a { background-position: 0px -85px; }
+#takeMeTo03 a { background-position: 0px -162px; }
+#takeMeTo04 a { background-position: 0px -239px; }
+#takeMeTo05 a { background-position: 0px -316px; }
+#takeMeTo06 a { background-position: 0px -393px; }
+
+#takeMeTo01 a:hover { background-position: -230px 0px; }
+#takeMeTo02 a:hover { background-position: -230px -85px; }
+#takeMeTo03 a:hover { background-position: -230px -162px; }
+#takeMeTo04 a:hover { background-position: -230px -239px; }
+#takeMeTo05 a:hover { background-position: -230px -316px; }
+#takeMeTo06 a:hover { background-position: -230px -393px; }
+
+#takeMeTo01 a:active { background:#red;}
+#takeMeTo02 a:active { background:#red;}
+#takeMeTo03 a:active { background:#red;}
+#takeMeTo04 a:active { background:#red;}
+#takeMeTo05 a:active { background:#red;}
+#takeMeTo06 a:active { background:#red;}
+*/
 }

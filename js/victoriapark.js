@@ -3,8 +3,11 @@ jQuery(function($){
  //Fade some stuff in on page load
  $(function(){
     $('img').animate({ opacity: 1 }, 200);
- });
-   
+    
+    $('.page-using-d2l img.cloud').animate({ 'margin-top' : '15px' }, 800);
+    
+  });
+    
  
   // jQuery Accordion for tool landing pages
   // Store variables

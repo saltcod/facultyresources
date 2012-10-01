@@ -21,7 +21,7 @@ get_header(); ?>
  
 <div class="row using-d2l-hero group">
 
-	<img src="<?php echo get_template_directory_uri();?>/images/d2l-screenshot.png" alt=""> 
+	<img src="<?php echo get_template_directory_uri();?>/images/d2l-screenshot-short.png" alt=""> 
 
 	<h2 class="title">Desire2Learn</h2>
 	<h2>Memorial University’s Learning Management System (LMS).</h2>
