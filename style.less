@@ -161,7 +161,7 @@ h1.entry-title{
 	margin-bottom: 35px;
 }
 
-
+ 
 #content h1.entry-title { color: @blue; }
 
  .blue {
@@ -1048,7 +1048,8 @@ body.page-using-d2l {
 
 		#content .forth h2.section-title { display: block; background: green;}
 
-		&.fifth { background: lighten(@blue, 35%); padding-bottom: 0;}
+		&.fifth { 
+			background: lighten(@blue, 35%); padding-bottom: 0;}
 		&.sixth { background: lighten(@blue, 30%); }
 	}
 
@@ -1175,9 +1176,10 @@ body.page-using-d2l-illustrated {
 	        		text-align: left;
 	        		border-bottom: 1px solid @red;
  	        	}
-	        &.center { text-align: center; display: block; }
+	        &.center { text-align: center; display: block; padding-bottom: 15px; }
 	}
-
+	 
+	
 	.left-side { 
 		width: 360px; 
 		display: inline-block;
@@ -1235,11 +1237,39 @@ body.page-using-d2l-illustrated {
 		&.first { 
 			background: lighten(@blue, 40%); 	
 			text-align: center;		
-				button { margin-top: 40px;}	
+				button { margin-top: 30px;}	
+				img.cloud { 
+					border-bottom: 2px solid lighten(@blue, 15%); 
+					padding-bottom: 15px;
+				}
+				.left{ margin-left: 50px;}
+				h3.how-to { text-align: left; margin: 25px 0 15px 0; }
+				ul { 
+					float: left;
+					width: 245px;
+					text-align: left;
+					margin-top: 0;
+ 						li { 
+							border-bottom: 1px solid lighten(@blue, 30%); 
+							padding: 4px 0; 
+								&:hover{ background: lighten(@blue, 39%);}
+						}
+						a { color: darken(@blue, 10%); &:hover { border-bottom: 1px solid; .transition(0s, ease-out)}}
+				}
+				 
 		}
 		&.second { 
 			background: lighten(@blue, 35%);
 			padding-bottom: 25px;
+				.triangle {
+					width: 0; 
+					height: 0; 
+					margin-top: -25px;
+					margin-left: 360px;
+					border-left: 40px solid transparent;
+					border-right: 40px solid transparent;
+					border-top: 40px solid lighten(@blue, 40%);
+				}
 				.right-side { margin-top: 25px; } 
 				h3 { margin-bottom: 50px;}
 				img.d2l-screenshot-numbered {
@@ -1272,12 +1302,20 @@ body.page-using-d2l-illustrated {
 							margin-bottom: 5px;
 						}
 				}
-
-
-
-		}
+				button { margin-top: 125px; margin-left: 60px;}
+		} /* Second */
 		&.third { 
 			background: lighten(@blue, 30%); 
+				.triangle {
+					width: 0; 
+					height: 0; 
+					margin-top: -25px;
+					margin-left: 550px;
+					border-left: 40px solid transparent;
+					border-right: 40px solid transparent;
+					border-top: 40px solid lighten(@blue, 35%);
+				}
+				
 				.left-side { 
 					background: lighten(@blue, 25%);
 					width: 415px;
@@ -1294,10 +1332,20 @@ body.page-using-d2l-illustrated {
 		&.forth { 
 			background: lighten(@blue, 27%); 
 			position: relative;
+				.triangle {
+					width: 0; 
+					height: 0; 
+					margin-top: -25px;
+					margin-left: 40px;
+					border-left: 40px solid transparent;
+					border-right: 40px solid transparent;
+					border-top: 40px solid lighten(@blue, 30%);
+				}
+				
 				.right-side {
 					margin-top: 25px;
  				}
- 				button { margin-top: 75px;}
+ 				button { margin-top: 75px; margin-bottom: 25px;}
  				.classlist-circle {
  					margin-top: 45px;
  					border-top: 1px solid lighten(@blue, 15%);
@@ -1338,7 +1386,38 @@ body.page-using-d2l-illustrated {
 
 		#content .forth h2.section-title { display: block; background: green;}
 
-		&.fifth { background: lighten(@blue, 35%); padding-bottom: 0;}
+		&.fifth { 
+			background-color: lighten(@blue, 35%); 
+			background: url("images/grades-clouds-bg.png") no-repeat bottom left; 
+			padding-bottom: 130px;
+				.triangle {
+					width: 0; 
+					height: 0; 
+					margin-top: -25px;
+					margin-left: 70px;
+					border-left: 40px solid transparent;
+					border-right: 40px solid transparent;
+					border-top: 40px solid lighten(@blue, 27%);
+				}
+				.left-side {
+					h3 { margin-bottom: 35px;}
+					span.instant-feedback {
+						font-size: 30px; 
+						color: darken(@blue, 10%);
+ 						display: block;
+ 						margin-bottom: 15px;
+					}
+					a.button { border: none; margin: 40px 0 0 65px;  float: left;}
+					 
+				}
+
+				.right-side {  
+					img.grades-cloud { width: 250px; float: right; margin:0 0 25px 0;}
+					img.grades-list { width: 350px; float: right; margin-top: 15px;}
+				}
+		}		
+
+
 		&.sixth { background: lighten(@blue, 30%); }
 	}
 
@@ -1681,12 +1760,13 @@ button.blue {
 	padding: 0 15px;
 	border: solid 1px;
 	border-radius: 3px;
-	.gradient(#50A9E7, #307CB3, #50A9E7);
- 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 1px rgba(0,0,0,.08);
-	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-	border-color: #2978B0 #266FA5 #1C557D;
+	.gradient(@blue, lighten(@blue, 2%), lighten(@blue, 5%));
+ 	.box-shadow(0 1px 2px #999);
+ 	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	border-color: darken(@blue, 10%);
 		&:hover { 
-			.gradient(#50A9E7, lighten(#307CB3, 10%), darken(#50A9E7, 20%));
+			.gradient(@blue, darken(@blue, 5%), darken(@blue, 7%));
+ 			.box-shadow(0 2px 3px #aaa);
 		}
 }
 
@@ -1711,7 +1791,7 @@ button.red { color: @red; }
 }
 
 .entry-content .group { margin-bottom: 25px;}
-#content .group img {
+#content .entry-content .group img {
 		margin-right: 40px;
 	}
 

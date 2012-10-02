@@ -34,11 +34,25 @@ get_header(); ?>
 
 
 
-<div class="row d2l-tools first group">
+<div class="row d2l-tools first group"> 
+	
 	<h2 class="section-title center">Getting started</h2>	 
 	<h3 class="center">Information for new and experienced users.</h3>
  		<img class="cloud" src="<?php echo get_template_directory_uri();?>/images/new-to-d2l-cloud.png" alt="">
 
+ 	<div class="left">
+ 		<h3 class="how-to">Learn how to:</h3>
+ 	 	
+ 	 	<ul class="first">
+ 	 		<li><a href="#">Access to Desire2Learn</a></li>
+ 	 		<li><a href="#">Logging in</a></li>
+ 	 		<li><a href="#">Copying course components</a></li>
+ 	 	</ul>
+ 	 	<ul class="second">
+ 	 		<li><a href="#">Starting a new semester</a></li>
+ 	 		<li><a href="#">Activating a course</a></li>
+ 	 	</ul>
+ 	</div>
  	<a href="../guides/getting-started"><button class="center blue">Lets begin!</button></a>
 </div>		 
 
@@ -46,6 +60,7 @@ get_header(); ?>
 
 
 <div class="row d2l-tools second group">
+	<div class="triangle"></div>
 	 
 	<h2 class="section-title center">Course Homepage and Navigation Bar</h2>	 
 	<h3 class="center">Use the homepage and navigation bar as they are or make modifications to suit the needs of your course.</h3>
@@ -63,15 +78,18 @@ get_header(); ?>
 	<div class="navigation-bar">		
 		<span class="label">Navigation Bar</span>
 		The doorway to your course!
+	
+ 		<button class="blue">Explore</button>
 	</div>
 	 
- 
+
 
 </div>		 
 
 
 
 <div class="row d2l-tools third group">
+	<div class="triangle"></div>
 	
 	<div class="left-side group">
 		<img src="<?php echo get_template_directory_uri();?>/images/manage-content-icons.png" alt="">
@@ -91,6 +109,8 @@ get_header(); ?>
 
 
 <div class="row d2l-tools forth group">
+	<div class="triangle"></div>
+
 	 <div class="left-side group">
 		<h2 class="section-title left">The Classlist</h2>	  
 		<h3>Use the classlist to send email and to check enrollments and student progress.</h3>
@@ -117,69 +137,26 @@ get_header(); ?>
 
 
 <div class="row d2l-tools fifth group">
-	<div class="left-side">		
+	<div class="triangle"></div>
 
+	<div class="left-side">		
 		<h2 class="section-title left">The Grades Tool</h2>	  
-		 <p>Use the Grades tool to enter, calculate, distribute, and send final grades to Banner. </p>
+		 <h3>Use the Grades tool to enter, calculate, distribute, and send final grades to Banner. </h3>
+		 <span class="instant-feedback">Instant feedback. </span>
+		 <span class="instant-feedback">No more hardcopies. </span>
+
+		<a class="button" href="#"><button class="blue">See how</button></a>
 
 </div>
 
 
 <div class="right-side">
-		 
-		<a href="../guides/the-grades-tool">
-			<div class="tool">		
-				<i class="icon-check"></i>
-				<span class="label">Grades</span>
-			</div>
-		</a>	
-	</div>
-		 
-</div>	
- 
-
-  <!-- 
-<div class="row d2l-tools fifth group">
-	<div class="left-side">		
-
-		<h2 class="section-title left">Communicate and Collaborate</h2>	  
-		 <p>You and your students can use <a href="#">Chat</a>, <a href="#">Discussions</a>, <a href="#">Groups</a>, and <a href="#">Online Rooms</a> to communicate and collaborate.</p>
-
+	<img class="grades-cloud" src="<?php echo get_template_directory_uri();?>/images/grades-tool-cloud.png" alt="">
+	 
+	 <img class="grades-list" src="<?php echo get_template_directory_uri();?>/images/grades-tool-list.png" alt="">
 </div>
-
-
-<div class="right-side">
-		
-		<div class="tool">
-			<i class="icon-bullhorn"></i> 
-			<span class="label">Chat</span>
-		</div>
-
-		<div class="tool last">		
-			<i class="icon-bolt"></i>
-				<span class="label">Discussions</span>
-		</div>	
-
-		<div class="tool">
-			<i class="icon-comments-alt"></i> 
-			<span class="label">Groups</span>
-		</div>
-
-		<div class="tool last">		
-			<i class="icon-signin"></i>
-				<span class="label">Online Rooms</span>
-		</div>	
-	</div>
 		 
-	<div class="soon">Coming Soon</div>
 </div>	
- 
-
-   -->
-  
-  
- 
-
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

@@ -4,7 +4,7 @@ jQuery(function($){
  $(function(){
     $('img').animate({ opacity: 1 }, 200);
     
-    $('.page-using-d2l img.cloud').animate({ 'margin-top' : '15px' }, 800);
+    $('.page-using-d2l-illustrated img.cloud').animate({ 'margin-top' : '15px' }, 800);
     
   });
     
