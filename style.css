@@ -2040,10 +2040,6 @@ body.page-using-d2l-illustrated #fade {
 body.page-using-d2l-illustrated #content img.cloud {
   margin-top: 150px;
 }
-body.page-using-d2l-illustrated .d2l-tools {
-  /* Second */
-
-}
 body.page-using-d2l-illustrated .d2l-tools.first {
   background: #e4f0f5;
   text-align: center;
@@ -2136,6 +2132,8 @@ body.page-using-d2l-illustrated .d2l-tools.second button {
   margin-left: 60px;
 }
 body.page-using-d2l-illustrated .d2l-tools.third {
+  /* Course Content */
+
   background: #bedbe8;
 }
 body.page-using-d2l-illustrated .d2l-tools.third .triangle {
@@ -2161,6 +2159,8 @@ body.page-using-d2l-illustrated .d2l-tools.third button {
   margin: 25px 0 0 95px;
 }
 body.page-using-d2l-illustrated .d2l-tools.forth {
+  /* The Classlist */
+
   background: #b2d5e4;
   position: relative;
 }
@@ -2264,15 +2264,16 @@ body.page-using-d2l-illustrated .d2l-tools.fifth .left-side a.button {
   margin: 40px 0 0 65px;
   float: left;
 }
+body.page-using-d2l-illustrated .d2l-tools.fifth .right-side {
+  margin-top: 35px;
+}
 body.page-using-d2l-illustrated .d2l-tools.fifth .right-side img.grades-cloud {
   width: 250px;
   float: right;
-  margin: 0 0 25px 0;
 }
 body.page-using-d2l-illustrated .d2l-tools.fifth .right-side img.grades-list {
   width: 350px;
   float: right;
-  margin-top: 15px;
 }
 body.page-using-d2l-illustrated .d2l-tools.sixth {
   background: #bedbe8;
