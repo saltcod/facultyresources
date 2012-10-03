@@ -118,7 +118,7 @@ get_header(); ?>
 	<div class="left-side">		
 
 		<h2 class="section-title left">The Grades Tool</h2>	  
-		 <p>Use the Grades tool to enter, calculate, distribute, and send final grades to Banner. </p>
+		 <p>Use the Grades tool to enter, calculate, distribute, and send final grades to Banner </p>
 
 </div>
 
