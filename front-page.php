@@ -33,10 +33,16 @@ get_header(); ?>
 			<a href="<?php echo home_url(); ?>/using-d2l"><h2>Desire2Learn </h2></a>
 		 	<h3>Memorial's Learning Management System (LMS)</h3></div>	
 
-		<div class="index-tool last">
-			<img src="<?php echo get_template_directory_uri();?>/images/elive-icon-green.png" alt="">
-			<a href="#"><h2>Elluminate <em>Live!</em></h2>	</a>
+		<div class="index-tool">
+			<img src="<?php echo get_template_directory_uri();?>/images/online-rooms-icon.png" alt="">
+			<a href="#"><h2>Online Rooms</h2>	</a>
 			<h3>Bring your classroom discussions online</h3><span class="soon">Coming soon</span>	
+	</div> 
+
+	<div class="index-tool last">
+			<img src="<?php echo get_template_directory_uri();?>/images/lecture-capture-icon.png" alt="">
+			<a href="<?php echo home_url(); ?>/guides/lecture-capture"><h2>Lecture Capture</h2> </a>
+			<h3>Record and share your lectures with your class</h3>	
 	</div> 
 </div> 
  

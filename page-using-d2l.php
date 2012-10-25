@@ -31,155 +31,135 @@ get_header(); ?>
 
 
 
-
-
-
-<div class="row d2l-tools first group">
-	<h2 class="section-title center">Getting started</h2>	 
+<div class="row d2l-tools first group"> 
+	
+	<h2 class="section-title center">Get Ready. Get Prepared. Get Started</h2>	 
 	<h3 class="center">Information for new and experienced users.</h3>
- 	
- 	<a href="../guides/getting-started"><button class="center red">Lets begin!</button></a>
+ 
+
+  	<a class="button blue" href="../guides/getting-started">See How</a>
 </div>		 
 
 
-
-
-<div class="row d2l-tools second group">
-	<div class="left-side">		
+<div class="row d2l-tools course-content group">
+	<div class="triangle"></div>
 	
-	<h2 class="section-title left">Course Homepage and Navigation Bar</h2>	 
- 
-		<p>Use the homepage and navigation bar as they are or make modifications to suit the needs of your course.</p>
-	</div>	
- 	
-
-	<div class="right-side">
-		<div class="tool">
-			<i class="icon-home"></i> 
-			<span class="label">Homepage</span>
-		</div>
- 
-		<a href="../guides/the-course-navigation-bar/">
-			<div class="tool last">		
-				<i class="icon-edit"></i>
-					<span class="label">Navigation Bar</span>
-			</div>
-		</a>	
+	<div class="left-side group">
+		<img src="<?php echo get_template_directory_uri();?>/images/manage-content-icons.png" alt="">
 	</div>
-	<div class="soon">Homepage Coming Soon</div>
 
+	<div class="right-side">		
+		<h2 class="section-title">Course Content</h2>	  
+			<h3>Make your syllabus and other course materials readily available to students.</h3>
+
+			<a class="button blue" href="../guides/the-content-tool">Explore</a>
+	</div>	
 </div>		 
 
 
 
-<div class="row d2l-tools third group">
-	<div class="left-side">		
 
-	<h2 class="section-title left">The Dropbox</h2>	  
-		<p>An easy way to receive, grade, and provide feedback on assignments.</p>
-	</div>	
- 	
-
-	<a href="../guides/the-dropbox">
-		<div class="right-side">
-			<div class="tool">
-				<i class="icon-inbox"></i> 
-				<span class="label">Dropbox</span>
-			</div>
-		</div>
-	</a>
-</div>		 
-
-
-
-<div class="row d2l-tools forth group">
-	<div class="left-side">		
-
-		<h2 class="section-title left">The Classlist</h2>	  
-		<p>Use the classlist to send email and to check enrollments and student progress.</p>
-	</div>	
- 	
-
-	<div class="right-side">
-		<a href="../guides/the-classlist">
-			<div class="tool">
-					<i class="icon-group"></i> 
-					<span class="label">Classlist</span>
-				</div>
-		</a>
-	</div>
+<div class="row d2l-tools homepage-navbar group">
+	<div class="triangle"></div>
+	 
+	<h2 class="section-title center">Course Homepage and Navigation Bar</h2>	 
+	<h3 class="center">Use the homepage and navigation bar as they are or make modifications to suit the needs of your course.</h3>
+	 
 	
-</div>		 
-
-
-
-
-<div class="row d2l-tools fifth group">
-	<div class="left-side">		
-
-		<h2 class="section-title left">The Grades Tool</h2>	  
-		 <p>Use the Grades tool to enter, calculate, distribute, and send final grades to Banner </p>
-
-</div>
-
-
-<div class="right-side">
-		 
-		<a href="../guides/the-grades-tool">
-			<div class="tool">		
-				<i class="icon-check"></i>
-				<span class="label">Grades</span>
-			</div>
-		</a>	
-	</div>
-		 
-</div>	
- 
-
-  <!-- 
-<div class="row d2l-tools fifth group">
-	<div class="left-side">		
-
-		<h2 class="section-title left">Communicate and Collaborate</h2>	  
-		 <p>You and your students can use <a href="#">Chat</a>, <a href="#">Discussions</a>, <a href="#">Groups</a>, and <a href="#">Online Rooms</a> to communicate and collaborate.</p>
-
-</div>
-
-
-<div class="right-side">
+	<div class="homepage-screenshot-container group">
+		<div class="homepage">
+				<a href="../guides/the-course-homepage">Homepage Widgets</a> 
+ 		</div>
+	
+			
+		<img class="d2l-screenshot-numbered" src="<?php echo get_template_directory_uri();?>/images/d2l-screenshot-numbered.png" alt="">
 		
-		<div class="tool">
-			<i class="icon-bullhorn"></i> 
-			<span class="label">Chat</span>
+	
+		<div class="navigation-bar">		
+			<a href="../guides/the-course-navigation-bar">Navigation Bar</a> 
+ 		
 		</div>
+	 </div>
+</div>		 
 
-		<div class="tool last">		
-			<i class="icon-bolt"></i>
-				<span class="label">Discussions</span>
-		</div>	
 
-		<div class="tool">
-			<i class="icon-comments-alt"></i> 
-			<span class="label">Groups</span>
-		</div>
 
-		<div class="tool last">		
-			<i class="icon-signin"></i>
-				<span class="label">Online Rooms</span>
-		</div>	
+
+<div class="row d2l-tools classlist group">
+	<div class="triangle"></div>
+		<h2 class="section-title center">The Classlist</h2>	  
+		<h3 class="center">Use the classlist to send email and to check enrollments and student progress.</h3>
+
+	 
+ 	<div class="group">
+	 	<img id="classlist-circle" src="<?php echo get_template_directory_uri();?>/images/classlist-circle.png" alt="">
+		<ul>
+	 		<li><span class="classlist-email"><i class="icon-envelope"></i>Email the class</span></li>
+			<li><span class="classlist-progress"><i class="icon-bar-chart"></i>View student progress</span></li>
+			<li><span class="classlist-status"><i class="icon-time"></i>Students' online status</span></li>
+			<li><span class="classlist-enrollments"><i class="icon-group"></i>View class enrollment</span></li>
+			<li class="last"><a class="button blue" href="../guides/the-classlist">See how</a></li>
+		</ul>
+  	
+ 	</div>
+ 
+
+</div>		 
+
+
+
+
+
+
+<div class="row d2l-tools communicate-collaborate group">
+	<div class="triangle"></div>
+		<h2 class="section-title center">Communicate and Collaborate</h2>	  
+		<h3 class="center">You and your students can use Chat, Discussions, Groups, and Online Rooms to communicate and collaborate</h3>
+
+	  <div class="icon-row">
+ 	  	<a href="../guides/groups-discussions-and-dropboxes/"><span class="icon"><i class="icon-group"></i><label>Groups</label></span></a>
+ 	  	<a href="../guides/groups-discussions-and-dropboxes/"><span class="icon"><i class="icon-comment-alt"></i><label>Discussions</label></span></a>
+	  	<a href="../guides/online-rooms/"><span class="icon"><i class="icon-signin"></i><label>Online Rooms</label></span></a>
+	  </div>
+ 
+  <span class="office-hours"> Office Hours and online Chats. <br> Anytime, anywhere. </span>
+
+
+</div>		 
+
+
+<div class="row d2l-tools dropbox group">
+	<div class="triangle"></div>
+
+	<div class="left-side">		
+		<h2 class="section-title left">The Dropbox</h2>	  
+		 <h3>An easy way to receive, grade, and provide feedback on assignments.</h3>
+		 <span class="instant-feedback">Instant feedback. </span>
+		 <span class="instant-feedback">No more hardcopies. </span>
+
+		<a class="button blue" href="../guides/the-dropbox">See how</a>
 	</div>
+
+
+	<div class="right-side">
+		<img class="grades-cloud" src="<?php echo get_template_directory_uri();?>/images/grades-tool-cloud.png" alt="">
+ 	</div>
 		 
-	<div class="soon">Coming Soon</div>
 </div>	
+
+<div class="row d2l-tools grades-tool group">
+	<div class="triangle"></div>
+
+ 		<h2 class="section-title center">The Grades Tool</h2>	  
+		 <h3 class="center">Use the Grades tool to enter, calculate, distribute, and send final grades to Banner. </h3>
  
+		<img class="grades-list" src="<?php echo get_template_directory_uri();?>/images/grades-tool-list.png" alt="">
+		
+		<a class="button blue" href="../guides/the-grades-tool">Explore</a>
 
-   -->
+</div>
  
-
-
-  
  
-
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

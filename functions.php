@@ -1,6 +1,6 @@
 <?php
 /**
- * A study in stuctural functionalism at Victoria Park 
+ * A study in stuctural functionalism at Victoria Park
  *
  * @package WordPress
  * @subpackage Victoria Park
@@ -15,73 +15,73 @@
  * @since Victoria Park 0.2
  */
 
-add_action('after_setup_theme', 'victoria_park_theme_setup');
+add_action( 'after_setup_theme', 'victoria_park_theme_setup' );
 
-function victoria_park_theme_setup(){
+function victoria_park_theme_setup() {
 	//add basic features
-	add_theme_support('automatic-feed-links');
-	add_theme_support('post-formats', array('aside', 'gallery'));
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
 	//add custom scripts
-	add_action('wp_enqueue_scripts', 'victoria_park_enqueue_scripts');
+	add_action( 'wp_enqueue_scripts', 'victoria_park_enqueue_scripts' );
 
 	//Register taxonomies
 	add_action( 'init', 'register_guide_type_taxonomy' );
 
 
 	//add custom widgets/sidebars
-	add_action('init', 'victoria_park_widgets_init');
+	add_action( 'init', 'victoria_park_widgets_init' );
 
 	// add custom menus
-	add_action('init', 'victoria_park_register_menus');
+	add_action( 'init', 'victoria_park_register_menus' );
 
 
 	// add various other custom actions/filters
-	add_filter('body_class', 'victoria_park_better_body_classes');
-	add_filter('wp_nav_menu', 'victoria_park_add_slug_class_to_menu_item');
+	add_filter( 'body_class', 'victoria_park_better_body_classes' );
+	add_filter( 'wp_nav_menu', 'victoria_park_add_slug_class_to_menu_item' );
 
-	//print template file in footer — remove for production. 
-	add_action('wp_footer', 'victoria_park_show_template');
+	//print template file in footer — remove for production.
+	add_action( 'wp_footer', 'victoria_park_show_template' );
 
 	// Make the HTML editor the default when creating content
-	add_filter( 'wp_default_editor', create_function('', 'return "html";') );
+	add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
 
-	 
+
 }
 
 /* Register the 'Guides' post type */
 
 register_post_type(
-	'guides', 
-		array(	
+	'guides',
+	array(
 		'label' => 'Guides',
 		'description' => '',
 		'public' => true,
-		'menu_icon' => get_bloginfo('template_directory') . '/images/help-icon.png',
+		'menu_icon' => get_bloginfo( 'template_directory' ) . '/images/help-icon.png',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
 		'has_archive' => true,
 		'hierarchical' => true,
-		'rewrite' => array('slug' => ''),
+		'rewrite' => array( 'slug' => '' ),
 		'query_var' => true,
-		'supports' => array('title','editor','custom-fields','thumbnail','page-attributes', 'revisions'),
+		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes', 'revisions', 'comments' ),
 		'labels' => array (
-		  'name' => 'Guides',
-		  'singular_name' => 'Guide',
-		  'menu_name' => 'Guides',
-		  'add_new' => 'Add guide',
-		  'add_new_item' => 'Add new guide',
-		  'edit' => 'Edit',
-		  'edit_item' => 'Edit guide',
-		  'new_item' => 'New guide',
-		  'view' => 'View guide',
-		  'view_item' => 'View guide',
-		  'search_items' => 'Search Guides',
-		  'not_found' => 'No Guides Found',
-		  'not_found_in_trash' => 'No Guides Found in Trash',
-		  'parent' => 'Parent guide',
-),) );
+			'name' => 'Guides',
+			'singular_name' => 'Guide',
+			'menu_name' => 'Guides',
+			'add_new' => 'Add guide',
+			'add_new_item' => 'Add new guide',
+			'edit' => 'Edit',
+			'edit_item' => 'Edit guide',
+			'new_item' => 'New guide',
+			'view' => 'View guide',
+			'view_item' => 'View guide',
+			'search_items' => 'Search Guides',
+			'not_found' => 'No Guides Found',
+			'not_found_in_trash' => 'No Guides Found in Trash',
+			'parent' => 'Parent guide',
+		), ) );
 
 
 
@@ -98,8 +98,8 @@ function register_guide_type_taxonomy() {
 		array(
 			'label' => __( 'Guide Type' ),
 			'sort' => true,
-			'args' => array( 'orderby' => 'term_order'),
-	    	'hierarchical' => true,
+			'args' => array( 'orderby' => 'term_order' ),
+			'hierarchical' => true,
 			'rewrite' => array( 'slug' => 'guide-type' )
 		)
 	);
@@ -107,7 +107,7 @@ function register_guide_type_taxonomy() {
 
 
 
- 
+
 /**
  * wp_list_pages() outputs a menu nicely, but doesn't include the handy classes like current_page_item for styling
  *
@@ -131,54 +131,67 @@ add_filter( 'page_css_class', 'facultyresources_wp_list_pages_classes', 10, 2 );
  */
 
 function victoria_park_enqueue_scripts() {
-    wp_enqueue_script( 'jquery' );
- 
-    wp_register_script( 'victoriapark', get_template_directory_uri() .'/js/victoriapark.js');
-    wp_enqueue_script( 'victoriapark' );
+	wp_enqueue_script( 'jquery' );
 
-    wp_register_script( 'jquery-ui', get_template_directory_uri() .'/js/jquery-ui-1.8.23.custom.min.js');
-    wp_enqueue_script( 'jquery-ui' );
+	wp_register_script( 'faculty-resources-scripts', get_template_directory_uri() .'/js/faculty-resources-scripts.js' );
+	wp_enqueue_script( 'faculty-resources-scripts' );
 
-    wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js');
-    wp_enqueue_script( 'jquery-accordion' );
-} 
+	wp_register_script( 'jquery-ui', get_template_directory_uri() .'/js/jquery-ui-1.8.23.custom.min.js' );
+	wp_enqueue_script( 'jquery-ui' );
 
- 
- /**
+	wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js' );
+	wp_enqueue_script( 'jquery-accordion' );
+
+	wp_register_script( 'jquery-typer', get_template_directory_uri() .'/js/jquery.typer.js' );
+	wp_enqueue_script( 'jquery-typer' );
+}
+
+
+/**
  * Include the page slug in the body class attribute.
  *
  * @since 0.2
  *
- * @param array $classes The existing classes for the body element
+ * @param array   $classes The existing classes for the body element
  * @return array The amended class array for the body element
  */
 
-function victoria_park_better_body_classes( $classes ){
-    global $post;
-    if ( isset( $post ) ) {
-        $classes[] = $post->post_type . '-' . $post->post_name;
-    }
-    return $classes;
+function victoria_park_better_body_classes( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+
+	$section_terms = get_the_terms($post->ID, 'guide-type');
+	    if ($section_terms && !is_wp_error($section_terms)) {
+	        $section_name = array();
+	        foreach ($section_terms as $term) {
+	            $classes[] = $term->slug;
+	        }
+	    return $classes;
+	    }
+
+	return $classes;
 }
 
 
 
 
 /**
- * Print out the current template file to the footer. 
+ * Print out the current template file to the footer.
  * Obviously to be removed in production
  *
  * @since 0.2
  */
 
 function victoria_park_show_template() {
-	if ( is_super_admin() ){
+	if ( is_super_admin() ) {
 		global $template;
 		echo '<strong>Template file:</strong>';
-	 	print_r($template);
-	 }
+		print_r( $template );
+	}
 }
- 
+
 
 
 /**
@@ -187,14 +200,14 @@ function victoria_park_show_template() {
  * @since 0.2
  */
 
-function victoria_park_add_slug_class_to_menu_item($output){
-	$ps = get_option('permalink_structure');
-	if(!empty($ps)){
-		$idstr = preg_match_all('/<li id="menu-item-(\d+)/', $output, $matches);
-		foreach($matches[1] as $mid){
-			$id = get_post_meta($mid, '_menu_item_object_id', true);
-			$slug = basename(get_permalink($id));
-			$output = preg_replace('/menu-item-'.$mid.'">/', 'menu-item-'.$mid.' menu-item-'.$slug.'">', $output, 1);
+function victoria_park_add_slug_class_to_menu_item( $output ) {
+	$ps = get_option( 'permalink_structure' );
+	if ( !empty( $ps ) ) {
+		$idstr = preg_match_all( '/<li id="menu-item-(\d+)/', $output, $matches );
+		foreach ( $matches[1] as $mid ) {
+			$id = get_post_meta( $mid, '_menu_item_object_id', true );
+			$slug = basename( get_permalink( $id ) );
+			$output = preg_replace( '/menu-item-'.$mid.'">/', 'menu-item-'.$mid.' menu-item-'.$slug.'">', $output, 1 );
 		}
 	}
 	return $output;
@@ -207,11 +220,11 @@ function victoria_park_add_slug_class_to_menu_item($output){
  */
 
 
-function victoria_park_register_menus(){
+function victoria_park_register_menus() {
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'victoria_park' ),
-	) );
-	
+			'primary' => __( 'Primary Menu', 'victoria_park' ),
+		) );
+
 }
 
 
@@ -221,7 +234,7 @@ function facultyresources_home_page_menu_args( $args ) {
 }
 add_filter( 'wp_page_menu_args', 'facultyresources_home_page_menu_args' );
 
- 
+
 /**
  * Modify the Posted on output
  *
@@ -247,38 +260,38 @@ function victoria_park_posted_on() {
  */
 function victoria_park_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar 1', 'victoria_park' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
-	) );
+			'name' => __( 'Sidebar 1', 'victoria_park' ),
+			'id' => 'sidebar-1',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => "</aside>",
+			'before_title' => '<h1 class="widget-title">',
+			'after_title' => '</h1>',
+		) );
 
 	register_sidebar( array(
-		'name' => __( 'Sidebar 2', 'victoria_park' ),
-		'id' => 'sidebar-2',
-		'description' => __( 'An optional second sidebar area', 'victoria_park' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
-	) );
+			'name' => __( 'Sidebar 2', 'victoria_park' ),
+			'id' => 'sidebar-2',
+			'description' => __( 'An optional second sidebar area', 'victoria_park' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => "</aside>",
+			'before_title' => '<h1 class="widget-title">',
+			'after_title' => '</h1>',
+		) );
 }
 
 
 
 
 if ( ! function_exists( 'victoria_park_content_nav' ) ):
-/**
- * Display navigation to next/previous pages when applicable
- *
- * @since victoria_park 1.2
- */
-function victoria_park_content_nav( $nav_id ) {
-	global $wp_query;
+	/**
+	 * Display navigation to next/previous pages when applicable
+	 *
+	 * @since victoria_park 1.2
+	 */
+	function victoria_park_content_nav( $nav_id ) {
+		global $wp_query;
 
-	?>
+?>
 	<nav id="<?php echo $nav_id; ?>">
 		<h1 class="assistive-text section-heading"><?php _e( 'Post navigation', 'victoria_park' ); ?></h1>
 
@@ -301,7 +314,7 @@ function victoria_park_content_nav( $nav_id ) {
 
 	</nav><!-- #<?php echo $nav_id; ?> -->
 	<?php
-}
+	}
 endif; // victoria_park_content_nav
 
 
@@ -310,8 +323,8 @@ function victoria_park_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
-			'hide_empty' => 1,
-		) );
+				'hide_empty' => 1,
+			) );
 
 		// Count the number of categories that are attached to the posts
 		$all_the_cool_cats = count( $all_the_cool_cats );
@@ -325,16 +338,16 @@ function victoria_park_categorized_blog() {
 	} else {
 		// This blog has only 1 category so toolbox_categorized_blog should return false
 		return false;
-		 
+
 	}
 }
 
 
-function direct_email($text="Send by email"){
+function direct_email( $text="Send by email" ) {
 	global $post;
-	$title = htmlspecialchars($post->post_title);
-	$subject = htmlspecialchars(get_bloginfo('name')) . ' from DELTS'.' : '.$title;
-	$body = 'Hi! I saw this step by step guide and thought you might like to have a look: '.$title.'. You can read it on : '.get_permalink($post->ID);
-	$link = '<a rel="nofollow" href="mailto:?subject='.rawurlencode($subject).'&amp;body='.rawurlencode($body).'" title="'.$text.' : '.$title.'">'.$text.'</a>';
+	$title = htmlspecialchars( $post->post_title );
+	$subject = htmlspecialchars( get_bloginfo( 'name' ) ) . ' from DELTS'.' : '.$title;
+	$body = 'Hi! I saw this step by step guide and thought you might like to have a look: '.$title.'. You can read it on : '.get_permalink( $post->ID );
+	$link = '<a rel="nofollow" href="mailto:?subject='.rawurlencode( $subject ).'&amp;body='.rawurlencode( $body ).'" title="'.$text.' : '.$title.'">'.$text.'</a>';
 	return $link;
-	}
+}

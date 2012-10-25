@@ -5,8 +5,14 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
- 	
- 	   
+ 	 
+
+
+ 	 <div class="breadcrumb">
+        <?php if( has_term('tool-landing-page', 'guide-type') ) : ?>
+                <span class="parent-guide"><a href="<?php echo home_url();?>/using-d2l">Desire2Learn</a></span>
+            <?php endif; ?>
+    </div>  
 
 <ul class="accordion">
  

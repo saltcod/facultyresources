@@ -33,7 +33,6 @@
 			  
 			if ($children) :
 		?>
-  
 
  		<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
 
