@@ -2332,23 +2332,37 @@ body.single-guides #content h2 {
 /* =Gravity forms
 -------------------------------------------------------------- */
 #gform_wrapper_1.gform_wrapper input[type="text"],
+#gform_wrapper_2.gform_wrapper input[type="text"],
 #gform_wrapper_1.gform_wrapper input[type="url"],
+#gform_wrapper_2.gform_wrapper input[type="url"],
 #gform_wrapper_1.gform_wrapper input[type="email"],
+#gform_wrapper_2.gform_wrapper input[type="email"],
 #gform_wrapper_1.gform_wrapper input[type="tel"],
+#gform_wrapper_2.gform_wrapper input[type="tel"],
 #gform_wrapper_1.gform_wrapper input[type="number"],
+#gform_wrapper_2.gform_wrapper input[type="number"],
 #gform_wrapper_1.gform_wrapper input[type="password"],
-#gform_wrapper_1 textarea {
+#gform_wrapper_2.gform_wrapper input[type="password"],
+#gform_wrapper_1 textarea,
+#gform_wrapper_2 textarea {
   font-size: 13px;
   padding: 10px;
   border: 1px solid #ccc;
 }
 #gform_wrapper_1.gform_wrapper input[type="text"]:focus,
+#gform_wrapper_2.gform_wrapper input[type="text"]:focus,
 #gform_wrapper_1.gform_wrapper input[type="url"]:focus,
+#gform_wrapper_2.gform_wrapper input[type="url"]:focus,
 #gform_wrapper_1.gform_wrapper input[type="email"]:focus,
+#gform_wrapper_2.gform_wrapper input[type="email"]:focus,
 #gform_wrapper_1.gform_wrapper input[type="tel"]:focus,
+#gform_wrapper_2.gform_wrapper input[type="tel"]:focus,
 #gform_wrapper_1.gform_wrapper input[type="number"]:focus,
+#gform_wrapper_2.gform_wrapper input[type="number"]:focus,
 #gform_wrapper_1.gform_wrapper input[type="password"]:focus,
-#gform_wrapper_1 textarea:focus {
+#gform_wrapper_2.gform_wrapper input[type="password"]:focus,
+#gform_wrapper_1 textarea:focus,
+#gform_wrapper_2 textarea:focus {
   background: #f9f9f9;
   -webkit-box-shadow: 0 0 3px #1cc2f5;
   -moz-box-shadow: 0 0 3px #1cc2f5;
