@@ -2368,6 +2368,10 @@ body.single-guides #content h2 {
   -moz-box-shadow: 0 0 3px #1cc2f5;
   box-shadow: 0 0 3px #1cc2f5;
 }
+#gforms_confirmation_message {
+  background: #bedbe8;
+  padding: 10px;
+}
 /* 404 page */
 .error404 .widget {
   float: left;
