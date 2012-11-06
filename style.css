@@ -1196,6 +1196,7 @@ body.tool-landing-page #secondary h2 {
   display: block;
   text-decoration: none;
   font-weight: 300;
+  color: white;
 }
 .accordion li#one a.tool-name:hover {
   color: #e4f0f5;
@@ -1227,6 +1228,7 @@ body.tool-landing-page #secondary h2 {
   font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
+  color: white;
 }
 .accordion li#two a.faq:hover {
   color: #cde3ee;
@@ -1250,6 +1252,7 @@ body.tool-landing-page #secondary h2 {
 }
 .accordion li#two .sub-menu a {
   border-bottom: 1px dotted #fff;
+  color: white;
 }
 /* The plus sign shoud be hidden on the active accordion item */
 a.tool-name.active i {
@@ -2325,6 +2328,31 @@ body.single-guides #content h2 {
   font-size: 12px;
   color: #bbb;
   font-weight: normal;
+}
+/* =Gravity forms
+-------------------------------------------------------------- */
+#gform_wrapper_1.gform_wrapper input[type="text"],
+#gform_wrapper_1.gform_wrapper input[type="url"],
+#gform_wrapper_1.gform_wrapper input[type="email"],
+#gform_wrapper_1.gform_wrapper input[type="tel"],
+#gform_wrapper_1.gform_wrapper input[type="number"],
+#gform_wrapper_1.gform_wrapper input[type="password"],
+#gform_wrapper_1 textarea {
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#gform_wrapper_1.gform_wrapper input[type="text"]:focus,
+#gform_wrapper_1.gform_wrapper input[type="url"]:focus,
+#gform_wrapper_1.gform_wrapper input[type="email"]:focus,
+#gform_wrapper_1.gform_wrapper input[type="tel"]:focus,
+#gform_wrapper_1.gform_wrapper input[type="number"]:focus,
+#gform_wrapper_1.gform_wrapper input[type="password"]:focus,
+#gform_wrapper_1 textarea:focus {
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 0 3px #1cc2f5;
+  -moz-box-shadow: 0 0 3px #1cc2f5;
+  box-shadow: 0 0 3px #1cc2f5;
 }
 /* 404 page */
 .error404 .widget {

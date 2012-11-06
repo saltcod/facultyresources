@@ -480,6 +480,7 @@ body.tool-landing-page #secondary {
  		  	  	display: block;
 				text-decoration: none;
 				font-weight: 300;
+				color: white;
 					&:hover { 
 						color: lighten(@blue,40%); 
 					}
@@ -516,6 +517,7 @@ body.tool-landing-page #secondary {
  			  font-size: 16px;
 			  font-family: @helvetica;
 			  cursor: pointer;
+			  color: white;
 			  	&:hover {
 			  		color: lighten(@blue,34%);
  			  	}
@@ -532,7 +534,7 @@ body.tool-landing-page #secondary {
 						font-family: @helvetica;
 						font-size: 20px;
 					}
-					a { border-bottom: 1px dotted #fff;}
+					a { border-bottom: 1px dotted #fff; color: white;}
 			}
 		}
 }
@@ -1550,6 +1552,28 @@ body.single-guides #content {
 	}
 		
 }
+
+
+
+
+ /* =Gravity forms
+-------------------------------------------------------------- */
+#gform_wrapper_1{		
+	&.gform_wrapper input[type="text"], 
+	&.gform_wrapper input[type="url"], 
+	&.gform_wrapper input[type="email"], 
+	&.gform_wrapper input[type="tel"], 
+	&.gform_wrapper input[type="number"], 
+	&.gform_wrapper input[type="password"], 
+	& textarea {
+		font-size: 13px;
+		padding: 10px;
+		border: 1px solid #ccc;
+		&:focus { background: #f9f9f9; .box-shadow(0 0 3px #1CC2F5) }
+	}
+}
+
+ 
 
 
 
