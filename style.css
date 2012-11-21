@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import "inc/normalize.css";
 
 @import "print.css";
 /*
@@ -2307,6 +2307,46 @@ body.single-guides #content h2 {
 #content h3.step-by-steps i {
   margin-right: 10px;
 }
+#content h3.watch-video {
+  text-transform: uppercase;
+  background: #3f8fb5;
+  font-size: 14px;
+  display: inline-block;
+  color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 45px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#content h3.watch-video:hover {
+  background: #3880a2;
+}
+#content h3.watch-video a {
+  color: white;
+  padding: 10px 15px;
+  line-height: 32px;
+}
+#content h3.watch-video i {
+  margin-right: 10px;
+}
+#content h3.watch-video i.second {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+#content h3.watch-video i.icon-circle-arrow-up {
+  margin-right: 10px;
+}
+.content-video {
+  padding: 15px;
+  width: 620px;
+  display: none;
+}
 .breadcrumb {
   margin-bottom: 15px;
 }
@@ -2328,6 +2368,9 @@ body.single-guides #content h2 {
   font-size: 12px;
   color: #bbb;
   font-weight: normal;
+}
+#CaptivateContent {
+  margin-bottom: 35px;
 }
 /* =Gravity forms
 -------------------------------------------------------------- */

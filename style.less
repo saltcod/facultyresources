@@ -9,8 +9,8 @@ Version: 0.1
 */
 
 
-@import "elements.less";
-@import "normalize.css";
+@import "inc/elements.less";
+@import "inc/normalize.css";
 
 
 /* Colour Variables */
@@ -27,7 +27,7 @@ Version: 0.1
 
 
 /* Font Awesome icon font */
-@import "font-awesome.less";
+@import "inc/font/font-awesome.less";
  
 /* =Structure
 -------------------------------------------------------------- */
@@ -1529,10 +1529,30 @@ body.single-guides #content {
 #content h3.step-by-steps{
 	text-transform: uppercase;
 	border-bottom: 1px solid #ccc; 
-		i {
-			margin-right: 10px;
-		}
+		i {margin-right: 10px; } 
+	}
+
+#content h3.watch-video {
+	text-transform: uppercase;
+	background: darken(@blue, 5%);
+	font-size: 14px;
+	display: inline-block;
+	color: white;
+	.rounded(4px);
+	margin-bottom: 45px;
+	.transition (.5s, ease-out);
+		&:hover { background: darken(@blue, 10%);}
+		a {color: white; padding: 10px 15px; line-height: 32px}
+ 		i {margin-right: 10px; &.second { margin-left: 15px; margin-right: 5px; }} 
+ 		i.icon-circle-arrow-up { margin-right: 10px; }
+ 	}
+
+.content-video {
+	padding: 15px;
+ 	width: 620px;
+	display: none;
 }
+
 
 .breadcrumb {
 	margin-bottom: 15px;
@@ -1553,7 +1573,9 @@ body.single-guides #content {
 		
 }
 
-
+#CaptivateContent {
+	margin-bottom: 35px;
+}
 
 
  /* =Gravity forms
