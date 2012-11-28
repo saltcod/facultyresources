@@ -64,6 +64,14 @@ get_header(); ?>
 			 	<li><a href="http://media.distance.mun.ca/courses/creativecommons/" target="_blank">Creative Commons</a></li>
 	 		</ul>
 		</div>
+		
+		<div class="short-courses">
+			<h2>Links</h2>
+			 <ul>
+			 	<li><a href="http://blog.distance.mun.ca/teachingwithtechnologycommunity" target="_blank">Teaching with Technology Community</a></li>
+			 	<li><a href="http://www.delts.mun.ca" target="_blank">DELTS</a></li>
+	 		</ul>
+		</div>
 
 	</div>
 	
