@@ -1,11 +1,9 @@
 
-<h3 class="watch-video"><a href="#"><i class="icon-facetime-video"></i>Watch a video <i class="icon-chevron-right second"></i></a></h3>
-
 <div class="content-video">
 	<div id="CaptivateContent">&nbsp;
 	</div>
 	<script type="text/javascript">
-	var so = new SWFObject("<?php the_field('captivate_url');?>", "Captivate", "610", "424", "8", "#CCCCCC");
+	var so = new SWFObject("<?php the_field('captivate_url');?>", "Captivate", "820", "570", "8", "#CCCCCC");
 	so.addParam("quality", "high");
 	so.addParam("name", "Captivate");
 	so.addParam("id", "Captivate");
@@ -21,5 +19,5 @@
 	<script type="text/javascript">
 	document.getElementById('Captivate').focus();
 	document.Captivate.focus();
-	</script>	
+	</script>
 </div>

@@ -17,10 +17,46 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
+
  
+ 
+ <!-- Button to trigger modal -->
+<h3 class="watch-video"><a href="#watch-video-modal" role="button" class="btn" data-toggle="modal"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
+
+ 
+<!-- Modal -->
+<div id="watch-video-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="watch-video-modalLabel" aria-hidden="true">
+  
+  <div class="modal-header">
+  	<div class="video-title"><?php the_title();?></div> 
+    <a class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+  </div>
+  
+  <div class="modal-body">
+    <?php include('captivate-embed.php'); ?>
+  </div>
+ 
+   <div class="modal-footer">
+    <a class="btn" data-dismiss="modal" aria-hidden="true">Close</a>
+  </div>
+  
+</div>
+  
+   
+    
+     
+      
+       
+        
+         
+          
+           
+            
+             
+               
 	<?php // Show Captivate video if guide has one ?> 
 	<?php if ( get_field('captivate_url' )) : ?>
-		<?php include('captivate-embed.php'); ?>
+		<?php // include('captivate-embed.php'); ?>
 	<?php endif; ?>
  
  
