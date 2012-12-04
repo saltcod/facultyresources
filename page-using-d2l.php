@@ -31,7 +31,25 @@ get_header(); ?>
 
 
 
+<div class="row d2l-tools hot-topics group"> 
+	
+	<div class="left-side">
+		<h2 class="section-title left"><i class="icon-fire"></i>Hot topics</h2>	 
+	</div>
+	
+	<div class="right-side">
+		
+		<ul>
+			<?php // This function is too long for a template file. It lives in functions.php 
+				victoria_park_get_hot_topics();
+			?>	
+		</ul>
+	</div>
+ </div>		 
+
+
 <div class="row d2l-tools first group"> 
+	<div class="triangle"></div>
 	
 	<h2 class="section-title center">Get Ready. Get Prepared. Get Started</h2>	 
 	<h3 class="center">Information for new and experienced users.</h3>

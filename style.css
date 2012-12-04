@@ -1752,6 +1752,25 @@ body.page-using-d2l #fade {
 body.page-using-d2l #content img.cloud {
   margin-top: 150px;
 }
+body.page-using-d2l .d2l-tools.hot-topics {
+  background: #d1e5ef;
+}
+body.page-using-d2l .d2l-tools.hot-topics .left-side {
+  width: 225px;
+}
+body.page-using-d2l .d2l-tools.hot-topics .left-side i {
+  color: #d90b00;
+  margin-right: 15px;
+  font-size: 20px;
+}
+body.page-using-d2l .d2l-tools.hot-topics .right-side li {
+  font-size: 18px;
+  padding: 10px 0 5px;
+  border-bottom: 1px solid #aaa;
+}
+body.page-using-d2l .d2l-tools.hot-topics .right-side li a:hover {
+  color: #d90b00;
+}
 body.page-using-d2l .d2l-tools.first {
   /* Get Started */
 
@@ -1777,6 +1796,15 @@ body.page-using-d2l .d2l-tools.first h3.how-to {
 }
 body.page-using-d2l .d2l-tools.first .button {
   margin-bottom: 50px;
+}
+body.page-using-d2l .d2l-tools.first .triangle {
+  width: 0;
+  height: 0;
+  margin-top: -25px;
+  margin-left: 350px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #d1e5ef;
 }
 body.page-using-d2l .d2l-tools.course-content {
   /* Course Content */

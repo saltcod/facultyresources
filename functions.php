@@ -181,6 +181,49 @@ function victoria_park_better_body_classes( $classes ) {
 
 
 /**
+ * Get current "Hot Topics"
+ *
+ * @since 0.2
+ */
+
+function victoria_park_get_hot_topics(){
+	$args = array( 
+		'post_type' => 'guides',
+		'meta_query' => array(
+			array(
+				'key' => 'hot_topic',
+				'value' => '1',
+				'compare' => '=='
+				)
+			)
+		); 
+
+	$the_query = new WP_Query( $args );
+
+	 // The Loop 
+	if ( $the_query->have_posts()) :
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+
+	echo '<li><a href="';
+	the_permalink();
+	echo '">';
+	the_title(); 
+	echo '</a>'; 
+	echo '</li>';
+
+	endwhile;
+	endif;
+
+
+	// Reset Post Data
+	wp_reset_postdata();
+}
+
+
+
+
+
+/**
  * Print out the current template file to the footer.
  * Obviously to be removed in production
  *
