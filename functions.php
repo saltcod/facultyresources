@@ -195,7 +195,10 @@ function victoria_park_get_hot_topics(){
 				'value' => '1',
 				'compare' => '=='
 				)
-			)
+			), 
+		'order' => 'ASC',
+		'orderby' => 'meta_value', 'meta_key' => 'hot_topic_order' 
+		 
 		); 
 
 	$the_query = new WP_Query( $args );

@@ -1756,17 +1756,20 @@ body.page-using-d2l .d2l-tools.hot-topics {
   background: #d1e5ef;
 }
 body.page-using-d2l .d2l-tools.hot-topics .left-side {
-  width: 225px;
+  width: 200px;
 }
 body.page-using-d2l .d2l-tools.hot-topics .left-side i {
   color: #d90b00;
   margin-right: 15px;
   font-size: 20px;
 }
+body.page-using-d2l .d2l-tools.hot-topics .right-side {
+  width: 500px;
+}
 body.page-using-d2l .d2l-tools.hot-topics .right-side li {
   font-size: 18px;
   padding: 10px 0 5px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
 }
 body.page-using-d2l .d2l-tools.hot-topics .right-side li a:hover {
   color: #d90b00;
