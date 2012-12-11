@@ -54,8 +54,7 @@
  <link href="http://www.mun.ca/appinclude/brand/2011v1/include/styles/interior.css" rel="stylesheet" type="text/css" media="screen" />
 
 <script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/basefunctions.js"></script>
-<script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/onready.js"></script>
-<script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/topnav-content.js"></script>
+ <script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/topnav-content.js"></script>
 <!-- Mun Goodies -->
 
 <!-- Captivate video helper -->
@@ -75,6 +74,7 @@
 <![endif]-->
  
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>

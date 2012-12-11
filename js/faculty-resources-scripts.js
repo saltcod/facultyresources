@@ -9,7 +9,7 @@ jQuery(function($) {
         'margin-top': 0
     }, 1000);
 
-     
+
 
      //Fade some stuff in on page load
      $(function(){
@@ -17,17 +17,16 @@ jQuery(function($) {
         
         $('.page-using-d2l-illustrated img.cloud').animate({ 'margin-top' : '15px' }, 800);
         
-      });
-        
+    });
+
      
       // jQuery Accordion for tool landing pages
       // Store variables
-     
-    var accordion_head = $('.accordion > li > a'),
-        accordion_body = $('.accordion li > .sub-menu');
+
+      var accordion_head = $('.accordion > li > a'),
+      accordion_body = $('.accordion li > .sub-menu');
 
     // Open the first tab on load
-
     accordion_head.first().addClass('active').next().slideDown(200);
 
     // Click function
@@ -37,7 +36,7 @@ jQuery(function($) {
         // Disable header links
 
         event.preventDefault();
-    		$('.accordion').toggleClass('is-collapsed');
+        $('.accordion').toggleClass('is-collapsed');
 
         // Show and hide the tabs on click
 
@@ -49,9 +48,15 @@ jQuery(function($) {
         }
 
     }); 
-      
 
- 
+
+    //Stop playing Captivate videos when you close the modal
+    $('.watch-video-modal').on('hide', function(){
+        console.log('closed');
+    })
+
+
+
 
 
 }); //Last
