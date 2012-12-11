@@ -11,8 +11,7 @@
 	so.addParam("bgcolor","#F5F4F1");
 	so.addParam("menu", "false");
 	so.addVariable("variable1", "value1");
-	so.addVariable('autoplay','false'); 
-	so.setAttribute("redirectUrl", "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash");
+ 	so.setAttribute("redirectUrl", "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash");
 	so.write("CaptivateContent");
 	</script>
 
