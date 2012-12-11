@@ -1,5 +1,22 @@
 jQuery(function($) {
 
+    // Captivate Modals
+    // hide() the modal first, then show() it before handing it to Bootstrap
+    
+    $('#watch-video-modal').hide();
+        console.log('hidden');
+    
+    $('h3.watch-video').on('click', function(){
+         $('#watch-video-modal').show().modal('show');
+     });
+
+      $('a.close').on('click', function(){
+         $('#watch-video-modal').hide();
+     });
+
+     
+
+    
 
     $('body.tool-landing-page #secondary h2').animate({ 
         opacity: 1

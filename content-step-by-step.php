@@ -24,10 +24,10 @@
 	<?php if ( get_field('captivate_url' )) : ?>
 		 
 	 <!-- Button to trigger modal -->
-	<h3 class="watch-video"><a href="#watch-video-modal" role="button" class="btn" data-toggle="modal"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
+	<h3 class="watch-video"><a href="#watch-video-modal" role="button" class="btn"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
 	 
 	<!-- Modal -->
-	<div id="watch-video-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="watch-video-modalLabel" aria-hidden="true">
+	<div id="watch-video-modal" class="modal hide fade" tabindex="-1">
 
 		<div class="modal-header">
 			<div class="video-title"><?php the_title();?></div> 
@@ -39,7 +39,7 @@
 		</div>
 
 		<div class="modal-footer">
-			<a class="btn" data-dismiss="modal" aria-hidden="true">Close</a>
+			<a class="btn close" data-dismiss="modal" aria-hidden="true">Close</a>
 		</div>
 
 	</div>
