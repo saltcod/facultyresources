@@ -143,6 +143,8 @@ function victoria_park_enqueue_scripts() {
 	wp_register_script( 'bootstrap-modal', get_template_directory_uri() .'/js/jquery.modal.bootstrap.js' );
 	wp_enqueue_script( 'bootstrap-modal' );
 
+	wp_register_script( 'jquery-typer', get_template_directory_uri() .'/js/jquery.typer.js' );
+	wp_enqueue_script( 'jquery-typer' );
 }
 
 
