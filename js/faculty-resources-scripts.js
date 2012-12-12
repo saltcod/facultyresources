@@ -7,8 +7,9 @@ jQuery(function($) {
 
 
     // Media Element js
-    $('video').mediaelementplayer({
+    $('captivate').mediaelementplayer({
             enablePluginDebug: true,
+            autoplay: false,
             plugins: ['flash','silverlight']
         });
 
