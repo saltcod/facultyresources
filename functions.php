@@ -91,16 +91,14 @@ register_post_type(
 //Register a taxonomy for specific tools (D2L, Elive)
 
 function register_guide_type_taxonomy() {
-	// create a new taxonomy
 	register_taxonomy(
-		'guide-type',
-		'guides',
-		array(
+		'guide-type', 'guides', array(
 			'label' => __( 'Guide Type' ),
 			'sort' => true,
 			'args' => array( 'orderby' => 'term_order' ),
 			'hierarchical' => true,
-			'rewrite' => array( 'slug' => 'guide-type' )
+			'rewrite' => array( 'slug' => 'guide-type' ),
+			'show_admin_column' => true
 		)
 	);
 }

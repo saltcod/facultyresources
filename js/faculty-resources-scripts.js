@@ -3,15 +3,22 @@ jQuery(function($) {
     // Captivate Modals
     // hide() the modal first, then show() it before handing it to Bootstrap
     
+   
+    $('h3').on('click', function(){
+        console.log('clicked');
+    });
+
     $('#watch-video-modal').hide();
         console.log('hidden');
     
-    $('h3.watch-video').on('click', function(){
+    $('h3').on('click', function(){
+        console.log('showing');
          $('#watch-video-modal').show().modal('show');
      });
 
       $('a.close').on('click', function(){
          $('#watch-video-modal').hide();
+        console.log('closing');
      });
 
      
@@ -19,7 +26,7 @@ jQuery(function($) {
     
 
     $('body.tool-landing-page #secondary h2').animate({ 
-        opacity: 1
+        'opacity': 1
     }, 1600);
 
     $('body.tool-landing-page #secondary').animate({ 
@@ -30,7 +37,7 @@ jQuery(function($) {
 
      //Fade some stuff in on page load
      $(function(){
-        $('img').animate({ opacity: 1 }, 200);
+        $('img').animate({ 'opacity': 1 }, 200);
         
         $('.page-using-d2l-illustrated img.cloud').animate({ 'margin-top' : '15px' }, 800);
         

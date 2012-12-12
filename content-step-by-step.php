@@ -24,7 +24,7 @@
 	<?php if ( get_field('captivate_url' )) : ?>
 		 
 	 <!-- Button to trigger modal -->
-	<h3 class="watch-video"><a href="#watch-video-modal" role="button" class="btn"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
+	<h3 class="watch-video"><a href="#watch-video-button" role="button" class="btn"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
 	 
 	<!-- Modal -->
 	<div id="watch-video-modal" class="modal hide fade" tabindex="-1">
