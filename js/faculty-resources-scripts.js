@@ -3,20 +3,7 @@ jQuery(function($) {
     // Captivate Modals
     // hide() the modal first, then show() it before handing it to Bootstrap
     
-
-
-
-    // Media Element js
-    $('video').mediaelementplayer({
-            enablePluginDebug: true,
-            plugins: ['flash','silverlight']
-        });
-
-
-
-
-
-
+   
     $('h3').on('click', function(){
         console.log('clicked');
     });

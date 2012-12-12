@@ -131,24 +131,19 @@ add_filter( 'page_css_class', 'facultyresources_wp_list_pages_classes', 10, 2 );
 function victoria_park_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 
-	wp_register_script( 'faculty-resources-scripts', get_template_directory_uri() .'/js/faculty-resources-scripts.js', array('jquery') );
+	wp_register_script( 'faculty-resources-scripts', get_template_directory_uri() .'/js/faculty-resources-scripts.js' );
 	wp_enqueue_script( 'faculty-resources-scripts' );
 
-	wp_register_script( 'jquery-ui', get_template_directory_uri() .'/js/jquery-ui-1.8.23.custom.min.js', array('jquery') );
+	wp_register_script( 'jquery-ui', get_template_directory_uri() .'/js/jquery-ui-1.8.23.custom.min.js' );
 	wp_enqueue_script( 'jquery-ui' );
 
-	wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js', array('jquery') );
+	wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js' );
 	wp_enqueue_script( 'jquery-accordion' );
 	
-	wp_register_script( 'bootstrap-modal', get_template_directory_uri() .'/js/jquery.modal.bootstrap.js', array('jquery') );
+	wp_register_script( 'bootstrap-modal', get_template_directory_uri() .'/js/jquery.modal.bootstrap.js' );
 	wp_enqueue_script( 'bootstrap-modal' );
 
-	wp_register_script( 'media-element-player', get_template_directory_uri() .'/js/mediaelement-and-player.min.js', array('jquery') );
-	wp_enqueue_script( 'media-element-player' );
-
-	wp_register_style( 'media-element-player', get_template_directory_uri() .'/inc/css/mediaelementplayer.css' );
-	wp_enqueue_style( 'media-element-player' );
-  }
+}
 
 
 /**

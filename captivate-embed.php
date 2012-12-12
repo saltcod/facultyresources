@@ -1,15 +1,23 @@
 
 <div class="content-video">
-	<div id="CaptivateContent">
-	
+	<div id="CaptivateContent">&nbsp;
 	</div>
-	
-	
+	<script type="text/javascript">
+	var so = new SWFObject("<?php the_field('captivate_url');?>", "Captivate", "820", "570", "8", "#CCCCCC");
+	so.addParam("quality", "high");
+	so.addParam("name", "Captivate");
+	so.addParam("id", "Captivate");
+	so.addParam("wmode", "window");
+	so.addParam("bgcolor","#F5F4F1");
+	so.addParam("menu", "false");
+	so.addVariable("variable1", "value1");
+ 	so.setAttribute("redirectUrl", "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash");
+	so.write("CaptivateContent");
+	</script>
 
-<captivate width="800" height="600" controls="controls">
-             
-            <object width="800" height="600" type="application/x-shockwave-flash" data="http://media.distance.mun.ca/courses/d2l/Grades_Clip_06_Changing_Grades_Settings_demo.swf">
-                <param name="movie" value="http://media.distance.mun.ca/courses/d2l/Grades_Clip_06_Changing_Grades_Settings_demo.swf">
-            </object>
-        </captivate>
+
+	<script type="text/javascript">
+	document.getElementById('Captivate').focus();
+	document.Captivate.focus();
+	</script>
 </div>
