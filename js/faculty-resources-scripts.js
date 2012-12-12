@@ -9,6 +9,7 @@ jQuery(function($) {
     // Media Element js
     $('captivate').mediaelementplayer({
             enablePluginDebug: true,
+            autoplay: false,
             plugins: ['flash','silverlight']
         });
 
