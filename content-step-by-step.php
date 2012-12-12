@@ -16,10 +16,8 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-
-
- 
-	               
+                                                                                        
+	                                                                                                                                                      
 	<?php // Show Captivate video if guide has one ?> 
 	<?php if ( get_field('captivate_url' )) : ?>
 		 
