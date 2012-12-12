@@ -3,27 +3,33 @@ jQuery(function($) {
     // Captivate Modals
     // hide() the modal first, then show() it before handing it to Bootstrap
     
-   
-    $('h3').on('click', function(){
-        console.log('clicked');
+
+    // Let's try again. 
+    // First:   Clone the video object
+    // Then :   .remove() it
+    // Then :   clone() it on clicking the button
+ 
+
+    $(function(){
+        var video = $('.content-video embed');
+        video.clone();
+        video.detach();
+        console.log(video);
+        
+        $('h3').on('click', function(){
+            console.log('clicked');
+            $('.modal-body').append(video);
+            $('#watch-video-modal').modal('show');
+        });
+
     });
+   
+    $('a.close').on('click', function(){
+        $('#watch-video-modal').detach();
+       console.log('detached');
+    });
+ 
 
-    $('#watch-video-modal').hide();
-        console.log('hidden');
-    
-    $('h3').on('click', function(){
-        console.log('showing');
-         $('#watch-video-modal').show().modal('show');
-     });
-
-      $('a.close').on('click', function(){
-         $('#watch-video-modal').hide();
-        console.log('closing');
-     });
-
-     
-
-    
 
     $('body.tool-landing-page #secondary h2').animate({ 
         'opacity': 1
