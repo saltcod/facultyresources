@@ -27,8 +27,7 @@
 	<h3 class="watch-video"><a href="#watch-video-button" role="button" class="btn"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
 	 
 	<!-- Modal -->
-	<div class="empty"></div>
-	<div id="watch-video-modal" class="modal hide fade" tabindex="-1">
+ 	<div id="watch-video-modal" class="modal hide fade" tabindex="-1">
 
 		<div class="modal-header">
 			<div class="video-title"><?php the_title();?></div> 
