@@ -1,5 +1,34 @@
 jQuery(function($) {
 
+
+$('.gallery').each(function() {
+    var slideshow = $(this);
+    var $nav = $('<a class="prev" href="#">Prev</a><a class="next" href="#">Next</a>').insertBefore(this);
+
+    var next = slideshow.parent().find('.next');
+    var prev = slideshow.parent().find('.prev');
+
+    slideshow.cycle({
+        fx: 'fade',
+        speed: 'fast',
+        timeout: 0, 
+        next: next, 
+        prev: prev,
+    });
+});
+ 
+
+
+// $('.gallery').each(function() {
+//     var $nav = $('<a class="prev" href="#">Prev</a><a class="next" href="#">Next</a>').insertBefore(this);
+    
+//     var p = this.parentNode;
+//     $(this).cycle({
+//         timeout: 0,
+//         prev:   $('.prev', p),
+//         next:   $('.next', p) 
+//     });
+// });
     // Captivate Modals
     // hide() the modal first, then show() it before handing it to Bootstrap
     
@@ -21,7 +50,6 @@ jQuery(function($) {
             $('.modal-body').append(video);
             $('#watch-video-modal').modal('show');
         });
-
     });
    
     $('a.close').on('click', function(){
@@ -41,13 +69,13 @@ jQuery(function($) {
 
 
 
-     //Fade some stuff in on page load
-     $(function(){
-        $('img').animate({ 'opacity': 1 }, 200);
+    //  //Fade some stuff in on page load
+    //  $(function(){
+    //     $('img').animate({ 'opacity': 1 }, 200);
         
-        $('.page-using-d2l-illustrated img.cloud').animate({ 'margin-top' : '15px' }, 800);
+    //     $('.page-using-d2l-illustrated img.cloud').animate({ 'margin-top' : '15px' }, 800);
         
-    });
+    // });
 
      
       // jQuery Accordion for tool landing pages

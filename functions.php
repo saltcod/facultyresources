@@ -21,6 +21,9 @@ function victoria_park_theme_setup() {
 	//add basic features
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+	
+	// Image size for inline slideshows
+	add_image_size( 'inline-slideshow', 500, 9999);
 
 	//add custom scripts
 	add_action( 'wp_enqueue_scripts', 'victoria_park_enqueue_scripts' );
@@ -104,6 +107,8 @@ function register_guide_type_taxonomy() {
 }
 
 
+ 
+
 
 
 /**
@@ -143,8 +148,8 @@ function victoria_park_enqueue_scripts() {
 	wp_register_script( 'bootstrap-modal', get_template_directory_uri() .'/js/jquery.modal.bootstrap.js' );
 	wp_enqueue_script( 'bootstrap-modal' );
 
-	wp_register_script( 'jquery-typer', get_template_directory_uri() .'/js/jquery.typer.js' );
-	wp_enqueue_script( 'jquery-typer' );
+	wp_register_script( 'jquery-cycle', get_template_directory_uri() .'/js/jquery.cycle.js' );
+	wp_enqueue_script( 'jquery-cycle' );
 }
 
 
@@ -221,6 +226,21 @@ function victoria_park_get_hot_topics(){
 }
 
 
+
+
+
+/**
+ * Check if the current page/post/guide has a gallery attached. 
+ * jQuery cycle will intercept if so
+ *
+ * @since 0.1
+ */
+
+
+function faculty_resources_hasgallery(){
+	global $post;
+	return (strpos($post->post_content,'[gallery') !== false);
+}
 
 
 

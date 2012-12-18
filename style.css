@@ -2799,15 +2799,6 @@ body.archive #content h1.page-title span {
 /* =Images
 -------------------------------------------------------------- */
 /* Some nice fadeIn action */
-img {
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  -webkit-opacity: 0;
-  opacity: 0;
-}
-img.alignnone {
-  display: block;
-}
 a img {
   border: none;
 }

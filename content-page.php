@@ -14,6 +14,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+	
+
+				<?php if( faculty_resources_hasgallery() ): ?>
+					
+				<?php endif; ?>
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'victoria_park' ), 'after' => '</div>' ) ); ?>
 		<?php edit_post_link( __( 'Edit', 'victoria_park' ), '<span class="edit-link">', '</span>' ); ?>
