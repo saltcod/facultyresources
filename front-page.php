@@ -49,31 +49,11 @@ get_header(); ?>
 
 	<div id="sidebar" class="block third">
 		
-		<div class="courses-programs">
-			 <h2>Courses and Programs</h2>
-			 <ul>
-			 	<li><a href="<?php echo home_url();?>/technology-enabled-learning/">Technology Enabled Learning</a></li>
- 			 	<li><a href="http://blog.distance.mun.ca/teachingandlearning/">Teaching Skills Enhancement</a></li>
- 	 		</ul>
-		</div>
-
-		<div class="short-courses">
-			<h2>Short Courses</h2>
-			 <ul>
-			 	<li><a href="http://media.distance.mun.ca/courses/rubrics/" target="_blank">Rubrics</a></li>
-			 	<li><a href="http://media.distance.mun.ca/courses/creativecommons/" target="_blank">Creative Commons</a></li>
-			 	<li><a href="http://media.distance.mun.ca/courses/blog_guide/" target="_blank">MUN Blog Guide</a></li>
-			 	<li><a href="http://media.distance.mun.ca/courses/elive/" target="_blank">Introduction to Elluminate Live!</a></li>
-	 		</ul>
-		</div>
-		
-		<div class="short-courses">
-			<h2>Links</h2>
-			 <ul>
-			 	<li><a href="http://blog.distance.mun.ca/teachingwithtechnologycommunity" target="_blank">Teaching with Technology Community</a></li>
-			 	<li><a href="http://www.delts.mun.ca" target="_blank">DELTS</a></li>
-	 		</ul>
-		</div>
+		 
+			 <?php do_action( 'before_sidebar' ); ?>
+				<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+			<?php endif; ?>
+		 
 
 	</div>
 	
