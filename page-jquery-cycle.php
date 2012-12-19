@@ -23,12 +23,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
-
-				 <div class="gallery">
-				 	<img src="http://placehold.it/350x250" alt="">
-				 	<img src="http://placehold.it/380x150" alt="">
-				 	<img src="http://placehold.it/250x250" alt="">
-				 </div>
+ 
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

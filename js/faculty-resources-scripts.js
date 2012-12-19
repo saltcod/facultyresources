@@ -14,9 +14,30 @@ $('.gallery').each(function() {
         timeout: 0, 
         next: next, 
         prev: prev,
+        slideResize: false,
+        slideExpr: '.gallery-item',
+        before: function(){
+           $(this).parent().find('.current').removeClass();
+           var max = -1;
+    $(".current img").each(function() {
+        var h = $(this).height(); 
+        max = h > max ? h : max;
     });
+    console.log(max);
+
+    $('.gallery-item').css('height', max)
+     },
+      after: function(){
+           $(this).addClass('current');
+     }
+
+
+     });
 });
  
+    // Calculate and assign the height of .gallery-item
+    
+
 
 
 // $('.gallery').each(function() {
