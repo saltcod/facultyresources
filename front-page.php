@@ -62,6 +62,8 @@ get_header(); ?>
 			 <ul>
 			 	<li><a href="http://media.distance.mun.ca/courses/rubrics/" target="_blank">Rubrics</a></li>
 			 	<li><a href="http://media.distance.mun.ca/courses/creativecommons/" target="_blank">Creative Commons</a></li>
+			 	<li><a href="http://media.distance.mun.ca/courses/blog_guide/" target="_blank">MUN Blog Guide</a></li>
+			 	<li><a href="http://media.distance.mun.ca/courses/elive/" target="_blank">Introduction to Elluminate Live!</a></li>
 	 		</ul>
 		</div>
 		
