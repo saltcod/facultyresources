@@ -35,8 +35,8 @@ get_header(); ?>
 
 		<div class="index-tool">
 			<img src="<?php echo get_template_directory_uri();?>/images/online-rooms-icon.png" alt="">
-			<a href="#"><h2>Online Rooms</h2>	</a>
-			<h3>Bring your classroom discussions online</h3><span class="soon">Coming soon</span>	
+			<a href="<?php echo home_url(); ?>/guides/online-rooms/"><h2>Online Rooms</h2></a>
+			<h3>Bring your classroom discussions online</h3>	
 	</div> 
 
 	<div class="index-tool last">
