@@ -1192,6 +1192,7 @@ body.tool-landing-page #secondary h2 {
 }
 .accordion li#one a.tool-name {
   font-size: 30px;
+  line-height: 1.5;
   padding: 25px 0 15px;
   display: block;
   text-decoration: none;
