@@ -135,7 +135,8 @@ $('.gallery').each(function() {
     })
 
 
-
+    // Add classes to table <td>s to allow for styling
+    $('table td:nth-child(1), table th:first').addClass('first');
 
 
 }); //Last
