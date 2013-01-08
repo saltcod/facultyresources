@@ -1383,6 +1383,7 @@ body.home h3 {
 }
 body.home span.tagline {
   font: 300 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 21px;
   color: #fff;
   position: absolute;
   top: 45px;
