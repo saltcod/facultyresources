@@ -2398,6 +2398,36 @@ body.single-guides #content h2 {
   color: #bbb;
   font-weight: normal;
 }
+/* =Tables
+-------------------------------------------------------------- */
+table {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+tr,
+td {
+  border: 1px solid #ccc;
+}
+th {
+  border-left: 1px solid white;
+  color: #fff;
+  background: #5fa6c8;
+  padding: 15px;
+}
+th.first {
+  border: none;
+}
+td {
+  padding: 10px;
+  font-size: 14px;
+}
+td.first {
+  width: 225px;
+}
+td.second {
+  width: 525px;
+  text-align: left;
+}
 /* =Bootstrap Modal
 -------------------------------------------------------------- */
 .clearfix {
