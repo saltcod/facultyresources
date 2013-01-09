@@ -280,6 +280,35 @@ function victoria_park_add_slug_class_to_menu_item( $output ) {
 	return $output;
 }
 
+
+
+
+
+
+
+/**
+ * Add an item or two to the admin menu
+ *
+ * @since 1.0
+ */
+function waterstreet_admin_bar_additions() {
+    global $wp_admin_bar;
+    // we can remove a menu item, like the Comments link, just by knowing the right $id
+     // or we can remove a submenu, like New Link.
+     // we can add a submenu item too
+    $wp_admin_bar->add_menu( array(
+         'id' => 'guides',
+        'title' => __('Guides'),
+        'href' => admin_url( 'edit.php?post_type=guides')
+    ) );
+ }
+// and we hook our function via
+add_action( 'wp_before_admin_bar_render', 'waterstreet_admin_bar_additions', 0 );
+
+
+
+ 
+
 /**
  * This theme uses wp_nav_menu() in one location.
  *
