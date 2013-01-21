@@ -2659,6 +2659,13 @@ body.logged-in .modal {
   background: #bedbe8;
   padding: 10px;
 }
+/* Workshop and clinic feedback form*/
+.gform_wrapper .workshop-and-clinic-feedback-form ul li.gfield {
+  clear: both;
+  list-style-type: decimal !important;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
 /* 404 page */
 .error404 .widget {
   float: left;
