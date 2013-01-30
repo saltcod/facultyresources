@@ -88,6 +88,8 @@ register_post_type(
 
 
 
+// Images get inserted into posts as links to the larger image. No more. 
+update_option('image_default_link_type','none');
 
 
 
