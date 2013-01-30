@@ -2992,6 +2992,12 @@ article.comment {
 .hidden {
   display: none;
 }
+.note {
+  background: #d1e5ef url(images/note-flag-icon.png) no-repeat;
+  padding: 10px 50px;
+  margin-bottom: 25px;
+  display: block;
+}
 /* =Group/Clearfix
 -------------------------------------------------------------- */
 .group:before,
