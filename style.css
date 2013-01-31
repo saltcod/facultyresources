@@ -1185,6 +1185,10 @@ body.tool-landing-page #secondary h2 {
   list-style-type: none;
   color: white;
 }
+.accordion ul {
+  list-style-type: disc;
+  margin-left: 25px;
+}
 .accordion li#one {
   background: #4c9cc1;
   margin-bottom: 25px;
@@ -1237,21 +1241,21 @@ body.tool-landing-page #secondary h2 {
 .accordion li#two a.faq i {
   text-decoration: none;
 }
-.accordion li#two .sub-menu {
+.accordion li#two > .sub-menu {
   list-style-type: none;
   padding: 10px 0 0 0;
   border-top: 1px solid #fff;
 }
-.accordion li#two .sub-menu ul {
+.accordion li#two > .sub-menu ul {
   padding-left: 0;
 }
-.accordion li#two .sub-menu h3 {
+.accordion li#two > .sub-menu h3 {
   font-weight: bold;
   margin: 25px 0 10px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
-.accordion li#two .sub-menu a {
+.accordion li#two > .sub-menu a {
   border-bottom: 1px dotted #fff;
   color: white;
 }

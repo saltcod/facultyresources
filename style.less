@@ -469,6 +469,12 @@ body.tool-landing-page #secondary {
  	padding: 0; 
 	list-style-type: none;
 	color: white;
+		
+		ul {
+		    list-style-type: disc;
+		    margin-left: 25px;
+		}
+		
 		li#one {
 		  background: @light-blue;
 		  margin-bottom: 25px;
@@ -524,7 +530,7 @@ body.tool-landing-page #secondary {
  			  	}
 			  	i { text-decoration: none;  }
 			}
-			.sub-menu {
+			> .sub-menu {
  	 			list-style-type: none;
 			  	padding: 10px 0 0 0;
 			  	border-top: 1px solid #fff;
@@ -537,6 +543,8 @@ body.tool-landing-page #secondary {
 					}
 					a { border-bottom: 1px dotted #fff; color: white;}
 			}
+
+
 		}
 }
 
