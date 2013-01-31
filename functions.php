@@ -88,11 +88,6 @@ register_post_type(
 
 
 
-// Images get inserted into posts as links to the larger image. No more. 
-update_option('image_default_link_type','none');
-
-
-
 //Register a taxonomy for specific tools (D2L, Elive)
 
 function register_guide_type_taxonomy() {
@@ -109,7 +104,21 @@ function register_guide_type_taxonomy() {
 }
 
 
+
+/**
+ * Strip the width and height attr for images posted to the content area
+ *
+ * @since 0.1
+ */
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
  
+function remove_thumbnail_dimensions( $html ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
 
 
 

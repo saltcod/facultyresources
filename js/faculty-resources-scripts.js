@@ -1,5 +1,20 @@
 jQuery(function($) {
 
+/* 
+    Lets use a hammer to kill these flies. 
+    We've stripped out the width and height attributes via a filter in functions.php
+    This will apply to new images placed in new/existing posts. Not old ones. 
+    This hammer will strip the attributes out of existing posts. 
+    We regret what we've done here. 
+
+*/
+    $('article img').each(function(){ 
+        $(this).removeAttr('width')
+        $(this).removeAttr('height');
+    });
+
+
+
 
 $('.gallery').each(function() {
     var slideshow = $(this);
