@@ -102,8 +102,7 @@ function register_guide_type_taxonomy() {
 		)
 	);
 }
-
-
+ 
 
 /**
  * Strip the width and height attr for images posted to the content area
@@ -121,7 +120,7 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 
-
+ 
 /**
  * wp_list_pages() outputs a menu nicely, but doesn't include the handy classes like current_page_item for styling
  *
