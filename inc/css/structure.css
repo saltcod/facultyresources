@@ -1,0 +1,895 @@
+/* ===================================================================================== STYLES FOR ALL PAGES */
+
+
+/* ===== Main Wrapper For Site ===== */
+
+#uber { /* Contains all the page content */
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/top-nav-background.gif) top left repeat-x;
+}
+
+
+
+#topNav{
+    width:980px;
+    height:32px;
+    margin:0 auto;
+    z-index:8;
+    position:relative;
+}
+
+/*Top nav buttons */
+.topNavQlButton{
+    float:right;
+    height:32px;
+}
+.topNavQlButton a{
+    height:32px;
+    text-indent: -9999px;
+    font-size: 1%;
+    overflow: hidden;
+    display:block;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/top-nav-links.gif?1315478976);
+}
+#tnql-about{
+    width:69px;
+    background-position: 0 0;
+}
+#tnql-alumni{
+    width:75px;
+    background-position: -69px 0;
+}
+
+#tnql-careers{
+                width:105px;
+    background-position: -144px 0;
+}
+
+#tnql-becomestudent{
+    width:180px;
+    background-position: -249px 0;
+}
+
+#tnql-international{
+    width:127px;
+    background-position: -429px 0;
+}
+
+
+#tnql-programs{
+    width:94px;
+    background-position: -556px 0;
+}
+
+#tnql-research{
+    width:88px;
+    background-position: -650px 0;
+}
+
+
+#tnql-exploreourcampuses{
+    width:114px;
+    background-position: -738px 0;
+}
+
+#tnql-quicklinks{
+    width:128px;
+    background-position: -852px 0;
+}
+
+#tnql-about:hover { background-position: 0 -32px; }
+#tnql-alumni:hover { background-position: -69px -32px; }
+#tnql-careers:hover { background-position: -144px -32px; }
+#tnql-becomestudent:hover { background-position: -249px -32px; }
+#tnql-international:hover { background-position: -429px -32px; }
+#tnql-programs:hover { background-position: -556px -32px; }
+#tnql-research:hover { background-position: -650px -32px; }
+#tnql-exploreourcampuses:hover { background-position: -738px -32px; }
+#tnql-quicklinks:hover { background-position: -852px -32px; }
+
+#tnql-becomestudent.current { background-position: -249px -64px; }
+#tnql-exploreourcampuses.current { background-position: -738px -64px; }
+#tnql-quicklinks.current { background-position: -852px -64px; }
+#tnql-careers.current { background-position: -144px -64px; }
+
+
+
+/*End Top nav buttons */
+/*Drop down, e.g. quick links, explore campuses */
+
+#dropdownBottom{
+    width:100%;
+    color:#888888;
+    background: #41433c /*url(http://www.mun.ca/appinclude/brand/2011v1/images/dropdown-bottom.gif) bottom left repeat-x*/;
+}
+#dropdown{
+    margin:0 auto;
+    width:980px;
+
+}
+
+#dropdownTop{
+    width:100%;
+    height:25px;
+    /*background: url(http://www.mun.ca/appinclude/brand/2011v1/images/dropdown-top.gif) top left repeat-x;*/
+}
+
+.tnql-content{
+    padding-bottom:10px;
+    display:none;
+}
+
+span.modifiedtime{
+    font-size: 8pt;
+}
+
+
+#dropdown table{
+    padding: 0px;
+}
+
+#dropdown td{
+    vertical-align:top;
+}
+#dropdown h1{
+    margin:0px 0px 4px 0px;
+}
+#dropdown h1 a{
+    font-size:12px;
+    color:#fff;
+}
+#dropdown a {
+    font-size:12px;
+    line-height:1.1;
+    color:#ccc;
+}
+
+#dropdown a:hover{
+    color:#fff;
+}
+
+#dropdown p{
+    color:#ccc;
+    line-height:18px;
+}
+#dropdown td{
+    padding-right:20px;
+}
+
+
+#tnql-quicklinks-content table{
+    padding-bottom:15px;
+}
+#tnql-quicklinks-content td{
+    width:176px;
+    margin-right:30px;
+}
+
+#tnql-quicklinks-content ul{
+    padding-left:20px;
+}
+#tnql-quicklinks-content li{
+    margin:0px;
+    padding:0px;
+    padding-bottom: 5px;
+}
+
+/*End Drop down, e.g. quick links, explore campuses */
+
+#multisearch{
+    height: 21px;
+    left: 87px;
+    position: absolute;
+    top: 43px;
+    width: 199px;
+
+}
+#searchtext{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #333333;
+    font-size: 11px;
+    left: 90px;
+    position: absolute;
+    top: 47px;
+    width: 199px;
+}
+
+#pseudosearchtext{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 21px;
+    left: 80px;
+    position: absolute;
+    text-indent: 5px;
+    top: 45px;
+    width: 199px;
+}
+
+#pseudosearchtextinner{
+    color:#909090;
+    font-size:13px;
+    }
+
+
+#searchError{
+    top:61px;
+    left:765px;
+    position:absolute;
+    z-index: 9;
+    font-weight: bold;
+    display:none;
+}
+
+#searchDropDown{
+    top:68px;
+    left:750px;
+    position:absolute;
+    z-index: 9;
+}
+
+#searchlist{
+    width:231px;
+    height:197px;
+    margin-top:14px;
+	background:url(http://www.mun.ca/appinclude/brand/2011v1/images/search-list-bg.png) no-repeat;
+    padding:0px;
+}
+#searchlist ul{
+    list-style-type:none;
+}
+#searchlist li{
+    padding-bottom: 0px
+}
+#searchlist a{
+    color:white;
+    width: 231px;
+    height: 31px;
+	margin:2px 0 0 0;
+    display:block;
+}
+
+
+#search_mun_button, #search_mun_button:hover, #search_people_button, #search_people_button:hover, #search_department_button, #search_department_button:hover, #search_yaffle_button, #search_yaffle_button:hover, #search_lc_button, #search_lc_button:hover, #search_da_button, #search_da_button:hover{
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/searchimages/search-buttons-consolidated.png) no-repeat;
+}
+
+
+#search_mun_button{
+    background-position: 0px 0px;
+}
+#search_mun_button:hover{
+    background-position: 0px -32px;
+}
+
+#search_people_button{
+    background-position: 0px -65px;
+}
+#search_people_button:hover{
+    background-position: 0px -97px;
+}
+#search_department_button{
+    background-position: 0px -129px;
+}
+#search_department_button:hover{
+
+    background-position: 0px -161px;
+}
+#search_yaffle_button{
+    background-position: 0px -193px;
+}
+#search_yaffle_button:hover{
+    background-position: 0px -225px;
+}
+#search_lc_button{
+    background-position: 0px -257px;
+}
+#search_lc_button:hover{
+    background-position: 0px -289px;
+}
+#search_da_button{
+    background-position: 0px -321px;
+}
+#search_da_button:hover{
+    background-position: 0px -353px;
+}
+
+#searchDropDownBottom{
+    width:180px;
+    height:5px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/dropdown-search-bottom.png) top left no-repeat;
+    background:none;
+}
+
+
+
+
+#sububer,
+#sububer-notitle { /* Contains the repeating background texture */
+    position:relative;
+    background: url(http://www.mun.ca/appinclude/brand/2011v1/images/homepage-background.gif) top left repeat-x;
+}
+#subsububer{ /* Contains the static background image  for the main page*/
+    background: url(http://www.mun.ca/appinclude/brand/2011v1/images/homepage-header-background.jpg) top center no-repeat;
+}
+#pageContent { /* Contains all the content from header to footer */
+    position: relative;
+    margin: auto;
+    width: 980px;
+}
+
+
+/* ===== Header ===== */
+
+#header {
+    margin: 0;
+    width: 980px;
+    height:100px;
+    position:relative;
+}
+
+#headerlogo{
+    width:119px;
+    height:72px;
+    margin:14px 0 0 11px;
+    float:left;
+}
+
+#headerlogo a{
+    background: url('http://www.mun.ca/appinclude/brand/2011v1/images/memorial-university-logo.png') no-repeat;
+    width: 119px;
+    height: 72px;
+    text-indent: -9999px;
+    border: 0;
+    display:block;
+}
+
+
+/* Main navigation styles */
+
+#headernav2{
+    position:relative;
+    height: 75px;
+    margin-top:15px;
+    width:303px;
+    background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/search-services.gif);
+    text-indent: -9999px;
+    font-size: 1%;
+    float:right;
+}
+
+#navTab01, #navTab02, #navTab03, #navTab04, #navTab05 {
+    position: absolute;
+    height:18px;
+}
+
+#navTab01 {
+    width:55px;
+    left:0px;
+    top:4px;
+}
+#navTab02 {
+    width:110px;
+    left:84px;
+    top:4px;
+}
+#navTab03 {
+    width:78px;
+    left:225px;
+    top:4px;
+}
+#navTab04 {
+    width:58px;
+    left:0px;
+    top:29px;
+}
+#navTab05 {
+    width:47px;
+    left:0px;
+    top:53px;
+}
+
+#navTab01:hover, #navTab02:hover, #navTab03:hover, #navTab04:hover, #navTab05:hover {
+    background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/search-services-hover.gif);
+}
+
+#navTab01:hover { background-position: 0px -4px; width: 55px;}
+#navTab02:hover { background-position: -84px -4px; width: 110px;}
+#navTab03:hover { background-position: -225px -4px; width: 78px; }
+#navTab04:hover { background-position: 0px -29px; width: 58px;}
+#navTab05:hover { background-position: 0px -53px; width: 47px;}
+
+
+
+
+#homebanner{
+    margin-top:9px;
+    width:980px;
+    height:299px;
+    position:relative;
+}
+#flashBanner{
+    width:980px;
+    height:299px;
+    float:left;
+    /*background:url(http://www.mun.ca/appinclude/brand/2011v1/images/flash-banner-background.jpg) top left no-repeat;*/
+    background: none;
+}
+
+#flashBannerLink{
+    position: absolute;
+}
+
+#flashBannerCorner{
+    width:4px;
+    height:4px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:3;
+    background: url(http://www.mun.ca/appinclude/brand/2011v1/images/flash-banner-round-corner.png) top left no-repeat;
+}
+#flashBannerShadow, #flashBannerShadow-left{
+    width:13px;
+    height:299px;
+    position:absolute;
+    top:0px;
+    left:967px;
+	z-index:33;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/flash-banner-shadow-right.png) top left no-repeat;
+}
+
+#flashBannerShadow-left{
+    left:0px;
+	z-index:4;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/flash-banner-shadow-left.png) top left no-repeat;
+}
+
+#flashBannerShadow-top{
+    width:980px;
+    height:13px;
+    position:absolute;
+    top:0px;
+    left:0px;
+	z-index:5;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/flash-banner-shadow-top.png) top left no-repeat;
+}
+
+#checkOutOurCampuses{
+    width:230px;
+    height:299px;
+    float:right;
+}
+
+#campusFlash  {
+    background:url("http://www.mun.ca/appinclude/brand/2011v1/images/campus-flash-background.jpg?1289393054") no-repeat scroll left top transparent;
+    clear:both;
+    height:242px;
+    width:230px;
+}
+
+#checkOutOurCampuses h1 {
+    background:url("http://www.mun.ca/appinclude/brand/2011v1/images/check-out-our-campuses.gif?1289393054") no-repeat scroll left top transparent;
+    float:left;
+    font-size:1%;
+    height:57px;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    text-indent:-9999px;
+    width:230px;
+}
+#home3columns{
+    position:relative;
+    width:980px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/home-columns-background.gif) top left repeat-y;
+}
+
+#lefthome{
+    width:352px;
+    float:left;
+    overflow:hidden;
+    padding:0px 17px 0px 6px;
+}
+#lefthome h1, #lefthome h4{
+    margin:0px;
+}
+#lefthome h1 a, #lefthome h4 a{
+    float:left;
+    width:368px;
+    height:53px;
+    margin:0px;
+    text-indent: -9999px;
+    font-size: 1%;
+    overflow: hidden;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/headlines.gif) top left no-repeat;
+}
+/*testing*/
+#lefthome h4 a{
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/headlines3.gif) top left no-repeat;
+}
+/*testing ends*/
+.lefthomeitem, .centerhomeitem, .blankItem{
+    background: url(http://www.mun.ca/appinclude/brand/2011v1/images/news-item-background.gif) no-repeat scroll left top transparent;
+    clear: both;
+    padding: 15px 0px;
+    width: 333px;
+}
+
+.lefthomeitem{
+   width: 350px;
+}
+.lefthomepic {
+
+}
+.lefthomeitem img{
+    display:inline;
+    float:left;
+    padding: 0px 11px 0px 0px;
+}
+.lefthomeitem ul, .centerhomeitem ul{
+    padding-left:16px;
+    list-style-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/announcement-arrow.gif);
+}
+.lefthomeitem li, .centerhomeitem li{
+    margin-bottom:5px;
+}
+/*.lefthomeitem ul.events a, .centerhomeitem ul.events a{
+    color:#1f1f1f;
+}*/
+
+.blankItem {
+    background:none;
+}
+.blankItem img{
+    float: left;
+    margin: 0px 15px 10px 0;
+}
+.homeAwayImage{
+    margin: 15px 0px 10px 0px !important;
+}
+.blankItemText{
+    margin:0px;
+}
+
+#centrehome{
+   	float: left;
+    overflow: hidden;
+    padding: 5px 20px 0;
+    width: 333px;
+}
+
+
+#righthome{
+    float:right;
+    width:230px;
+	margin:20px 0 0 0;
+	min-height:700px;
+    overflow:hidden;
+}
+#dare-to-button {
+  margin: 5px 44px;
+   position: absolute;
+   top:390px;
+  
+}
+
+#righthome h2{
+    float:left;
+    width:230px;
+    height:54px;
+    text-indent: -9999px;
+    font-size: 1%;
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/take-me-to-header.jpg) top left no-repeat;
+}
+#righthome h3, #righthome span.h3{
+    color:#2a485a;
+    margin:0px;
+    padding:0px;
+    margin-bottom:2px;
+    font-size:13px;
+    font-weight: bold;
+}
+#righthome ul {
+    list-style-type:none;
+    clear:both;
+}
+#righthome li {
+    float: left;
+}
+
+#footer{
+    width:980px;
+    height:25px;
+    padding-top:8px;
+    font-size:10px;
+    color:#5f605d;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/footer-header-bar.gif) top left no-repeat;
+}
+#footer a{
+    color:#5f605d;
+}
+#footerText{
+    float:left;
+}
+#footerlinks{
+    float:right;
+}
+.black{
+    color:#000!important;
+}
+#lastupdated{
+    width:auto;
+    text-align:right;
+    font-size: 10px;
+    color: #555555;
+}
+
+#campusFlash  { background:url("http://www.mun.ca/appinclude/brand/2011v1/images/campus-flash-background.jpg") no-repeat scroll left top transparent; clear:both; height:242px; width:230px; }
+
+/* ========== EMERGENCY STYLES =========== */
+div.emergencyBarContainer{
+    background-color: #990000;
+    padding: 5px;
+}
+div.emergencyBar{
+    width: 940px;
+    margin: 0 auto;
+    padding: 5px;
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/warning_icon.png);
+    background-position: left center;
+    background-repeat:no-repeat;
+    padding-left:60px;
+    min-height:40px;
+}
+div.emergencyBar a{
+    display:block;
+    color: #ffffff;
+    padding:5px;
+}
+div.emergencyBar a:hover{
+    text-decoration:none;
+}
+div.emergencyBar span.title{
+    font-size: 20px;
+    display:block;
+    margin-bottom:5px;
+}
+
+/*====== expand/cllapse side nav for main page ===*/
+
+h5.acc_trigger, h5.acc_no_trigger {
+	padding: 0;	margin: 0;
+	border:2px solid #E5E5E5;
+	width: 224px;
+	font-size: 2em;
+	font-weight: normal;
+	float: left;
+}
+
+.class-1{
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-nav-bg.gif);
+	/*text-transform:uppercase;*/
+}
+.class-11{
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-nav-bg2.gif);
+	text-transform:uppercase;
+}
+.class-2{
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-nav-bg3.gif);
+	/*text-transform:uppercase;*/
+}
+.class-22{
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-nav-bg4.gif);
+	/*text-transform:uppercase;*/
+}
+.class-3{
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-nav-bg5.gif);
+}
+.class-33{
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-nav-bg6.gif);
+}
+	
+#home3columns-testing{
+    position:relative;
+    width:980px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/home-columns-background1.gif) top left repeat-y;
+}
+	
+h5.acc_trigger a, h5.acc_no_trigger a {
+	margin: 0;
+    padding: 5px 0 0 12px;
+    width: 212px;
+	color: #FFF;
+    float: left;
+    font-size: 14px;
+    height: 20px;
+	
+}
+
+
+
+.class-1-text p a, .class-3-text p a, .class-2-text p a{
+	color:#35729a;
+	font-size:13px;
+	padding:0;
+	line-height: 20px;
+	text-transform:none;
+}
+
+.class-1-text p a{
+	color:#888;
+	font-size:11px;
+	padding:0;
+	line-height: 20px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.class-1-text p a:hover{
+	color:#98012e;
+	text-decoration:none;
+}
+
+.class-2-text p a{
+	color:#555;
+	text-decoration:none;
+}
+
+.class-2-text p a:hover{
+	color:#98012e;
+	text-decoration:none;
+}
+
+.class-3-text p a:hover  {
+	color: #35729a;
+	text-decoration:underline;
+    }
+
+
+h5.acc_trigger a:hover, h5.acc_no_trigger a:hover, h5.acc_trigger a:active, h5.acc_no_trigger a:active {
+	text-decoration:none;
+}
+
+h5:hover {background-position: 0px -25px;}
+h5.active {background-position: left bottom;}
+
+.acc_container{
+	margin: 0; padding: 0;
+	background:#fff;
+	overflow: hidden;
+	width: 224px;
+	border: 2px solid #e5e5e5;
+}
+.class-3-text{
+	background:#f8f8f8;
+}
+
+.acc_container .block{
+	float: left;
+    padding: 10px;
+    width: 204px;
+}
+
+#rightHomeBase{
+    bottom: 10px;
+    clear: both;
+    color: #808080;
+    font-size: 13px;
+    height: 46px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 230px;
+    }
+#rightHomeBase ul{
+    float:left;
+    height:24px;
+    margin:5px 25px 0 25px;
+    padding:0;
+}
+#rightHomeBase ul li{    
+    display:inline;
+	
+}
+#twitter, #facebook, #youtube, #mobile, #blogger{    
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/twitter_home.png);
+    width:30px;
+    height:30px;
+    float:left;
+    margin:0px 0px 0px 5px;
+    display:inline;
+    background-repeat:no-repeat;
+    }
+#facebook{    
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/facebook_home.png);
+}
+#youtube{    
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/youtube-home.png);
+}
+#mobile{    
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/mobile_home.png);
+}
+#blogger{
+	background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/blog.png);
+}
+#mun-live-home-page{
+ 	margin: 40px 50px;
+	position: absolute;
+	top:420px;
+	right:10px;
+	font-size:13px;
+	text-transform:uppercase;
+	color:#808080;
+	text-align:center;}
+#red-means-go{
+ 	margin:0 2px;
+	position: absolute;
+	top:535px;
+	right:2px
+}
+	
+#righthome p{
+	margin:0;
+	padding:0;
+}
+
+#contentTop a {
+	color:#888;
+}
+#contentTop a:hover {
+	color:#ac8787;
+	
+}
+
+#breadcrumbs{  padding: 10px 0 0 30px; }	
+#breadcrumbs ul, #breadcrumbs li { list-style-type:none; padding:0 0 0 3px; margin:0; display: inline; }
+#breadcrumbs li a { padding:0 12px 0 0; background:transparent url(http://www.mun.ca/appinclude/brand/2011v1/images/bc-arrow.gif) no-repeat right center;}
+#breadcrumbs li.first {
+	padding: 0;
+}
+
+/*
+#takeMeTo01, #takeMeTo02, #takeMeTo03, #takeMeTo04, #takeMeTo05, #takeMeTo06 {
+    position: relative;
+    float: left;
+}
+#righthome a, #righthome a:active, #righthome a:visited {
+    margin: 0 2px;
+    padding: 5px 0 0 12px;
+    text-transform: uppercase;
+    width: 212px;
+	color: #66899E;
+    float: left;
+    font-size: 14px;
+    height: 20px;
+	border-top:4px solid #E5E5E5;
+	background-image: url(http://www.mun.ca/appinclude/brand/2011v1/images/take-me-to-buttons.jpg);
+}
+#righthome a:hover{
+    text-decoration:none;
+}
+
+#takeMeTo01 a { background-position: 0px 0px; border-top:none}
+#takeMeTo02 a { background-position: 0px -85px; }
+#takeMeTo03 a { background-position: 0px -162px; }
+#takeMeTo04 a { background-position: 0px -239px; }
+#takeMeTo05 a { background-position: 0px -316px; }
+#takeMeTo06 a { background-position: 0px -393px; }
+
+#takeMeTo01 a:hover { background-position: -230px 0px; }
+#takeMeTo02 a:hover { background-position: -230px -85px; }
+#takeMeTo03 a:hover { background-position: -230px -162px; }
+#takeMeTo04 a:hover { background-position: -230px -239px; }
+#takeMeTo05 a:hover { background-position: -230px -316px; }
+#takeMeTo06 a:hover { background-position: -230px -393px; }
+
+#takeMeTo01 a:active { background:#red;}
+#takeMeTo02 a:active { background:#red;}
+#takeMeTo03 a:active { background:#red;}
+#takeMeTo04 a:active { background:#red;}
+#takeMeTo05 a:active { background:#red;}
+#takeMeTo06 a:active { background:#red;}
+*/

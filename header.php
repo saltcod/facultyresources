@@ -49,10 +49,10 @@
 
 
 
-<!-- Mun Goodies -->
- <link href="http://www.mun.ca/appinclude/brand/2011v1/include/styles/structure.css" rel="stylesheet" type="text/css" media="screen" />
- <link href="http://www.mun.ca/appinclude/brand/2011v1/include/styles/interior.css" rel="stylesheet" type="text/css" media="screen" />
-
+<!-- Mun Goodies   -->
+<link href="<?php echo get_template_directory_uri();?>/inc/css/structure.css" rel="stylesheet" type="text/css" media="screen" /> 
+<link href="<?php echo get_template_directory_uri();?>/inc/css/interior.css" rel="stylesheet" type="text/css" media="screen" /> 
+ 
 <script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/basefunctions.js"></script>
  <script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/topnav-content.js"></script>
 <!-- Mun Goodies -->

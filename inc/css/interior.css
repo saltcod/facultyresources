@@ -1,0 +1,309 @@
+#sububer{
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/int-header-background.gif) top left repeat-x;
+}
+
+#sububer-notitle{
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/int-header-background-notitle.gif) top left repeat-x;
+}
+
+#header-interior {
+    margin: 0;
+    width: 980px;
+    height:136px;
+    position:relative;
+}
+#header-interior-notitle {
+    margin: 0;
+    width: 980px;
+    height:113px;
+    position:relative;
+}
+
+
+#header_title_text{
+    color: #FFFFFF;
+    font-size: 17px;
+    left: 21px;
+    letter-spacing: 0.12em;
+    line-height: 22px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 108px;
+}
+
+#contentTop{
+    width:774px;
+    height:32px;
+    float:right;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/content-top.gif) top left repeat-x;
+}
+ 
+
+#content-wrap-for-become{
+    margin-top:1px;
+    width:980px;
+    background:none;
+} 
+
+#content-wrap-for-become h1{
+    line-height:30px;
+    margin:0px;
+    font-weight:normal;
+    font-size:24px;
+    margin-bottom:30px;
+    color:#930032;
+}
+  
+
+#leftnav{
+    width:205px;
+    float:left;
+    background:#ffffff;
+}
+#leftnav a{
+    width:165px;
+    margin:0px;
+    padding:0px;
+    float:left;
+    color:#252525;
+    padding: 11px 20px;
+    text-decoration:none;
+    background: #ebeaea url(http://www.mun.ca/appinclude/brand/2011v1/images/button-bottom.gif) bottom left no-repeat;
+}
+#leftnav a:hover{
+    text-decoration:none;
+    background-color:#e3e3e3;
+}
+#leftnav ul{
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+}
+#leftnav li ul{
+    float:left;
+}
+#leftnav li ul li a{
+    background-color:#d3d3d3;
+    padding-left:35px;
+    width: 150px;
+}
+#leftnav li ul li a:hover{
+    background-color:#bcbcbc;
+    padding-left:35px;
+    width: 150px;
+}
+#leftnav li ul li ul li a{
+    background-color:#c4c4c4;
+    padding-left:50px;
+    width: 135px;
+}
+#leftnav li ul li ul li a:hover{
+    background-color:#ababab;
+    padding-left:50px;
+    width: 135px;
+}
+/*#leftnav ul{
+				width:205px;
+				list-style-type:none;
+				margin:0px;
+				padding:0px;
+			}
+			#leftnav li{
+				width:206px;
+				margin:0px;
+				padding:0px;
+			}
+			#leftnav a{
+				width:165px;
+				color:#252525;
+				background:#ebeaea;
+				margin:0px;
+				padding: 11px 20px;
+				float:left;
+				margin:0px;
+				border-bottom:1px solid #fff;
+			}
+				#leftnav a:hover{
+					text-decoration:none;
+					background-color:#e3e3e3;
+				}
+			#leftnav li ul li a{
+				background-color:#dfdede;
+				padding-left:35px;
+				width: 150px;
+			}
+				#leftnav li ul li a:hover{
+					background-color:#d5d5d5;
+					padding-left:35px;
+					width: 150px;
+				}
+			#leftnav li ul li ul li a{
+				background-color:#c4c4c4;
+				padding-left:50px;
+				width: 135px;
+			}
+				#leftnav li ul li ul li a:hover{
+					background-color:#ababab;
+					padding-left:50px;
+					width: 135px;
+				}*/
+#leftnav a.leftnavon{
+    background-color:#d3c1c7;
+    color:#930032;
+}
+#leftnav a.leftnavon:hover{
+    background-color:#c59daa;
+}
+#leftnavTop{
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/left-nav-top.gif) top left repeat-x;
+    width:205px;
+    height:32px;
+}
+#leftnavBottom{
+    width:205px;
+    height:80px;
+    clear:both;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/left-nav-bottom.gif) top left repeat-x;
+	overflow: hidden;
+}
+
+#middle-content{
+		width:775px;
+		float:left;
+		margin:0px;
+		padding:0px;
+}
+
+#middle2col{
+    width:745px;
+    float:right;
+    padding: 10px 0 30px 30px;
+}
+
+#middle{
+	width:509px;
+    float:left;
+    padding: 10px 30px 30px 30px;
+}
+
+#middle ul, #middle ol  {
+    margin: 0px;
+    list-style-position:outside;
+    padding-left:30px;
+    padding-bottom:15px;
+}
+
+
+#right{
+    float:right;
+    width:205px;
+
+}
+.bg-floater{
+    padding:0px;
+    margin:0px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/right-bar-background.gif) top left repeat-y;
+}
+
+#floatrelated, #floatrelated2{
+    width:205px;
+    background: url(http://www.mun.ca/appinclude/brand/2011v1/images/right-bar-header-small.gif) top left no-repeat;
+}
+
+#floatrelated2{
+    margin-top:20px;
+}
+
+#box, #box2{
+	width:205px;
+    padding-bottom:10px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/right-bar-footer-small.gif) bottom left no-repeat;
+}
+#right h3{
+    margin:0px;
+    font-size:13px;
+    color:#31576c;
+    padding: 16px 25px 26px 25px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/right-bar-title-bottom.gif) bottom left no-repeat;
+}
+#right a {
+    float:left;
+    width:155px;
+    color:#4f6f82;
+    padding: 12px 25px;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/right-bar-btn-bottom.gif) bottom left no-repeat;
+}
+
+
+/*
+#become-content{
+    background:none repeat scroll 0 0 transparent;
+    height:400px;
+    margin:70px 232px;
+}
+.img-holder{
+    margin:10px;
+    width:238px;
+    padding:0px;
+    float:left;
+}
+
+#img-become-grad a, #img-become-undergrad a {
+    width:237px;
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/become-grad.jpg);
+    height:236px;
+    display:block;
+    text-indent:-9999px;
+}
+
+#img-become-undergrad a {
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/become-undergrad.jpg);
+}	
+
+#img-become-grad a:hover {
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/become-hover-grad.jpg);
+
+}
+
+#img-become-undergrad a:hover {
+    background-image:url(http://www.mun.ca/appinclude/brand/2011v1/images/become-hover-undergrad.jpg);
+}
+
+.img-become-text{
+    color:#666666;
+    font:20px Helvetica,Arial,sans-serif;
+    margin-top:20px;
+    text-align:center;
+}
+*/
+
+/* RIGHT MENU STYLES */
+#box p{
+    padding: 16px 25px 26px 24px;
+}
+p.rightnavtitle{
+    text-align: center;
+    font-size:13px;
+    color:#31576c;
+    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/right-bar-title-bottom.gif) bottom left no-repeat;
+    font-weight: bold;
+}
+#box2 h3.refreshHead{
+    text-align: center;
+}
+#navcontainerright ul{
+    list-style:none;
+}
+
+/* accordian styles
+---------------- */
+div.sb-accordion-hidden{
+    display:none;
+    border:1px solid #c8c8c8;
+    padding:10px;
+    border-radius: 5px;
+    margin-bottom:20px;
+}
+.sb-accordion-trigger{
+    cursor:pointer;
+}

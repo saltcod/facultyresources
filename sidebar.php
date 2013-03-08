@@ -9,18 +9,18 @@
 ?>
 <div id="secondary" class="widget-area group" role="complementary">
 
-
+ 
 		<?php
-			if (!$post->post_parent):
-				// will get the subpages of this top level page
-				$parent = $post->ID;
-			elseif ($post->ancestors):
-				// now can get the the top ID of this page
-				// WordPress puts the IDs DESC, which is why the top level ID is the last one
-				$parent = end($post->ancestors);
-			endif;
+			  if (!$post->post_parent):
+			  	// will get the subpages of this top level page
+			  	$parent = $post->ID;
+			  elseif ($post->ancestors):
+			  	// now can get the the top ID of this page
+			  	// WordPress puts the IDs DESC, which is why the top level ID is the last one
+			  	$parent = end($post->ancestors);
+			  endif;
 
-
+ 
  		    $args = array(
 		     	'post_type'    => 'guides', 
 		     	'sort_column' => 'menu_order',
@@ -34,8 +34,7 @@
 			if ($children) :
 		?>
 
- 		<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
-
+ 
 		<nav id="menu-context">
 			<ul class="menu">
 				<?php echo $children; ?>

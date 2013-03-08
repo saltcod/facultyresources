@@ -1,0 +1,62 @@
+DESIRE2LEARN
+
+	1. Semester Startup—>Semester Startup landing page
+	--------------------------------------------	
+
+	2. Course Home
+	--------------------------------------------	
+		Course Homepage Widgets landing page 
+		Course Navigation Bar and Theme landing page
+
+	3. Course Content—>The Content Tool landing page
+	--------------------------------------------	
+
+	4. Communication—>The Communicate and Collaborate landing page
+	--------------------------------------------	
+		Chat—>step by step
+		Classlist —>The Discussions Tool landing page
+		Discussions—>The Discussions Tool landing page 
+		Email—>step by step
+		Online Rooms—>Online Rooms landing page
+		Pager—>step by step
+		Groups—>Groups landing page
+		Calendar—>Calendar landing page
+		Notifications
+		News Tool
+
+	5. Assessments—>The Assessments landing page
+	--------------------------------------------	
+		Dropbox
+		Grades
+		The Question Library 
+		Quizzes
+		Rubrics
+		Self Assessments
+		Surveys
+
+	6. Help—>Help Landing Page (we need to create this)
+	--------------------------------------------	
+		Technical Support
+		D2l Help
+		Faculty Resources
+
+	7. Edit Course
+	--------------------------------------------	
+		Blurb
+
+
+
+
+1. DESIRE2LEARN
+	2. Assessments 
+		3.  Dropbox
+				4. Tour the Grades Tool
+				   Set gradebook options using the Grades Wizard
+				   Set gradebook options manually
+			Grades
+			The Question Library 
+			Quizzes
+			Rubrics
+			Self Assessments
+			Surveys
+		 
