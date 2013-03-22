@@ -21,7 +21,6 @@ function victoria_park_theme_setup() {
 	//add basic features
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
-	
 	// Image size for inline slideshows
 	add_image_size( 'inline-slideshow', 500, 9999);
 
@@ -181,18 +180,6 @@ function victoria_park_enqueue_scripts() {
 
 	wp_register_script( 'faculty-resources-scripts', get_template_directory_uri() .'/js/faculty-resources-scripts.js', array('jquery') );
 	wp_enqueue_script( 'faculty-resources-scripts' );
-
-	wp_register_script( 'jquery-ui', get_template_directory_uri() .'/js/jquery-ui-1.8.23.custom.min.js', array('jquery'));
-	wp_enqueue_script( 'jquery-ui' );
-
-	wp_register_script( 'jquery-accordion', get_template_directory_uri() .'/js/jquery.accordion.js', array('jquery') );
-	wp_enqueue_script( 'jquery-accordion' );
-	
-	wp_register_script( 'bootstrap-modal', get_template_directory_uri() .'/js/jquery.modal.bootstrap.js', array('jquery') );
-	wp_enqueue_script( 'bootstrap-modal' );
-
-	wp_register_script( 'jquery-cycle', get_template_directory_uri() .'/js/jquery.cycle.js', array('jquery') );
-	wp_enqueue_script( 'jquery-cycle' );
 }
 
 
@@ -332,6 +319,33 @@ function waterstreet_is_child_of($id){
 }
 
 
+/**
+* A better stab at body classes for post-parents
+*
+*/
+function waterstreet_ancestor_body_class( $classes ){
+	global $post;
+	// add 'class-name' to the $classes array
+	
+	if ($post->post_parent)	{
+		$ancestors = get_post_ancestors($post->ID);
+		$root = count($ancestors)-1;
+		$parent = $ancestors[$root];
+		$parent_data = get_page($parent);
+
+
+ 		$classes[] = $parent_data->post_name . '-child' ;
+	} else {
+		$parent = $post->ID;
+	}
+
+	
+	return $classes;
+}
+add_filter( 'body_class', 'waterstreet_ancestor_body_class' );
+
+
+
 
 /**
 * We need a body class hook to add post->parent()  
@@ -344,10 +358,12 @@ function waterstreet_page_parent_body_class( $classes ){
 
 	if ( waterstreet_is_child_of(3029) ) {
 		$classes[] = 'd2l-child';
-	}
+	} 
 	return $classes;
 }
 add_filter( 'body_class', 'waterstreet_page_parent_body_class' );
+
+
 
 
 
@@ -368,7 +384,7 @@ function waterstreet_admin_bar_additions() {
 		'href' => admin_url( 'edit.php?post_type=guides')
 		) );
 }
-// and we hook our function via
+
 add_action( 'wp_before_admin_bar_render', 'waterstreet_admin_bar_additions', 0 );
 
 

@@ -7,14 +7,10 @@
  * @since Victoria Park 0.1
  */
 
-get_header(); ?>
-
-<?php if ( waterstreet_is_child_of(3029) ) { // d2l = post->ID=>3029
-		get_sidebar('d2l');
-	} else{
-		get_sidebar();
-	}
+get_header(); 
+get_sidebar();
 ?>
+ 
 
 
 

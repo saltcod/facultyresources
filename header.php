@@ -22,9 +22,9 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width" />
+	<title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
 	 */
@@ -45,64 +45,65 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'victoria_park' ), max( $paged, $page ) );
 
 	?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
 
 
 
-<!-- Mun Goodies   -->
-<link href="<?php echo get_template_directory_uri();?>/inc/css/structure.css" rel="stylesheet" type="text/css" media="screen" /> 
-<link href="<?php echo get_template_directory_uri();?>/inc/css/interior.css" rel="stylesheet" type="text/css" media="screen" /> 
- 
-<script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/basefunctions.js"></script>
- <script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/topnav-content.js"></script>
-<!-- Mun Goodies -->
+	<!-- Mun Goodies   -->
+	<link href="<?php echo get_template_directory_uri();?>/inc/css/structure.css" rel="stylesheet" type="text/css" media="screen" /> 
+	<link href="<?php echo get_template_directory_uri();?>/inc/css/interior.css" rel="stylesheet" type="text/css" media="screen" /> 
 
-<!-- Captivate video helper -->
-<script src="http://media.distance.mun.ca/courses/standard.js" type="text/javascript"></script>
+	<script type="text/javascript" language="javascript" src="<?php echo get_template_directory_uri();?>/js/basefunctions.js"></script>
+	<script type="text/javascript" language="javascript" src="http://www.mun.ca/appinclude/brand/2011v1/include/topnav-content.js"></script>
+	<!-- Mun Goodies -->
 
-
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" type="text/css" media="screen, projection, print" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- Captivate video helper -->
+	<script src="http://media.distance.mun.ca/courses/standard.js" type="text/javascript"></script>
 
 
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" type="text/css" media="screen, projection, print" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 
-<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
- 
+
 <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 	<?php include ('header-mun.php'); ?>
-<div id="page" class="hfeed group">
-	<header id="branding" class="group" role="banner">
-		<hgroup>
-			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<!-- <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>-->		</hgroup>
+	<div id="page" class="hfeed group">
+		<header id="branding" class="group" role="banner">
+			<div class="wrap group">
+				<hgroup>
+					<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <span class="from-delts">from DELTS</span></h1>
+					<!-- <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>-->		</hgroup>
 
-		<nav id="access" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'tsep' ); ?></h1>
-			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tsep' ); ?>"><?php _e( 'Skip to content', 'tsep' ); ?></a></div>
+					<nav id="access" role="navigation">
+						<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'tsep' ); ?></h1>
+						<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tsep' ); ?>"><?php _e( 'Skip to content', 'tsep' ); ?></a></div>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+ 					</nav><!-- #access -->
+				</div>
+			</header><!-- #branding -->
 			
-			<a href="http://online.mun.ca"><div id="at-home"></div></a>
-		</nav><!-- #access -->
-	</header><!-- #branding -->
 			
-			
-	<?php if(is_front_page() ): ?>
-	<div class="hero">
-		<h3>Discover. Learn. Transform. Teach.</h3>
-		<span class="tagline">Teaching with Technology Resources from DELTS </span>
-
-	</div>
-	<?php endif; ?>
+			 
+			<div class="hero">
+				<h3>Discover. Learn. Transform. Teach.</h3>
+ 
+			</div>
+		 
 
 
-<div id="main" class="group">
+		<div id="main" class="group">

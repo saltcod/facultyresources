@@ -10,14 +10,13 @@
 
 <header class="entry-header">
 	<h1 class="entry-title"><?php the_title(); ?></h1>
-	<div class="breadcrumbs"><?php if(function_exists('bcn_display')) {bcn_display(); }?> </div>
+	<div class="breadcrumbs"><?php if(function_exists('bcn_display')) {bcn_display(false, false); }?> </div>
 </header><!-- .entry-header -->
 
 
-
-
+ 
 <?php // Show Captivate video if guide has one ?> 
-<?php if ( get_field('captivate_url' )) : ?>
+<?php global $cfs; if ( $cfs->get('captivate_url' )) : ?>
 
 	<!-- Button to trigger modal -->
 	<h3 class="watch-video"><a href="#watch-video-button" role="button" class="btn"><i class="icon-facetime-video"></i>Watch a video<i class="icon-chevron-right second"></i></a></h3>
