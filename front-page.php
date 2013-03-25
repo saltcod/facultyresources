@@ -38,17 +38,17 @@ get_header(); ?>
 						<h3>Memorial's Learning Management System (LMS)</h3>
 						<div class="course-contents">
 							<ul class="chevron-green left">
-								<li><a href="#"> Semester Startup</a></li>
-								<li><a href="#"> Course Home</a></li>
-								<li><a href="#"> Course Content</a></li>
-								<li><a href="#"> Communication</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/semester-startup/semester-startup-parent/"> Semester Startup</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/course-home/course-homepage-widgets/"> Course Home</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/course-content/the-content-tool/"> Course Content</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/communication/calendar/"> Communication</a></li>
 							</ul>
 						</div>
 						<div class="course-contents">
 							<ul class="chevron-green">
-								<li><a href="#"> Assessments</a></li>
-								<li><a href="#"> Help</a></li>
-								<li><a href="#"> Edit Course</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/the-grades-tool/"> Assessments</a></li>
+								<li><a href="<?php echo home_url(); ?>/"> Help</a></li>
+								<li><a href="<?php echo home_url(); ?>/"> Edit Course</a></li>
 							</ul>
 						</div>
 					</div>
@@ -67,8 +67,8 @@ get_header(); ?>
 
 						<div class="course-contents">
 							<ul class="chevron-green">
-								<li><a href="#"> Uses of Online Rooms</a></li>
-								<li><a href="#"> Best Practices</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/online-rooms/uses-of-online-rooms/"> Uses of Online Rooms</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/online-rooms/best-practices/"> Best Practices</a></li>
 							</ul>
 						</div>
 					</div> 
@@ -85,8 +85,8 @@ get_header(); ?>
 
 						<div class="course-contents">
 							<ul class="chevron-green">
-								<li><a href="#"> Request Lecture Capture</a></li>
-								<li><a href="#"> Give students access to recordings</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/lecture-capture/set-up-lecture-capture"> Request Lecture Capture</a></li>
+								<li><a href="<?php echo home_url(); ?>/guides/lecture-capture/student-access-to-lecture-recordings"> Give students access to recordings</a></li>
 							</ul>
 						</div>
 					</div> 

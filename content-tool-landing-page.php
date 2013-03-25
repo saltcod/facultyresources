@@ -7,10 +7,10 @@
 
 
 <?php // Setup custom fields up here
-	global $cfs;
-	$faq = $cfs->get('frequently_asked_questions');
-	$intro = $cfs->get('tool_intro');
-	?>
+global $cfs;
+$faq = $cfs->get('frequently_asked_questions');
+$intro = $cfs->get('tool_intro');
+?>
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -25,17 +25,18 @@
 
 	<div class="landing-page-description"> 
 		<?php if( isset( $intro )) {
-			 echo $intro;
-			}
+			echo $intro;
+		}
 		?>
 	</div> 
 	
 	
-
-	<?php if( !empty( $faq )): ?>
-		<h3 class="faq">Frequently Asked Questions</h3> 
-		 <?php echo $faq; ?>
-	<?php endif; ?>
+	<div class="faq">
+		<?php if( !empty( $faq )): ?>
+			<h3 class="faq">Frequently Asked Questions</h3> 
+			<?php echo $faq; ?>
+		<?php endif; ?>
+	</div>
 
 
 

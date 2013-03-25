@@ -1219,6 +1219,16 @@ body.tool-category #content h3.faq {
   margin-bottom: 25px;
   margin-top: 0;
 }
+.landing-page-description ol,
+.faq ol {
+  list-style-type: decimal;
+  margin-left: 40px;
+}
+.landing-page-description ul,
+.faq ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
 /* =Content
 -------------------------------------------------------------- */
 .entry-content ol {
