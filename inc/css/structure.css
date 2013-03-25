@@ -4,7 +4,7 @@
 /* ===== Main Wrapper For Site ===== */
 
 #uber { /* Contains all the page content */
-    background:url(http://www.mun.ca/appinclude/brand/2011v1/images/top-nav-background.gif) top left repeat-x;
+    background: #999 url(http://www.mun.ca/appinclude/brand/2011v1/images/top-nav-background.gif) top left repeat-x;
     width: 100%;
 }
 
