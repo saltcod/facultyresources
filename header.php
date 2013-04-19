@@ -80,9 +80,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="mun-header group"> <?php include ('header-mun.php'); ?> </div>
-	<div id="page" class="hfeed group">
-		<header id="branding" class="group" role="banner">
+<!-- <div class="mun-header group"> <?php // include ('header-mun.php'); ?> </div>  -->
+ 		<header id="branding" class="group" role="banner">
 			<div class="wrap group">
 				<hgroup>
 					<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <span class="from-delts">from DELTS</span></h1>
@@ -100,11 +99,13 @@
 			
 			
 			 
-			<div class="hero">
+			<div class="hero wrap">
 				<h3>Discover. Learn. Transform. Teach.</h3>
- 
 			</div>
 		 
 
 
 		<div id="main" class="group">
+			<div class="wrap group">
+			
+		

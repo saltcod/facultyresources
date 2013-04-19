@@ -23,6 +23,7 @@
 		<img src="<?php echo get_template_directory_uri();?>/images/creativecommons.png">
 	</div>
 </footer><!-- #colophon -->
+</div><!-- .wrap -->
 </div><!-- #main -->
 </div><!-- #page -->
 
