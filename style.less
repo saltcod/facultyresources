@@ -40,21 +40,23 @@ body{
 	color: #444;
 	background:url(images/tile.gif) #F7F7F7 repeat;
 	font-weight: normal;
-	border: 5px solid red;
-}
+ }
 
 #page {
-	border: 4px solid yellow;
- 	padding-bottom: 50px;
+  	padding-bottom: 50px;
 }
 
 #main{
-	margin: -35px auto;
+	margin: -35px auto 15px;
 	padding: 25px;
  	position: relative;
- 	.box-shadow(0 0 30px rgba(0, 0, 0, 0.1));
 	body.home & { padding-top: 0; margin-top: 45px;		}
-	.wrap{ background: #fff; padding: 1em;}
+	.wrap{ 
+		background: #fff; 
+		padding: 2em 1.5em 2em;
+		body.home & { padding-top: 0; }
+		.box-shadow(0 0 30px rgba(0, 0, 0, 0.1));
+		}
 }
 
 #branding {
@@ -382,10 +384,12 @@ h1.entry-title { color: @blue; }
 	}
 
 	.step-by-step.current-page-item {
-		background: url(images/chevron-blue-w-bg.png) no-repeat 1px 2px;
+		/* background: url(images/chevron-blue-w-bg.png) no-repeat 1px 2px; */
 		padding-left: 20px;	
 		margin-left: -20px;
-		a {color: @blue;}
+
+		a {
+			color: @blue; text-decoration: underline;  }
 	}
 
 	.current-page-ancestor .current-children .current-children   {
@@ -603,6 +607,7 @@ body.tool-category #content{
 	width: 100%;
 	padding: 25px 0;
 	margin: 25px 0;
+		body.home & { margin-top: 10px; }
 }
 
 /* Frontpage

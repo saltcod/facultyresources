@@ -80,7 +80,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!-- <div class="mun-header group"> <?php // include ('header-mun.php'); ?> </div>  -->
+<div class="mun-header group"> <?php include ('header-mun.php'); ?> </div> 
  		<header id="branding" class="group" role="banner">
 			<div class="wrap group">
 				<hgroup>
