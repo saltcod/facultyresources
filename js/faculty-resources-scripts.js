@@ -47,6 +47,8 @@ if ( body.hasClass('d2l-child') || body.hasClass('page-using-d2l') || body.hasCl
   $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/lecture-capture">Lecture Capture</a></li>');
 } else if ( body.hasClass('guides-online-rooms') || body.hasClass('online-rooms-child') ) {
   $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/online-rooms/">Online Rooms</a></li>');
+} else if ( body.hasClass('guides-stor') || body.hasClass('stor-child') ) {
+  $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/stor/stor-basics/getting-started/">stor</a></li>');
 
 };
 

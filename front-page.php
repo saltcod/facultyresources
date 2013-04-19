@@ -74,7 +74,7 @@ get_header(); ?>
 					</div> 
 				</div>
 
-				<div class="index-tool last group">
+				<div class="index-tool group">
 					<div class="left-side">
 						<img src="<?php echo get_template_directory_uri();?>/images/lecture-capture-icon.png" alt="">
 					</div>
@@ -91,6 +91,28 @@ get_header(); ?>
 						</div>
 					</div> 
 				</div>
+				
+				<div class="index-tool last group">
+					<div class="left-side">
+						<img src="<?php echo get_template_directory_uri();?>/images/stor-icon.png" alt="">
+					</div>
+					
+					<div class="right-side group">
+					 
+						<a href="<?php echo home_url(); ?>/guides/stor/stor-basics/getting-started/"><h2>stor</h2> </a>
+						<h3>A Learning Object Repository</h3>	
+
+						<div class="course-contents">
+							<ul class="chevron-green">
+								<li><a href="<?php echo home_url(); ?>/guides/stor/stor-basics/getting-started/">Getting started</a></li>
+							</ul>
+						</div>
+						
+					</div> 
+				</div>
+				
+				
+				
 			</div> 
 
 
