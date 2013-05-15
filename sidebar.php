@@ -9,10 +9,11 @@
 ?>
 <div id="secondary" class="widget-area group" role="complementary">
 
+
 	<?php 
 	if ($post->post_parent) {
-		$ancestors=get_post_ancestors($post->ID);
-		$root=count($ancestors)-1;
+		$ancestors = get_post_ancestors($post->ID);
+		$root = count($ancestors)-1;
 		$parent = $ancestors[$root];  
 	} else {
 		$parent = $post->ID;
@@ -38,6 +39,11 @@
 	<div class="menu-wrap">
 		<nav id="menu-sidebar">
 			<ul class="menu">
+				
+				<?php if( ! is_single(3029) ): ?>
+					<span class="back"><a href="<?php echo home_url();?>/guides/desire2learn/"><i class="icon-chevron-left"></i>Back</a> </span>
+				 <?php endif; ?>
+				
 				<?php echo $children; ?>
 			</ul>
 		</nav>

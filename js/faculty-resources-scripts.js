@@ -64,18 +64,18 @@ $('.tool-category.current-page-ancestor,.tool-category.current-page-item')
 
 
 
- // Make sidebar menu an accordion
- $('nav#menu-sidebar .menu > li.tool-category').click(function(e) { // limit click to children of secondarye
-        var $el = $('ul',this); // element to toggle
-        $('.menu > li > ul').not($el).slideUp(); // slide up other elements
-        $el.stop(true, true).slideToggle(400); // toggle element
-        $el.addClass('active');
-        $('.children .children').hide();
-        return false;
-      });
- $('.menu > li > ul > li').click(function(e) {
-        e.stopPropagation();  // stop events from bubbling from sub menu clicks
-      });
+ // // Make sidebar menu an accordion
+ // $('nav#menu-sidebar .menu > li.tool-category').click(function(e) { // limit click to children of secondarye
+ //        var $el = $('ul',this); // element to toggle
+ //        $('.menu > li > ul').not($el).slideUp(); // slide up other elements
+ //        $el.stop(true, true).slideToggle(400); // toggle element
+ //        $el.addClass('active');
+ //        $('.children .children').hide();
+ //        return false;
+ //      });
+ // $('.menu > li > ul > li').click(function(e) {
+ //        e.stopPropagation();  // stop events from bubbling from sub menu clicks
+ //      });
 
 
 

@@ -183,6 +183,15 @@ function victoria_park_enqueue_scripts() {
 }
 
 
+
+
+
+
+
+
+
+
+
 /**
  * Include the page slug in the body class attribute.
  *
@@ -209,6 +218,15 @@ function victoria_park_better_body_classes( $classes ) {
 
 	return $classes;
 }
+
+
+
+
+
+
+
+
+
 
 /**
  * Get current "Hot Topics"

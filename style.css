@@ -864,8 +864,6 @@ h1.entry-title {
 }
 .entry-content h3 {
   color: #33aecd;
-  font-weight: bold;
-  font-size: 18px;
 }
 .blue {
   color: #33aecd;
@@ -1010,12 +1008,18 @@ hgroup {
   padding: 0;
   margin-right: 5px;
   margin-top: 10px;
+  /* All category parents */
+
   /* Top level category */
-  /* Just line heights */
+  /* Only show current Tool Category */
+
+  /* Show Tool Category items on the D2L landing page*/
 
   /* Hovers and drill downs on the menu */
 
   /* Menus with no children */
+
+  /* Back button */
 
 }
 #secondary ul,
@@ -1026,7 +1030,26 @@ hgroup {
 #secondary .menu-wrap {
   background: #F4F4F4;
 }
-#secondary .children {
+#secondary li {
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+#secondary .children li {
+  padding-left: 15px;
+}
+#secondary .children.current-children li {
+  padding-left: 15px;
+}
+#secondary .children.current-children .current-children li {
+  padding-left: 0;
+}
+#secondary .current-page-parent .children.current-children li {
+  padding-left: 15px;
+}
+#secondary .current-page-parent .children.current-children .current-children li {
+  padding-left: 0;
+}
+#secondary .children .children {
   display: none;
 }
 #secondary .parent-tool {
@@ -1044,7 +1067,6 @@ hgroup {
   margin-left: 15px;
   width: 205px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #d7eff5;
 }
 #secondary .tool-category.last a {
   border: none;
@@ -1054,22 +1076,35 @@ hgroup {
 }
 #secondary .tool-category.current-page-item,
 #secondary .tool-category.current-page-ancestor {
-  background: #E0EAEE;
+  padding: 0;
+}
+#secondary .current-page-item.tool-landing-page,
+#secondary .current-page-parent.tool-landing-page {
+  background: #E8EDEE;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#secondary .tool-category > a {
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: default;
 }
 #secondary .tool-category .tool-landing-page > a {
-  font-weight: bold;
+  color: #777;
 }
 #secondary .tool-category.current-page-item > a,
 #secondary .tool-category.current-page-ancestor > a {
   display: block;
-  color: white;
   width: 100%;
   padding: 10px 15px;
   margin-left: 0;
   border: none;
-  margin-bottom: 20px;
-  background: #33aecd url(images/chevron-white-down.png) no-repeat;
+  margin-bottom: 10px;
   background-position: 215px 10px;
+}
+#secondary .tool-category.current-page-item .last,
+#secondary .tool-category.current-page-ancestor .last {
+  margin-bottom: 0;
 }
 #secondary .tool-category.current-page-item .children .children,
 #secondary .tool-category.current-page-ancestor .children .children {
@@ -1081,7 +1116,7 @@ hgroup {
 }
 #secondary .tool-landing-page.current-page-item > a,
 #secondary .tool-landing-page.current-page-parent > a {
-  color: #33aecd;
+  font-weight: bold;
 }
 #secondary .tool-category.current-page-ancestor .current-children {
   display: block;
@@ -1089,18 +1124,30 @@ hgroup {
 #secondary .tool-landing-page.current-page-ancestor .children > .children {
   display: block;
 }
-#secondary .tool-category.current-page-parent .children .children {
+#secondary .tool-category.current-page-parent .children .children,
+#secondary .tool-category.current-page-ancestor .children .children {
   border-left: 1px solid #ccc;
   padding-left: 15px;
+  margin-top: 10px;
 }
-#secondary .tool-category.current-page-item .children {
-  margin-left: 15px;
+#secondary .tool-category.current-page-parent .children .children li,
+#secondary .tool-category.current-page-ancestor .children .children li {
+  padding-left: 0;
+}
+#secondary .tool-category.current-page-parent .children .children li.current-page-item,
+#secondary .tool-category.current-page-ancestor .children .children li.current-page-item {
+  padding-left: 20px;
+}
+#secondary .tool-category.current-page-parent .children .children a,
+#secondary .tool-category.current-page-ancestor .children .children a {
+  color: #666;
+}
+#secondary .tool-category.current-page-parent .children .children a:hover,
+#secondary .tool-category.current-page-ancestor .children .children a:hover {
+  text-decoration: underline;
 }
 #secondary .tool-category.current-page-item .children .children {
   display: none;
-}
-#secondary .tool-category.current-page-ancestor .children {
-  margin-left: 15px;
 }
 #secondary .tool-category.current-page-ancestor .children .current-children {
   display: block;
@@ -1115,14 +1162,7 @@ hgroup {
 #secondary .step-by-step.current-page-item a {
   color: #33aecd;
   text-decoration: underline;
-}
-#secondary .current-page-ancestor .current-children .current-children {
-  padding-left: 15px;
-  margin-left: 0px;
-  border-left: 1px solid #85cfe1;
-}
-#secondary .current-page-ancestor .current-children .current-children li:last-child {
-  margin-bottom: 0;
+  font-weight: bold;
 }
 #secondary .previous-item a {
   border: none;
@@ -1131,12 +1171,6 @@ hgroup {
 }
 #secondary .next-item a {
   border-top: none;
-}
-#secondary li {
-  margin-bottom: 10px;
-}
-#secondary .children {
-  margin: 5px 0;
 }
 #secondary .children .children li {
   margin-bottom: 10px;
@@ -1150,17 +1184,52 @@ hgroup {
 #secondary .current-page-item.tool-category + .tool-category.next-item a {
   border-top: none;
 }
+#secondary .tool-category {
+  display: none;
+}
+body.guides-desire2learn #secondary  .tool-category {
+  display: block;
+}
+body.step-by-step #secondary  .tool-category {
+  display: none;
+}
+body.step-by-step #secondary  .tool-category.current-page-ancestor {
+  display: block;
+}
+body.tool-landing-page #secondary  .tool-category {
+  display: none;
+}
+body.tool-landing-page #secondary  .tool-category.current-page-ancestor {
+  display: block;
+}
 #secondary .children.active {
   background: #E0EAEE;
   padding-left: 20px;
   padding-top: 15px;
 }
 #secondary .menu.no-children .current-children-indent {
-  margin-left: 15px;
   padding-left: 15px;
 }
 #secondary .menu.no-children .step-by-step.current-page-item {
   background: url(images/chevron-no-bg.png) no-repeat 1px 2px;
+}
+#secondary .menu {
+  position: relative;
+}
+#secondary .back {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  text-transform: uppercase;
+}
+#secondary .back a {
+  color: #999;
+}
+#secondary .back a:hover {
+  color: #33aecd;
+}
+#secondary .back i {
+  margin-right: 5px;
 }
 #secondary #share {
   margin-top: 25px;
@@ -1354,14 +1423,14 @@ body.home .index-tool:hover {
 body.home .index-tool .left-side {
   float: left;
   width: 50px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 body.home .index-tool .right-side {
   float: left;
   margin-left: 45px;
   border-left: 1px solid #c9e1bb;
   padding-left: 10px;
-  padding: 25px 10px 25px 25px;
+  padding: 10px 10px 10px 25px;
 }
 body.home .index-tool h2 {
   font-size: 34px;

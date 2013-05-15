@@ -67,7 +67,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
-
+ 
 
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -80,32 +80,31 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="mun-header group"> <?php include ('header-mun.php'); ?> </div> 
- 		<header id="branding" class="group" role="banner">
-			<div class="wrap group">
-				<hgroup>
-					<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <span class="from-delts">from DELTS</span></h1>
-					<!-- <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>-->		</hgroup>
+	<div class="mun-header group"> <?php include ('header-mun.php'); ?> </div> 
+	<header id="branding" class="group" role="banner">
+		<div class="wrap group">
+			<hgroup>
+				<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <span class="from-delts">from DELTS</span></h1>
+				<!-- <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>-->		</hgroup>
 
-					<nav id="access" role="navigation">
-						<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'tsep' ); ?></h1>
-						<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tsep' ); ?>"><?php _e( 'Skip to content', 'tsep' ); ?></a></div>
+				<nav id="access" role="navigation">
+					<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'tsep' ); ?></h1>
+					<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tsep' ); ?>"><?php _e( 'Skip to content', 'tsep' ); ?></a></div>
 
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
- 					</nav><!-- #access -->
-				</div>
-			</header><!-- #branding -->
-			
-			
-			 
-			<div class="hero wrap">
-				<h3>Discover. Learn. Transform. Teach.</h3>
+				</nav><!-- #access -->
 			</div>
-		 
+		</header><!-- #branding -->
+
+
+
+		<div class="hero wrap">
+			<h3>Discover. Learn. Transform. Teach.</h3>
+		</div>
+
 
 
 		<div id="main" class="group">
 			<div class="wrap group">
-			
-		
+
