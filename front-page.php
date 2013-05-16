@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<div class="block two-thirds">
 				<h2 class="resources">Teaching with Technology Resources</h2>
-				<p class="em light">Detailed how-to guides and video tutorials will guide you through the technical side of teaching online.</p>
+				<p class="em light">Detailed how-to guides and video tutorials will guide you through the technical side of teaching online</p>
 
 
 				<div class="index-tool first group">
@@ -34,23 +34,53 @@ get_header(); ?>
 					
 					<div class="right-side group">
 						
-						<a href="<?php echo home_url(); ?>/guides/desire2learn"><h2>Desire2Learn </h2></a>
+						<h2><a href="<?php echo home_url(); ?>/guides/desire2learn">Desire2Learn</a></h2>
 						<h3>Memorial's Learning Management System (LMS)</h3>
+						
+						
 						<div class="course-contents">
-							<ul class="chevron-green left">
-								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/semester-startup/semester-startup-parent/"> Semester Startup</a></li>
-								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/course-home/course-homepage-widgets/"> Course Home</a></li>
-								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/course-content/the-content-tool/"> Course Content</a></li>
-								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/communication/calendar/"> Communication</a></li>
+							
+							<ul class="left">
+								<li class="tool-category">Customizing your Course 
+									<ul class="tools">
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/semester-startup/semester-startup-parent/">Course Homepage Widgets</a></li>
+										<li><a href="#">Course Navigation and Theme</a></li>
+									</ul>
+								</li> <!-- Customizing your Course -->
+								
+								<li class="tool-category communication">Communication
+									<ul class="tools">
+										<li><a href="#">Classlist</a> </li>
+										<li><a href="#">Discussions</a> </li>
+										<li><a href="#">Email</a> </li>
+										<li><a href="#">Online Rooms</a> </li>
+										<li><a href="#">Groups</a> </li> 
+									</ul>
+								</li>
+								
 							</ul>
+								
+							<ul class="right">
+								
+								<li class="tool-category">Course Content
+									<ul class="tools">
+										<li><a href="#">Content</a></li>
+									</ul>
+								</li>
+								
+								<li class="tool-category assessment">Assessment
+									<ul class="tools">
+										<li><a href="#">Grades</a></li>
+										<li><a href="#">Quiz</a></li>
+										<li><a href="#">Dropbox</a></li>
+										<li><a href="#">Question</a></li>
+									</ul>
+								</li> <!-- assessment -->
+								
+							</ul>	
+
 						</div>
-						<div class="course-contents">
-							<ul class="chevron-green">
-								<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/the-grades-tool/"> Assessments</a></li>
-								<li><a href="<?php echo home_url(); ?>/"> Help</a></li>
-								<li><a href="<?php echo home_url(); ?>/"> Edit Course</a></li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>	
 
@@ -61,9 +91,9 @@ get_header(); ?>
 					</div>
 
 					<div class="right-side group">
-						<a href="<?php echo home_url(); ?>/guides/online-rooms/"><h2>Online Rooms</h2></a>
-						
-						<h3>Bring your classroom discussions online</h3>	
+						<h2><a href="<?php echo home_url(); ?>/guides/online-rooms/">Online Rooms</a></h2>
+
+						<h3>Online discussions with Elluminate Live</h3>	
 
 						<div class="course-contents">
 							<ul class="chevron-green">
@@ -78,9 +108,9 @@ get_header(); ?>
 					<div class="left-side">
 						<img src="<?php echo get_template_directory_uri();?>/images/lecture-capture-icon.png" alt="">
 					</div>
-					
+
 					<div class="right-side group">
-						<a href="<?php echo home_url(); ?>/guides/lecture-capture"><h2>Lecture Capture</h2> </a>
+						<h2><a href="<?php echo home_url(); ?>/guides/lecture-capture">Lecture Capture </a></h2>
 						<h3>Record and share your lectures with your class</h3>	
 
 						<div class="course-contents">
@@ -91,15 +121,15 @@ get_header(); ?>
 						</div>
 					</div> 
 				</div>
-				
+
 				<div class="index-tool last group">
 					<div class="left-side">
 						<img src="<?php echo get_template_directory_uri();?>/images/stor-icon.png" alt="">
 					</div>
-					
+
 					<div class="right-side group">
-					 
-						<a href="<?php echo home_url(); ?>/guides/stor/stor-basics/getting-started/"><h2>stor</h2> </a>
+
+						<h2><a href="<?php echo home_url(); ?>/guides/stor/stor-basics/getting-started/">stor</a></h2>
 						<h3>A Learning Object Repository</h3>	
 
 						<div class="course-contents">
@@ -107,12 +137,12 @@ get_header(); ?>
 								<li><a href="<?php echo home_url(); ?>/guides/stor/stor-basics/getting-started/">Getting started</a></li>
 							</ul>
 						</div>
-						
+
 					</div> 
 				</div>
-				
-				
-				
+
+
+
 			</div> 
 
 

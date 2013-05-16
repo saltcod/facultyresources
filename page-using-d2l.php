@@ -38,16 +38,13 @@ get_header(); ?>
 		<div class="topics group">
 			<h3 class="blue">Topics include</h3>
 			<ul class="chevron-green left">
-				<li><a href="#">Semester Startup</a></li>
-				<li><a href="#">Course Home</a></li>
-				<li><a href="#">Course Content</a></li>
-				<li><a href="#">Communication</a></li>
+				<li><a href="#">Customizing your Course</a></li>
+				<li><a href="#">Assessments</a></li>
 			</ul>
 			
 			<ul class="chevron-green left">
-				<li><a href="#">Assessments</a></li>
-				<li><a href="#">Edit Course</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="#">Course Content</a></li>
+				<li><a href="#">Communication</a></li>
 			</ul>
 		</div>
 		
