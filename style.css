@@ -2494,3 +2494,11 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #ffff9e;
 }
+/* =Some IE specifics
+--------------------------------------------------------------*/
+.ie .single .hero {
+  display: none;
+}
+.ie .single #main {
+  margin-top: 15px;
+}
