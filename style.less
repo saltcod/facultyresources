@@ -325,7 +325,8 @@ h1.entry-title { color: @blue; }
 		color: #555;
 		background: url(images/hatch.png);
 		text-transform: uppercase;
- 
+			a:hover { color: @blue; }
+
 	}
 	.tool-category {
 		
@@ -335,11 +336,13 @@ h1.entry-title { color: @blue; }
 			margin-left: 15px;
 			width: 205px;
 			padding-bottom: 5px;
+
 		}
 		&.last a {border: none;}
 		&.current-page-item .children {
 			display: block;
 		}
+
 	}
 	.tool-category.current-page-item,
 	.tool-category.current-page-ancestor {
@@ -431,7 +434,7 @@ h1.entry-title { color: @blue; }
 			color: @blue; text-decoration: underline; font-weight: bold; }
 		}
 
-		 
+
 		.previous-item a{ border: none; margin-bottom: 0; padding-bottom: 0 }
 		.next-item a{ border-top: none;  }
 
@@ -504,12 +507,12 @@ h1.entry-title { color: @blue; }
 		/* Back button */
 		.menu { position: relative; }
 		.back {
-		    position: absolute;
-		    top: 10px;
-		    right: 5px;
-		    text-transform: uppercase;
-		    	a {color: #999;  &:hover { color: @blue; }}
-		    	i { margin-right: 5px;  }   	
+			position: absolute;
+			top: 10px;
+			right: 5px;
+			text-transform: uppercase;
+			a {color: #999;  &:hover { color: @blue; }}
+			i { margin-right: 5px;  }   	
 		}
 
 
@@ -735,18 +738,18 @@ body.home {
 		h2 {
 			font-size: 34px;
 			font-weight: 600;
- 			margin-bottom:0;
-			 
+			margin-bottom:0;
+
 			a { 
 				text-decoration: underline; 
 				color: @blue;	
 				&:hover { border:none; color: darken(@blue, 5%);}
-				}
+			}
 		}
 		h3 {
 			color: #888;
 			font-size: 16px;
- 			padding: 0;
+			padding: 0;
 
 		}
 
@@ -755,35 +758,37 @@ body.home {
 			color: #888;
 			width: 100%;
 			
-				.left {
-				    width: 190px;
-				    float: left;
-				    margin-right: 50px;
-				}
-				.right {
-				    width: 120px;
-				    float: left;
-				}
-				 
+			.left {
+				width: 190px;
+				float: left;
+				margin-right: 50px;
+			}
+			.right {
+				width: 120px;
+				float: left;
+			}
 
-				.tool-category{
-				    text-transform: uppercase;
-				    list-style-type: none;
-				    font-size: 12px;
-				    margin-top: 15px;
-				    color: @blue;
-				    	&.communication { margin-top: 25px; }
-				    	&.assessment { margin-top: 43px; }
+
+			.tool-category{
+				text-transform: uppercase;
+				list-style-type: none;
+				font-size: 12px;
+				margin-top: 15px;
+				color: @blue;
+				font-weight: bold;
+				&.communication { margin-top: 25px; }
+				&.assessment { margin-top: 43px; }
+			}
+			.tools {
+				text-transform:none;
+				margin: 5px 0 15px;
+				font-weight: normal;
+				li { line-height: 20px}
+				a {
+					color: #777; 
+					&:hover { border-bottom: 1px solid @green; }
 				}
-				.tools {
-				    text-transform:none;
-				    margin: 5px 0 15px;
-				    	li { line-height: 20px}
-				    	a {
-				    		color: #777; 
- 				    		&:hover { border-bottom: 1px solid @green; }
-				    		}
-				}
+			}
 		}
 
 		a {
@@ -852,12 +857,12 @@ body.home {
 .hero {
 	color: @blue;
 	background: url('images/hatch.png');
- 	width: 960px; 
+	width: 960px; 
 	margin: -25px auto;
 	position: relative;
- 	font-weight: 100;
- 	text-align: left;
- 	padding: 5px;
+	font-weight: 100;
+	text-align: left;
+	padding: 5px;
 	text-shadow: 4px 4px 1px rgba(92, 190, 215, 0.4);
 	.opacity(.125);
 	body.home & {.opacity(1);  margin-top: 15px;}
@@ -1722,12 +1727,12 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 /* =Some IE specifics
 --------------------------------------------------------------*/
 .ie .single {
-    .hero {
-        display: none;
-    }
-    #main {
-        margin-top: 15px;
-    }
+	.hero {
+		display: none;
+	}
+	#main {
+		margin-top: 15px;
+	}
 }
 
 

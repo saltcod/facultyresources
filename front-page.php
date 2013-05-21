@@ -43,8 +43,8 @@ get_header(); ?>
 							<ul class="left">
 								<li class="tool-category">Customizing your Course 
 									<ul class="tools">
-										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/semester-startup/semester-startup-parent/">Course Homepage Widgets</a></li>
-										<li><a href="#">Course Navigation and Theme</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/customizing-your-course/course-homepage-widgets/">Course Homepage Widgets</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/customizing-your-course/the-course-navigation-bar-and-theme/">Course Navigation and Theme</a></li>
 									</ul>
 								</li> <!-- Customizing your Course -->
 								
@@ -64,16 +64,16 @@ get_header(); ?>
 								
 								<li class="tool-category">Course Content
 									<ul class="tools">
-										<li><a href="#">Content</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/course-content/content/">Content</a></li>
 									</ul>
 								</li>
 								
 								<li class="tool-category assessment">Assessment
 									<ul class="tools">
-										<li><a href="#">Grades</a></li>
-										<li><a href="#">Quiz</a></li>
-										<li><a href="#">Dropbox</a></li>
-										<li><a href="#">Question</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/grades">">Grades</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/quiz">">Quiz</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/dropbox">">Dropbox</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/question">">Question</a></li>
 									</ul>
 								</li> <!-- assessment -->
 								

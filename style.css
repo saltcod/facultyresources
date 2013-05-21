@@ -1061,6 +1061,9 @@ hgroup {
   background: url(images/hatch.png);
   text-transform: uppercase;
 }
+#secondary .parent-tool a:hover {
+  color: #33aecd;
+}
 #secondary .tool-category > a {
   color: #33aecd;
   display: inline-block;
@@ -1470,6 +1473,7 @@ body.home .index-tool .course-contents .tool-category {
   font-size: 12px;
   margin-top: 15px;
   color: #33aecd;
+  font-weight: bold;
 }
 body.home .index-tool .course-contents .tool-category.communication {
   margin-top: 25px;
@@ -1480,6 +1484,7 @@ body.home .index-tool .course-contents .tool-category.assessment {
 body.home .index-tool .course-contents .tools {
   text-transform: none;
   margin: 5px 0 15px;
+  font-weight: normal;
 }
 body.home .index-tool .course-contents .tools li {
   line-height: 20px;
