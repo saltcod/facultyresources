@@ -70,10 +70,10 @@ get_header(); ?>
 								
 								<li class="tool-category assessment">Assessment
 									<ul class="tools">
-										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/grades">">Grades</a></li>
-										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/quiz">">Quiz</a></li>
-										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/dropbox">">Dropbox</a></li>
-										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/question">">Question</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/grades">Grades</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/quiz">Quiz</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/dropbox">Dropbox</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/question">Question</a></li>
 									</ul>
 								</li> <!-- assessment -->
 								
