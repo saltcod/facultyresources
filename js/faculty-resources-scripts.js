@@ -36,6 +36,13 @@ $('.current-page-ancestor').prev().addClass('prev-tool-cat');
 $('.tool-category.current-parent').prev().addClass('prev-tool-cat');
 
 
+// Disable links for tool-category menu items
+
+$('.menu .tool-category > a').on('click', function(e){
+  e.preventDefault();
+});
+
+
 
 
 // Add parent item to the sidebar menu
