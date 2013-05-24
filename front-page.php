@@ -50,11 +50,10 @@ get_header(); ?>
 								
 								<li class="tool-category communication">Communication
 									<ul class="tools">
-										<li><a href="#">Classlist</a> </li>
-										<li><a href="#">Discussions</a> </li>
-										<li><a href="#">Email</a> </li>
-										<li><a href="#">Online Rooms</a> </li>
-										<li><a href="#">Groups</a> </li> 
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/customizing-your-course/classlist">Classlist</a> </li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/customizing-your-course/groups-discussions-and-dropboxes/">Discussions</a> </li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/communication/classlist/emailing-from-the-classlist/">Email</a> </li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/customizing-your-course/groups-discussions-and-dropboxes/">Groups</a> </li> 
 									</ul>
 								</li>
 								
@@ -72,7 +71,7 @@ get_header(); ?>
 									<ul class="tools">
 										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/grades">Grades</a></li>
 										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/quiz">Quiz</a></li>
-										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/dropbox">Dropbox</a></li>
+										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/groups-discussions-and-dropboxes">Dropbox</a></li>
 										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/assessments/question">Question</a></li>
 									</ul>
 								</li> <!-- assessment -->
