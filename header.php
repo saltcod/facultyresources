@@ -65,7 +65,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
- 
+
 
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -95,14 +95,14 @@
 			</div>
 		</header><!-- #branding -->
 
-
+		<?php if (is_front_page() ): ?>
 
 		<div class="hero wrap">
 			<h3>Discover. Learn. Transform. Teach.</h3>
 		</div>
+		<?php endif; ?>
 
 
-
-		<div id="main" class="group">
-			<div class="wrap group">
+	<div id="main" class="group">
+		<div class="wrap group">
 
