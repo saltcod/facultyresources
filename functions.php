@@ -149,6 +149,11 @@ function remove_thumbnail_dimensions( $html ) {
 
 
 
+
+
+
+
+
  /**
   * Add custom tax term to each wp_list_pages() item, 
   *

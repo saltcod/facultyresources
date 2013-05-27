@@ -90,7 +90,7 @@ get_header(); ?>
 					</div>
 
 					<div class="right-side group">
-						<h2><a href="<?php echo home_url(); ?>/guides/online-rooms/">Online Rooms</a></h2>
+						<h2><a href="<?php echo home_url(); ?>/guides/elluminate-live">Online Rooms</a></h2>
 
 						<h3>Online discussions with Elluminate Live</h3>	
 
