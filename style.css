@@ -913,6 +913,8 @@ body.home .chevron-green li {
 .chevron-green.left {
   margin-right: 35px;
   float: left;
+  padding-left: 0;
+  list-style-type: none;
 }
 .chevron-blue li {
   background: url(images/chevron-blue.png) no-repeat;
@@ -1046,11 +1048,11 @@ hgroup {
 #secondary .children.current-children .current-children li {
   padding-left: 0;
 }
-#secondary .current-page-parent .children.current-children li {
-  padding-left: 15px;
+#secondary .current-parent .children.current-children {
+  margin-top: 10px;
 }
-#secondary .current-page-parent .children.current-children .current-children li {
-  padding-left: 0;
+#secondary .current-parent {
+  padding-left: 15px;
 }
 #secondary .children .children {
   display: none;
@@ -1094,12 +1096,22 @@ body.d2l-child #secondary .parent-tool {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+#secondary .current-page-ancestor .children.current-children {
+  border-left: 1px solid #ccc;
+}
+#secondary .tool-category.current-page-ancestor > .children.current-children,
+#secondary .tool-category.current-page-parent > .children.current-children {
+  border: none;
+}
+#secondary .tool-landing-page > a:hover {
+  text-decoration: underline;
+}
 #secondary .tool-category > a {
   text-transform: uppercase;
   font-weight: bold;
   cursor: default;
 }
-#secondary .tool-category .tool-landing-page > a {
+#secondary .tool-landing-page > a {
   color: #777;
 }
 #secondary .tool-category.current-page-item > a,
@@ -1134,26 +1146,30 @@ body.d2l-child #secondary .parent-tool {
 #secondary .tool-landing-page.current-page-ancestor .children > .children {
   display: block;
 }
-#secondary .tool-category.current-page-parent .children .children,
-#secondary .tool-category.current-page-ancestor .children .children {
+#secondary .current-page-parent .children .children,
+#secondary .current-page-ancestor .children .children {
   border-left: 1px solid #ccc;
   padding-left: 15px;
   margin-top: 10px;
 }
-#secondary .tool-category.current-page-parent .children .children li,
-#secondary .tool-category.current-page-ancestor .children .children li {
+#secondary .current-page-parent .children .children li,
+#secondary .current-page-ancestor .children .children li {
   padding-left: 0;
 }
-#secondary .tool-category.current-page-parent .children .children li.current-page-item,
-#secondary .tool-category.current-page-ancestor .children .children li.current-page-item {
-  padding-left: 20px;
+#secondary .current-page-parent .children .children li.current-page-item,
+#secondary .current-page-ancestor .children .children li.current-page-item {
+  text-decoration: underline;
+  font-weight: bold;
 }
-#secondary .tool-category.current-page-parent .children .children a,
-#secondary .tool-category.current-page-ancestor .children .children a {
+#secondary .current-page-parent .children .children a,
+#secondary .current-page-ancestor .children .children a {
   color: #666;
 }
-#secondary .tool-category.current-page-parent .children .children a:hover,
-#secondary .tool-category.current-page-ancestor .children .children a:hover {
+#secondary .current-page-parent .children .children a:hover,
+#secondary .current-page-ancestor .children .children a:hover {
+  text-decoration: underline;
+}
+#secondary .current-children li > a:hover {
   text-decoration: underline;
 }
 #secondary .tool-category.current-page-item .children .children {
@@ -1162,17 +1178,6 @@ body.d2l-child #secondary .parent-tool {
 #secondary .tool-category.current-page-ancestor .children .current-children {
   display: block;
   margin-left: 5px;
-}
-#secondary .step-by-step.current-page-item {
-  /* background: url(images/chevron-blue-w-bg.png) no-repeat 1px 2px; */
-
-  padding-left: 20px;
-  margin-left: -20px;
-}
-#secondary .step-by-step.current-page-item a {
-  color: #33aecd;
-  text-decoration: underline;
-  font-weight: bold;
 }
 #secondary .previous-item a {
   border: none;
@@ -1218,10 +1223,16 @@ body.tool-landing-page #secondary .tool-category.current-page-ancestor {
   padding-top: 15px;
 }
 #secondary .menu.no-children .current-children-indent {
+  margin-left: 15px;
   padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+#secondary .menu.no-children .current-children-indent a:hover {
+  text-decoration: underline;
 }
 #secondary .menu.no-children .step-by-step.current-page-item {
-  background: url(images/chevron-no-bg.png) no-repeat 1px 2px;
+  text-decoration: underline;
+  font-weight: bold;
 }
 #secondary .menu {
   position: relative;
@@ -1372,12 +1383,21 @@ body.tool-category #content h3.faq {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  border-bottom: none;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 .edit-link a:hover {
+  background: #aaa;
+}
+body.single .entry-meta .edit-link a {
+  border: none;
+  background: #bbb;
+  color: white;
+}
+a body.single .entry-meta .edit-link a:hover {
   background: #aaa;
 }
 /* Up on Blocks
