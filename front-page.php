@@ -56,7 +56,7 @@ get_header(); ?>
 										<li><a href="<?php echo home_url(); ?>/guides/desire2learn/communication/groups">Groups</a> </li> 
 									</ul>
 								</li>
-								
+								 
 							</ul>
 								
 							<ul class="right">

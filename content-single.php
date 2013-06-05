@@ -16,6 +16,8 @@
 
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
+				<div class="breadcrumbs"><?php if(function_exists('bcn_display')) {bcn_display(false, false); }?> </div>
+
 	</header><!-- .entry-header -->
 
 

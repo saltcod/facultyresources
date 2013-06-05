@@ -867,6 +867,7 @@ h1.entry-title {
 }
 .entry-content h3 {
   color: #33aecd;
+  font-weight: bold;
 }
 .blue {
   color: #33aecd;
@@ -944,7 +945,7 @@ body.home .chevron-blue li {
   margin-left: 15px;
   color: #fff;
   text-transform: none;
-  font: 12px "Annie Use Your Telescope";
+  font: 13px "Annie Use Your Telescope";
 }
 #site-description {
   font-size: 14px;
