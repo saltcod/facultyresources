@@ -68,7 +68,7 @@ register_post_type(
 		'hierarchical' => true,
 		'rewrite' => array( 'slug' => '' ),
 		'query_var' => true,
-		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes', 'revisions', 'comments' ),
+		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes', 'revisions', 'comments', 'author' ),
 		'labels' => array (
 			'name' => 'Guides',
 			'singular_name' => 'Guide',

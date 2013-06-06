@@ -55,7 +55,7 @@ get_header(); ?>
 	<h3 class="center">Information for new and experienced users.</h3>
  
 
-  	<a class="button blue" href="../guides/getting-started">See How</a>
+  	<a class="button blue" href="../guides/semester-startup">See How</a>
 </div>		 
 
 
@@ -86,7 +86,7 @@ get_header(); ?>
 	
 	<div class="homepage-screenshot-container group">
 		<div class="homepage">
-				<a href="../guides/the-course-homepage">Homepage Widgets</a> 
+				<a href="../guides/course-homepage-widgets">Homepage Widgets</a> 
  		</div>
 	
 			
