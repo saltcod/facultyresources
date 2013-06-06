@@ -10,88 +10,69 @@
 <div id="secondary" class="widget-area group" role="complementary">
 
 
-		<?php
-			if (!$post->post_parent):
-				// will get the subpages of this top level page
-				$parent = $post->ID;
-			elseif ($post->ancestors):
-				// now can get the the top ID of this page
-				// WordPress puts the IDs DESC, which is why the top level ID is the last one
-				$parent = end($post->ancestors);
-			endif;
+	<?php 
+	if ($post->post_parent) {
+		$ancestors = get_post_ancestors($post->ID);
+		$root = count($ancestors)-1;
+		$parent = $ancestors[$root];  
+	} else {
+		$parent = $post->ID;
+	} 
+	?>
+	
+	<?php
 
+	$args = array(
+		'post_type'    => 'guides', 
+		'sort_column' => 'menu_order',
+		'title_li'     => __(''),
+		'echo' => 0,
+		'child_of' => $parent //The ID of the top D2L guide
+		);
 
- 		    $args = array(
-		     	'post_type'    => 'guides', 
-		     	'sort_column' => 'menu_order',
-		   		'title_li'     => __(''),
-		   		'echo' => 0, 
-		   		'child_of' => $parent
- 		     	);
+	$children = wp_list_pages( $args );
+	?>
+	
+	
+	<?php if ( $children ) : ?>
 
-		    $children = wp_list_pages( $args );
-			  
-			if ($children) :
-		?>
-
- 		<h2><i class="icon-bookmark-empty"></i>Step by Step Guides</h2>
-
-		<nav id="menu-context">
+	<div class="menu-wrap">
+		<nav id="menu-sidebar">
 			<ul class="menu">
-				<?php echo $children; ?>
-			</ul>
-		</nav>
-
- 		<?php endif;?>
- 
-
-
- 		<?php // Show a few things on the blog pages ?>
-
-		<?php  //Quizzically, is_home detects the posts page
-		if( is_home() || is_single() && !has_term('step-by-step', 'guide-type') && !has_term('tool-landing-page', 'guide-type') || is_archive() ): ?> 
-			
-			<a href="<?php echo home_url();?>/blog"><h2 class="blog"><i class="icon-rss"></i> Blog</h2></a>
-			<p>Thanks for stopping by at the new Technology Resources website</p>
-			
-			<h3>Tags</h3>			
+				
 				<?php
-					$tags = get_tags();
-					$html = '<div class="post-tags"><ul>';
-					foreach ($tags as $tag){
-						$tag_link = get_tag_link($tag->term_id);
-								
-						$html .= "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
-						$html .= "{$tag->name}</a>";
-						$html .= "<span>{$tag->count}</span></li>";
-					}
-					$html .= '</ul></div>';
-					echo $html;
+				// Return the topmost Parent to the top of the menu stack
+				$page_data = get_page( $parent );
+				echo '<a href="'. get_permalink( $parent ) .'"><h4 class="parent-tool">'. $page_data->post_title .'</h4></a> ';
 				?>
 
+				<?php if( ! is_single(3029) ): ?>
+				<span class="back"><a href="<?php echo get_permalink( $parent );?>"><i class="icon-chevron-left"></i>Back</a> </span>
+			<?php endif; ?>
+
+			<?php echo $children; ?>
+		</ul>
+	</nav>
+</div>
+
+<?php endif;?>
 
 
 
-			<h3> Archives</h3>
-			<div class="monthly-archives"><?php wp_get_archives('type=monthly&limit=12'); ?></div>
-		<?php endif; ?>
 
 
 
+<div id="share">
+	<h2>Share</h2>
+	<i class="icon-share"> </i><?php echo direct_email();?>
 
- 		<div id="share">
- 			<h2>Share</h2>
- 			<i class="icon-share"> </i><?php echo direct_email();?>
- 
 
- 			<?php if( has_term('step-by-step', 'guide-type') ) : ?>
-	 			<div class="print">
-	 				<i class="icon-print"></i> <a href="javascript:window.print()">Print this guide</a>
+	<?php if( has_term('step-by-step', 'guide-type') ) : ?>
+	<div class="print">
+		<i class="icon-print"></i> <a href="javascript:window.print()">Print this guide</a>
+	</div>
+<?php endif; ?>
 
-	 			</div>
-	 		<?php endif; ?>
+</div>
 
- 		</div>
-
-		</div><!-- #secondary .widget-area -->
- 
+</div><!-- #secondary .widget-area -->

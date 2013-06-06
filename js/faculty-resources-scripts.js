@@ -1,157 +1,118 @@
 jQuery(function($) {
 
 /* 
-    Lets use a hammer to kill these flies. 
-    We've stripped out the width and height attributes via a filter in functions.php
-    This will apply to new images placed in new/existing posts. Not old ones. 
-    This hammer will strip the attributes out of existing posts. 
-    We regret what we've done here. 
-
-*/
-    $('article img').each(function(){ 
-        $(this).removeAttr('width')
-        $(this).removeAttr('height');
-    });
-
+  Lets use a hammer to kill these flies. 
+  We've stripped out the width and height attributes via a filter in functions.php
+  This will apply to new images placed in new/existing posts. Not old ones. 
+  This hammer will strip the attributes out of existing posts. 
+  We regret what we've done here. 
+  */
+  $('article img').each(function(){ 
+    $(this).removeAttr('width')
+    $(this).removeAttr('height');
+  });
 
 
 
-$('.gallery').each(function() {
-    var slideshow = $(this);
-    var $nav = $('<a class="prev" href="#">Prev</a><a class="next" href="#">Next</a>').insertBefore(this);
-
-    var next = slideshow.parent().find('.next');
-    var prev = slideshow.parent().find('.prev');
-
-    slideshow.cycle({
-        fx: 'fade',
-        speed: 'fast',
-        timeout: 0, 
-        next: next, 
-        prev: prev,
-        slideResize: false,
-        slideExpr: '.gallery-item',
-        before: function(){
-           $(this).parent().find('.current').removeClass();
-           var max = -1;
-    $(".current img").each(function() {
-        var h = $(this).height(); 
-        max = h > max ? h : max;
-    });
-    console.log(max);
-
-    $('.gallery-item').css('height', max)
-     },
-      after: function(){
-           $(this).addClass('current');
-     }
+/**
+* Set a first and last on all menus
+*
+**/
+$('nav ul li:first-child,nav ol li:first-child').addClass('first');
+$('nav ul li:last-child,nav ol li:last-child').addClass('last');
 
 
-     });
+
+
+// Set proper classes on sidebar menu items 
+// If .children contains the current-page-item, 
+// highlight the parent and that .children ul.
+
+$('.children:has(li.current-page-item)').addClass('current-children');
+$('.current-page-item .children ').addClass('current-children');
+$(".menu > li").addClass('parent');
+$('.current-children').parent().addClass('current-parent');
+$('.current-page-ancestor').prev().addClass('prev-tool-cat');
+$('.tool-category.current-parent').prev().addClass('prev-tool-cat');
+
+
+// Disable links for tool-category menu items
+
+$('.menu .tool-category > a').on('click', function(e){
+  e.preventDefault();
 });
+
+
+
+
+// // Add parent item to the sidebar menu
+
+// var body = $('body');
+// if ( body.hasClass('d2l-child') || body.hasClass('page-using-d2l') || body.hasClass('guides-desire2learn') ) {
+//   $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/desire2learn">Desire2Learn</a></li>');
+// } else if ( body.hasClass('lecture-capture-child') || body.hasClass('guides-lecture-capture') ){
+//   $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/lecture-capture">Lecture Capture</a></li>');
+// } else if ( body.hasClass('guides-elluminate-live') || body.hasClass('elluminate-live-child') ) {
+//   $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/elluminate-live">Online Rooms</a></li>');
+// } else if ( body.hasClass('guides-stor') || body.hasClass('stor-child') ) {
+//   $('#menu-sidebar ul.menu').prepend('<li class="page_item parent-tool"><a href="http://localhost:8888/technologyresources/guides/stor/stor-basics/getting-started/">stor</a></li>');
+
+// };
+
+
+
+// Set a class on the prev/next menu item to the current parent
+
+$('.tool-category.current-page-ancestor,.tool-category.current-page-item')
+.prev().addClass('previous-item');
+
+$('.tool-category.current-page-ancestor,.tool-category.current-page-item')
+.next().addClass('next-item');
+
+
+
+ // // Make sidebar menu an accordion
+ // $('nav#menu-sidebar .menu > li.tool-category').click(function(e) { // limit click to children of secondarye
+ //        var $el = $('ul',this); // element to toggle
+ //        $('.menu > li > ul').not($el).slideUp(); // slide up other elements
+ //        $el.stop(true, true).slideToggle(400); // toggle element
+ //        $el.addClass('active');
+ //        $('.children .children').hide();
+ //        return false;
+ //      });
+ // $('.menu > li > ul > li').click(function(e) {
+ //        e.stopPropagation();  // stop events from bubbling from sub menu clicks
+ //      });
+
+
+
+ // If sidebar menu has no children, add a class and indent sub menu
+
+ (function(){
  
-    // Calculate and assign the height of .gallery-item
-    
+  if( $('.menu li').children('.children').length == 0 ){
+    $('.menu').addClass('no-children');
+     $('.menu .step-by-step').wrapAll('<div class="current-children-indent" />')
+  }
 
-
-
-// $('.gallery').each(function() {
-//     var $nav = $('<a class="prev" href="#">Prev</a><a class="next" href="#">Next</a>').insertBefore(this);
-    
-//     var p = this.parentNode;
-//     $(this).cycle({
-//         timeout: 0,
-//         prev:   $('.prev', p),
-//         next:   $('.next', p) 
-//     });
-// });
-    // Captivate Modals
-    // hide() the modal first, then show() it before handing it to Bootstrap
-    
-
-    // Let's try again. 
-    // First:   Clone the video object
-    // Then :   .remove() it
-    // Then :   clone() it on clicking the button
  
-
-    $(function(){
-        var video = $('.content-video embed');
-        video.clone();
-        video.detach();
-        console.log(video);
-        
-        $('h3').on('click', function(){
-            console.log('clicked');
-            $('.modal-body').append(video);
-            $('#watch-video-modal').modal('show');
-        });
-    });
-   
-    $('a.close').on('click', function(){
-        $('#watch-video-modal').detach();
-       console.log('detached');
-    });
- 
-
-
-    $('body.tool-landing-page #secondary h2').animate({ 
-        'opacity': 1
-    }, 1600);
-
-    $('body.tool-landing-page #secondary').animate({ 
-        'margin-top': 0
-    }, 1000);
+})();
 
 
 
-    //  //Fade some stuff in on page load
-    //  $(function(){
-    //     $('img').animate({ 'opacity': 1 }, 200);
-        
-    //     $('.page-using-d2l-illustrated img.cloud').animate({ 'margin-top' : '15px' }, 800);
-        
-    // });
 
-     
-      // jQuery Accordion for tool landing pages
-      // Store variables
-
-      var accordion_head = $('.accordion > li > a'),
-      accordion_body = $('.accordion li > .sub-menu');
-
-    // Open the first tab on load
-    accordion_head.first().addClass('active').next().slideDown(200);
-
-    // Click function
-
-    accordion_head.on('click', function(event) {
-
-        // Disable header links
-
-        event.preventDefault();
-        $('.accordion').toggleClass('is-collapsed');
-
-        // Show and hide the tabs on click
-
-        if ($(this).attr('class') != 'active'){
-            accordion_body.slideUp('normal');
-            $(this).next().stop(true,true).slideToggle('normal');
-            accordion_head.removeClass('active');
-            $(this).addClass('active');
-        }
-
-    }); 
+  // Add classes to table <td>s to allow for styling
+  $('table td:nth-child(1), table th:first').addClass('first');
 
 
-    //Stop playing Captivate videos when you close the modal
-    $('.watch-video-modal').on('hide', function(){
-        console.log('closed');
-    })
+// Save us the indignity of having to scroll past the MUN header every time
+if ( $('body').hasClass('logged-in') ) {
+  $(document).scrollTop( $("#branding").offset().top - 25) ;
+} else {
+  $(document).scrollTop( $("#branding").offset().top ) ;
+};
 
 
-    // Add classes to table <td>s to allow for styling
-    $('table td:nth-child(1), table th:first').addClass('first');
 
 
 }); //Last

@@ -4,34 +4,42 @@
  * @subpackage Victoria Park
  */
 ?>
+
+
+<?php // Setup custom fields up here
+global $cfs;
+$faq = $cfs->get('frequently_asked_questions');
+$intro = $cfs->get('tool_intro');
+?>
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
- 	 
 
 
- 	 <div class="breadcrumb">
-        <?php if( has_term('tool-landing-page', 'guide-type') ) : ?>
-                <span class="parent-guide"><a href="<?php echo home_url();?>/using-d2l">Desire2Learn</a></span>
-            <?php endif; ?>
-    </div>  
-
-<ul class="accordion">
- 
-    <li id="one">
-        <a href="#one" class="tool-name"><?php the_title();?> <i class="icon-plus tool-name"></i></a>
-        <ul class="sub-menu">
-            <li><?php the_field('tool_intro');?></li>
-        </ul>
-    </li>
- 
-    <li id="two">
-        <a href="#two" class="faq">Frequently Asked Questions <i class="icon-plus faq"></i></a>
-        <ul class="sub-menu">
-            <li><li><?php the_field('frequently_asked_questions');?></li></li>
-        </ul>
-    </li>
-</ul>
+	<header class="entry-header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<div class="breadcrumbs"><?php if(function_exists('bcn_display')) {bcn_display(false, false); }?> </div>
+	</header><!-- .entry-header -->
 
 
- 	
-	<?php edit_post_link( __( 'Edit', 'victoria_park' ), '<span class="edit-link">', '</span>' ); ?>
- </article><!-- #post-<?php the_ID(); ?> -->
+
+	<div class="landing-page-description"> 
+		<?php if( isset( $intro )) {
+			echo $intro;
+		}
+		?>
+	</div> 
+	
+	
+	<div class="faq">
+		<?php if( !empty( $faq )): ?>
+			<h3 class="faq">Frequently Asked Questions</h3> 
+			<?php echo $faq; ?>
+		<?php endif; ?>
+	</div>
+
+
+
+
+<?php edit_post_link( __( 'Edit', 'victoria_park' ), '<span class="edit-link">', '</span>' ); ?>
+</article><!-- #post-<?php the_ID(); ?> -->
