@@ -15,7 +15,23 @@
  * @since Victoria Park 0.2
  */
 
+
+
+function wpr_maintenance_mode() {
+    if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
+        wp_die('Sorry about this. We\'re just doing a little upgrade. We should only be a few minutes.');
+    }
+}
+add_action('get_header', 'wpr_maintenance_mode');
+
+
+
+
+
 add_action( 'after_setup_theme', 'victoria_park_theme_setup' );
+
+
+
 
 function victoria_park_theme_setup() {
 	//add basic features
